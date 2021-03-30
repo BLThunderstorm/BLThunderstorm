@@ -1,4 +1,4 @@
-# BLThunderstorm
+![](https://gitlab.com/BLThunderstorm/about/-/raw/master/assets/bg.png)
 
 BLThunderstorm is an **unofficial** dashboard and stats-tracking site for Battlelog games.
 
