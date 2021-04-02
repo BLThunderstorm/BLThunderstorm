@@ -17,8 +17,8 @@ As like other applications, BLThunderstorm have multiple codebases. To prevent t
 
 We also have some other projects, usually they are created to be used in our core projects or to add new features and integrations into our core projects.
 | Name  | Description | Repo | 
-| ---- | -- |
-| battlelog.js | An unofficial API library for Battlefield Battlelog. | [Click here](https://gitlab.com/BLThunderstorm/battlelog.js) |
+| ---- | -- | -- |
+| battlelog.js | An unofficial API library for Battlefield Battlelog. | [BLThunderstorm/battlelog.js](https://gitlab.com/BLThunderstorm/battlelog.js) |
 
 ## Contributing
 Want to contribute to BLThunderstorm and it's projects?
