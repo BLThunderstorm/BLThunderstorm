@@ -1,8 +1,9 @@
-![](https://gitlab.com/BLThunderstorm/about/-/raw/master/assets/bg.png)
+<div> <p align="center"><img src="https://gitlab.com/BLThunderstorm/about/-/raw/master/brand/Twitter%20header/Twitter%20header.png" height="200px"/>
+</p>
+<p align="center">
+BLThunderstorm is an <b>unofficial</b> dashboard and stats-tracking site for Battlelog games. BLThunderstorm is still work in progress and not production-ready.</p>
 
-BLThunderstorm is an **unofficial** dashboard and stats-tracking site for Battlelog games.
-
-BLThunderstorm is still work in progress and not production-ready.
+</div>
 
 ## Codebases
 
