@@ -1,7 +1,7 @@
 # Contributing to BLThunderstorm
 
 ## Commits Convention
-We follow the Conventional Commits specification that can be read [here](https://www.conventionalcommits.org/en/v1.0.0/). Please use it in all of your commits.
+I personally follow the Conventional Commits specification that can be read [here](https://www.conventionalcommits.org/en/v1.0.0/). Please use it in all of your commits.
 
 ### Examples
 **Good**:
@@ -29,4 +29,5 @@ Resolves bug #72
 ```
 A lot of changes
 ```
-## 
+## Running BLThunderstorm locally
+You can go to the repositories you want to run, like the backend or frontend, and see an overview of what you need to prepare in order to run them.
