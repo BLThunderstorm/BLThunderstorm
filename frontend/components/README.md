@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-# COMPONENTS
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-The components directory contains your Vue.js Components.
-
-_Nuxt.js doesn't supercharge these components._
-=======
 # /components
 This is where we store our Vue components. Feel free to use them as long as you credit me (Nefomemes), it doesn't matter where. Maybe in the README of your project, maybe in the footer of your project's website, or maybe in the 'Credits' page!
 
@@ -32,4 +24,3 @@ The title of the category. (expects [String](https://developer.mozilla.org/en-US
 
 ### FooterLinksCategory#links
 The list of links in the category. (expects [Array<FooterLink>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))
->>>>>>> frontend/master

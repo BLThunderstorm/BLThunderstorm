@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+		
+    body {
+       margin: 0 0 0 0;
+       font-family: Arial;
+    }
+  
+
+#main-ui {
+	height: 100vh;
+	width: 100%;
+	
+}
+    
+   
