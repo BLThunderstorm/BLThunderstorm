@@ -25,7 +25,11 @@
     "vue-template-compiler": "^2.6.12",
     "vuetify": "^2.4.7",
     "vuetify-loader": "^1.7.2",
+<<<<<<< HEAD
     "webpack": "^5.28.0"
+=======
+    "@nuxtjs/vercel-builder":"0.21.2"
+>>>>>>> frontend/master
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3"
