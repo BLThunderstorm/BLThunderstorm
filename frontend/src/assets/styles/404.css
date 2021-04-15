@@ -1,0 +1,32 @@
+
+#notfound-box {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	
+	color: white;
+	
+	
+
+}
+
+#notfound-box .notfound {
+	text-align: center;
+	   font-family: "Mix Giants";
+	   position: relative;
+}
+
+#notfound-box .notfound .title {
+	font-size: 250px;
+	   margin-bottom: -75px;
+	   width: 75%;
+}
+
+
+  #notfound-box .notfound .description {
+	font-size: 60px;
+	
+}
+
+   
+

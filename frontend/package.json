@@ -1,0 +1,33 @@
+{
+  "name": "blthunderstorm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth-next": "5.0.0-1616003482.75c20e6",
+    "@nuxtjs/axios": "^5.13.1",
+    "battlelog.js": "^0.2.6",
+    "core-js": "^3.9.1",
+    "express": "^4.17.1",
+    "nuxt": "^2.15.3",
+    "rehype": "^11.0.0",
+    "rehype-sanitize": "^4.0.0",
+    "remark": "^13.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-html": "^13.0.1",
+    "remark-rehype": "^8.0.0",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify": "^2.4.7",
+    "vuetify-loader": "^1.7.2",
+    "webpack": "^5.28.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.3"
+  }
+}
