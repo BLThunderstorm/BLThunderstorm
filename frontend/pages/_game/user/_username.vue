@@ -1,22 +1,37 @@
 <template>
 <div>
 
-<div v-if="user" id="user-page-container">
-<div id="user-page">
-<div id="main-user-wallpaper" class="user-page-content">
-<div id="main-user-wallpaper-content">
-<div id="main-user-username-box">
+<div v-if="user" class="user-page">
+<div class="user-wallpaper user-page-content">
+<div class="user-wallpaper-content">
+<div class="user-username-box">
 <p class="user-name">
 {{ user.username }}
 </p>
 <p class="user-id"> {{ user.userId }} </p>
 </div>
-<img v-bind:src="user.avatarURL" id="main-user-avatar-box">
+<img v-bind:src="userify(user).displayAvatarURL({size: 2048})" class="user-avatar-box"/>
 </div>
 </div>
 
 <div id="user-presentation" class="user-page-content">
-<LazyMarkdownBox v-if="user.readme" v-bind:content="user.readme"/>
+
+<div class="marginish-page-container">
+<div class="marginish-page">
+<LazyMarkdownBox v-if="mainuser().readme" v-bind:content="mainuser().readme"/>
+</div>
+
+<div class="friends-bar content-order-container user-page-content" >
+
+<div class="content-order">
+<div class="title">Friends</div>
+<div v-for="friend in Array.from(user.friends)">
+
+<a :href="friend.username"><v-avatar size="48"><img :src="userify(friend).displayAvatarURL({size: 128})"></v-avatar></a>
+
+</div>
+</div>
+</div
 </div>
 </div>
 </div>
@@ -33,37 +48,31 @@
 </div>
 </div>
 </div>
+
+</div>
 </template>
 <script>
-import bljs from 'battlelog.js/dist/bundle.dev.js';
-
-var client = bljs();
-
 export default {
 data() {
 return {user: undefined, error: undefined, readme: undefined}
 },
-async asyncData({ params }){
+async asyncData({ params, $client }){
 
 try {
-let gameclient = client.game(params.game);
-
-let user = await gameclient.users.fetch(params.username);
+let user = await $client.fetchUser(params.username);
 
 if(user){
-
-user.avatarURL = user.displayAvatarURL({size: 2048});
-
 user.readme = user.userinfo.presentation;
 
+user = JSON.parse(JSON.stringify(user));
 
-
-return { user, error: false};
+return { user, error: false, params };
 }
 
 } catch(error) {
 console.error(error);
-return { error, user: null };
+
+return { error, user: null, params };
 }
 },
 
@@ -71,85 +80,82 @@ head() {
   return {
   title: this.user.username || "User not found",
   }
+
+}, methods: {
+userify(user){
+
+let userified = new this.$bljs.User(this.$client, user);
+
+return userified;
+}
+
 }
 
 }
 </script>
-<style>
-
-#user-page-container {
-height: 100%;
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+<style lang="sass">
+@import '~vuetify/src/styles/styles.sass'
 
 
-
-#error-page h1 {
-  font-size: 30px;
-  font-weight: 600;
-}
+#error-page h1 
+ font-size: 30px
+ font-weight: 600
 
 
-#error-page h2 {
-font-size: 20px;
-}
-#box-error {
-width: calc(100% - 80px);
-text-align: center;
-}
-
-#error-page a {
-
-color: white !important;
-}
-
-
-
-#error-page {
-display: grid; place-items: center;
-height: 100%;
-color: white;
-}
-
-#user-page {
-width: calc(100% - 40px);
-margin-top: 20px;
-position: relative;
-}
-
-#main-user-wallpaper {
-background-color: black;
-color: white;
-width: 100%;
-position: relative;
-height: 150px;
-border-radius: 10px;
-}
-
-#main-user-wallpaper-content {
-padding: 20px;
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: space-between;
-}
-
-#main-user-username-box {
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-}
-
-
- .user-name {
- font-weight: 600;
- font-size: 35px;
- }
+.content-order-container 
+ padding: 20px
+ background-color: map-get($material-dark, "background")
  
- .user-page-content {
- margin-bottom: 20px;
- }
+.content-order-container .content-order
+ display: flex
+
+#error-page h2 
+ font-size: 20px
+
+#box-error 
+ width: calc(100% - 80px)
+ text-align: center
+
+
+#error-page a 
+ color: white !important
+
+#error-page 
+ display: grid
+ place-items: center
+ height: 100%
+ color: white
+
+
+#user-page
+ position: relative
+
+ .user-page-content 
+  margin-bottom: 20px
+ 
+.user-wallpaper
+ background-color: black
+ color: white
+ width: 100%
+ position: relative
+ height: 150px
+
+
+.user-wallpaper .user-wallpaper-content
+ padding: 20px
+ height: 100%
+ width: 100%
+ display: flex
+ justify-content: space-between
+
+.user-wallpaper .user-wallpaper-content .user-username-box
+ display: flex
+ flex-direction: column
+ justify-content: flex-end
+
+
+
+.user-wallpaper .user-name 
+ font-weight: 600
+ font-size: 35px
 </style>

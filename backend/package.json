@@ -12,19 +12,17 @@
   "author": "Nefomemes",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.13.14",
-    "@octokit/core": "^3.3.1",
+
     "axios": "^0.21.1",
     "battlelog.js": "^0.2.6",
-    "canvas": "^2.7.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.5",
-    "node-fetch": "^2.6.1",
     "node-grau": "^1.0.21",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
-    "@babel/preset-env": "^7.13.12"
+    "@babel/preset-env": "^7.13.12",
+    "@babel/core": "^7.13.14"
   }
 }

@@ -13,7 +13,7 @@
         
         <div class="title">
           <p id="service-name">BLThunderstorm</p>
-            <p class="message">Unofficial stats tracking tool for Battlefield games, and other Battlelog games.</p>
+            <p class="message">Unofficial stats-tracking and dashboard site for Battlefield games.</p>
           </div>
       
      </div>
@@ -46,42 +46,32 @@ export default {
   
 }
 </script>
-<style>
+<style lang="sass">
 
-#service-name {
-      font-family: "Bebas Neue" !important;
-      font-size: 100px;
-      
-      line-height: 100px;
-      margin-bottom: -1px;
-     
-    }
+#service-name
+ font-family: "Bebas Neue" !important
+ font-size: 100px
+ line-height: 100px
+ margin-bottom: -1px
 
-    #intro {
-      position: relative;
+#intro 
+ position: relative
 
-    }
+#intro .title 
+ position: absolute
+ display: grid
+ place-items: center
+ font-family: Arial
+ color: white
 
-
-
-      #intro .title {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      font-family: Arial;
-    color: white;
-      transform: translate(-50%, -50%);
-      
-    }
-    #intro .message {
-      font-weight: 600;
-    }
-
-    #about {
-      background-color: rgba(0, 0, 0, 0.4);
-      min-height: 100vh;
-      max-height: auto;
-      min-width: calc(100% - 80px);
+#intro .message
+ font-weight: 600
+   
+#about 
+ background-color: rgba(0, 0, 0, 0.4)
+ min-height: 100vh
+ max-height: auto;
+ min-width: calc(100% - 80px)
       padding-left: 40px;
       padding-right: 40px;
       
@@ -109,24 +99,19 @@ flex-wrap: wrap;
     
    
 
-     @media (orientation: landscape){
-	 
-	 
-	    #forums-container {
-		    flex-direction: row;
-		    align-items: flex-start;
-		
-		    
-	    }
+@media (portrait: landscape)
 
-	    #about .features {
-		    width: 25%;
-		    margin-right: 40px;
-	    }
+	#forums-container 
+	 flex-direction: row
+	 align-items: flex-start
 
-	    #about #forum-features {
-		    width: 30% !important;
-	    }
+	#about .features 
+	 width: 25%
+	 margin-right: 40px
 
-}
+
+	#about #forum-features 
+	 width: 30% !important
+
+
 </style>

@@ -2,17 +2,19 @@
   <v-app >
   <div id="error-page">
   <div id="box-error">
+  <video class="jokomium" muted loop controls autoplay nofullscreen src="/jokomium.mp4"></video>
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <h2>
+    <div v-else>
+      <h1>Error {{ error.statusCode }} </h1>
+      <h2>{{ error.message }}</h2>
+    </div>
+    <h3>
     <NuxtLink to="/">
       Return to home page
     </NuxtLink>
-    </h2>
+    </h3>
     </div>
     
     </div>
@@ -44,30 +46,52 @@ export default {
 }
 </script>
 
-<style scoped>
-#error-page h1 {
-  font-size: 30px;
-  font-weight: 600;
-}
+<style lang="sass">
+#error-page h1 
+ font-size: 30px
+ font-weight: 600
+
+#error h2 
+ font-size: 20px
+
+#box-error
+ width: 50%
+ text-align: center
+
+#error-page a 
+ color: white !important
+
+#error-page
+ display: grid
+ place-items: center
+ height: 100%
+ 
+<style scoped lang="sass">
+
+.jokomium
+ width: 100%
+ max-width: 500px
+
+#error-page h1
+ font-size: 30px
+ font-weight: 600
 
 
-#error h2 {
-font-size: 20px;
-}
-#box-error {
-width: 50%;
-text-align: center;
-}
 
-#error-page a {
+#error h2 
+ font-size: 20px
 
-color: white !important;
-}
+#box-error
+ width: 50%
+ text-align: center
 
 
+#error-page a
+ color: white !important
 
-#error-page {
-display: grid; place-items: center;
-height: 100%;
-}
+#error-page
+ display: grid
+ place-items: center
+ height: 100%
+
 </style>

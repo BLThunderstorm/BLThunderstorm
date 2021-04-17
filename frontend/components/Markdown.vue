@@ -14,13 +14,18 @@ data(){
 return { parsedContent: undefined };
 },
 async fetch(){
-let instance = this;
+
 remark()
   .use(remarkGFM)
   .use(remarkRehype)
   .use(rehypeSanitize)
-  .process(this.content, (err, file) => { console.log(file); return this.parsedContent = String(file) });
-  console.log(this)
+  .process(this.content, (err, file) => { 
+  if(err){
+  console.log(this.content);
+  return this.parsedContent = `${err.stack ||  err.toString()}`;
+  }
+  return this.parsedContent = String(file);
+  });
 },
 props: {
 content: String
