@@ -24,10 +24,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-<<<<<<< HEAD
-=======
     "~/plugins/bl.js"
->>>>>>> frontend/master
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -37,19 +34,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-<<<<<<< HEAD
-=======
     '@nuxt/typescript-build'
->>>>>>> frontend/master
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   	'@nuxtjs/axios',
-<<<<<<< HEAD
-=======
 	    '@nuxtjs/pwa',
->>>>>>> frontend/master
     '@nuxtjs/auth-next'
   ],
   auth: {
@@ -66,11 +57,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-<<<<<<< HEAD
-    customVariables: ['~/assets/variables.scss'],
-=======
     customVariables: ['~/assets/variables.sass'],
->>>>>>> frontend/master
     theme: {
       dark: true,
       themes: {
@@ -86,46 +73,12 @@ export default {
       }
     }
   },
-<<<<<<< HEAD
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-=======
  typescript: {
   
     typeCheck: true
   },
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
- /* extend (config, ctx) {
-      config.resolve.symlinks = false
-    },
-  rules: [ 	{
-    test: /\.s(c|a)ss$/,
-    use: [
-      'vue-style-loader',
-      'css-loader',
-      {
-        loader: 'sass-loader',
-        // Requires sass-loader@^7.0.0
-     /*   options: {
-          implementation: require('sass'),
-          fiber: require('fibers'),
-          indentedSyntax: true // optional
-        },*/
-        // Requires sass-loader@^8.0.0 
-     /*   options: {
-          implementation: require('sass'),
-          sassOptions: {
-            fiber: require('fibers'),
-            indentedSyntax: true // optional
-          },
-        },
-      },
-    ],
-  },] */
-  
->>>>>>> frontend/master
   },
   server: {
   	host: "0.0.0.0"
