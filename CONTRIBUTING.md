@@ -41,7 +41,11 @@ A lot of changes
 #### Vercel deployment
 The frontend itself is deployed to Vercel, it should work out of the box there. Click the following button to easily deploy BLThunderstorm in minutes to Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world&env=GITHUB_CLIENT_ID,GITHUB_CLIENT_TOKEN&envDescription=In%20order%20to%20run%20the%20frontend%2C%20you%20need%20to%20create%20a%20GitHub%20OAuth%20app%20first.%20&envLink=https%3A%2F%2Fgithub.com%2FNefomemes%2FBLThunderstorm%2Fblob%2Fdevelopment%2FCONTRIBUTING.md%23environment-variables)
+<div>
+  <p align="center">
+    <a href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world&env=GITHUB_CLIENT_ID,GITHUB_CLIENT_TOKEN&envDescription=In%20order%20to%20run%20the%20frontend%2C%20you%20need%20to%20create%20a%20GitHub%20OAuth%20app%20first.%20&envLink=https%3A%2F%2Fgithub.com%2FNefomemes%2FBLThunderstorm%2Fblob%2Fdevelopment%2FCONTRIBUTING.md%23environment-variables"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+    </p>
+ </div>
 
 #### Environment variables
 In order to run this thing you need the following environment variables.
