@@ -46,7 +46,6 @@ Sign in
       <div><p>Ugh, seems the video is broken.</p></div>
     <source v-bind:src="video"/>
     </video>-->
->>>>>>> frontend/master
 
    </div>
  
@@ -54,18 +53,7 @@ Sign in
     <Nuxt/>
     </div>
       </div>
-      
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-
- </div>
-  </div>
-=======
-=======
->>>>>>> frontend/master
       <Footer v-bind:links="links" v-bind:icons="icons" v-bind:disclaimers="disclaimers"/>
 
 =======
@@ -87,19 +75,12 @@ Sign in
 <script>
 export default {
  data () {
-<<<<<<< HEAD
-=======
- 
- 
->>>>>>> frontend/master
+
    return { video: `/assets/videos/bf-${Math.floor(Math.random() * 4)}.webm`,
 		disclaimers: [
 		'This project is neither developed by Electronic Arts Inc. or EA Digital Illusions CE AB nor affiliated with them. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc. All company, product, and service names, logos, and brands, and any other copyrighted materials are property of their respective owners and are used for identification purposes only. Use of these materials does not imply endorsement.'
 		],
-		links: [{title: 'This website', links: [{title: 'GitLab repo', href: 'https://gitlab.com/blthunderstorm/about'},{title: 'Status', href: 'https://blthunderstorm.instatus.com'}]}],
-<<<<<<< HEAD
-		icons: [{name: 'gitlab', href: 'https://gitlab.com/BLThunderstorm'}]
-   };
+		links: [{title: 'This website', links: [{title: 'GitLab repo', href: 'https://gitlab.com/blthunderstorm/about'},{title: 'Status', href: 'https://blthunderstorm.instatus.com'}]}]}
   }
 }
 </script>

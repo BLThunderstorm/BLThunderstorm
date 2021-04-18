@@ -2,7 +2,7 @@
     <div class="marginish-page-container">
         <div class="marginish-page">
             <div class="server-list">
-                <div v-for="server in servers" class="server" :map="server.map" :image="server.image" :style="server.customCSS">
+                <div v-for="server in servers" class="server" :map="server.map" :image="server.image" :style="server.customCSS"  :key="server.guid">
                     <div>
                         {{ server.name }}
                     </div>
@@ -24,7 +24,7 @@
     </div>
 </template>
 <script>
-    export {
+    export default {
         head(){
             return {title: "Servers"}
         },

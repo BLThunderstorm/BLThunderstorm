@@ -7,23 +7,24 @@
 				<li class="nefo-link-title" v-html="category.title">
 					
 				</li>
-			
-			<li v-if="category.links && category.links.length" v-for="link in category.links">
+			<span v-if="category.links && category.links.length">
+			<li v-for="link in category.links">
 				<a v-bind:href="link.href" v-html="link.title"></a>
 				</li>
-			
+			</span>
 			</ul>
 		</nav>
 
-
-		<div v-if="disclaimers && disclaimers.length" v-for="disclaimer in disclaimers" class="nefo-copyright-container">
+<span  v-if="disclaimers && disclaimers.length">
+		<div v-for="disclaimer in disclaimers" class="nefo-copyright-container" :key="Math.random()">
 			<div class="nefo-copyright" v-html="disclaimer">
 
 			</div>
 		</div>
+		</span>
 
 		<div v-if="icons && icons.length" class="nefo-footer-links">
-		<div v-for="icon in icons" class="nefo-icons"><a v-bind:href="icon.href"><img v-if="icon.name" class="nefo-simple-icons" v-bind:src="`https://simple-icons.github.io/simple-icons-website/icons/${icon.name}.svg`" style="filter: invert(100%)"/><img v-else v-bind:src="icon.imageUrl"></a></div>
+		<div v-for="icon in icons" class="nefo-icons" :key="Math.random()"><a v-bind:href="icon.href"><img v-if="icon.name" class="nefo-simple-icons" v-bind:src="`https://simple-icons.github.io/simple-icons-website/icons/${icon.name}.svg`" style="filter: invert(100%)"/><img v-else v-bind:src="icon.imageUrl"></a></div>
 			</div>
 </footer>
 		
@@ -51,46 +52,33 @@ async asyncData(){
  padding-left: 40px
  padding-top: 60px
  padding-right: 40px
- margin-top: -20px;
-			position: relative;
+ margin-top: -20px
+ position: relative
 			
-		
-		
-		
-		.nefo-footer nefo-links-bar {
-		}
-			.nefo-footer	.nefo-navi-links {
-			flex-wrap: wrap;
-display: flex;  
-
-
-margin-bottom: 20px;
-justify-content: space-between; 
-}
+.nefo-footer	.nefo-navi-links
+ flex-wrap: wrap
+ display: flex
+ margin-bottom: 20px
+ justify-content: space-between
  
-.nefo-footer .nefo-footer-links{  
-display: flex;  
+.nefo-footer .nefo-footer-links
+ display: flex
+ margin-top: 0px
+ height: 50px
+ width: 150px
+ justify-content: space-between
+ align-items: center
+ margin-top: 40px
 
-margin-top: 0px;
-height: 50px;
-width: 150px;
-justify-content: space-between;
-align-items: center;
-margin-top: 40px;
+.nefo-footer .nefo-icons
+ width: 40px
+ height: 40px
+ color: white
 
+.nefo-footer .nefo-discord-icon
+width: 50px
+height: 50px
 
-}
- 
-.nefo-footer .nefo-icons {    
-width: 40px;
-height: 40px;
-color: white;
-}
- 
-.nefo-footer .nefo-discord-icon {
-width: 50px;
-height: 50px;
-}
  
 .nefo-footer .nefo-link-title {
 font-size: 20px;    

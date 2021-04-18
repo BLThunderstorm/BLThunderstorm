@@ -18,7 +18,8 @@
 
 <div class="marginish-page-container">
 <div class="marginish-page">
-<LazyMarkdownBox v-if="mainuser().readme" v-bind:content="mainuser().readme"/>
+<div v-if="user.readme">
+<Markdown v-if="user.readme" :content="user.readme"/>
 </div>
 
 <div class="friends-bar content-order-container user-page-content" >
@@ -31,7 +32,7 @@
 
 </div>
 </div>
-</div
+</div>
 </div>
 </div>
 </div>

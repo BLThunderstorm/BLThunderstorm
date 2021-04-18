@@ -70,32 +70,23 @@ export default {
 #about 
  background-color: rgba(0, 0, 0, 0.4)
  min-height: 100vh
- max-height: auto;
+ max-height: auto
  min-width: calc(100% - 80px)
-      padding-left: 40px;
-      padding-right: 40px;
-      
-      position: relative;
- 
-        padding-top: 100px;
-        padding-bottom: 100px;
-       color: white;
-     
-    }
+ padding-left: 40px
+ padding-right: 40px
+ position: relative
+ padding-top: 100px
+ padding-bottom: 100px
+ color: white
 
-    #features-container {
-     display: flex;
-       
-        align-items: center;
-    justify-content: center;
-flex-wrap: wrap;
-    }
+#features-container
+ display: flex
+ align-items: center
+ justify-content: center
+ flex-wrap: wrap
     
-
-    #about-content {
-    	margin-left: 40px;
-     
-	}
+#about-content
+ margin-left: 40px
     
    
 
