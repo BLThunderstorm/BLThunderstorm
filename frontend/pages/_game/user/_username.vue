@@ -19,7 +19,9 @@
 <div class="marginish-page-container">
 <div class="marginish-page">
 <div v-if="user.readme">
+  <div class="user-readme">
 <Markdown v-if="user.readme" :content="user.readme"/>
+</div>
 </div>
 
 <div class="friends-bar content-order-container user-page-content" >
@@ -103,7 +105,7 @@ return userified;
  font-weight: 600
 
 
-.content-order-container 
+.content-order-container, .user-readme
  padding: 20px
  background-color: map-get($material-dark, "background")
  
