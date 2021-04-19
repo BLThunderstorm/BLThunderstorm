@@ -70,7 +70,7 @@ try {
 
 	return res.status().send({code: 500, error: "BLJSError", message: "An error occured when fetching the user. Might be because the user is non-existen." })
 }
-       if(user.userinfo.presentation !== guid) returb res.status(401).send("Unathorized. The user haven't got the guid as their presentation yet.");
+       if(user.userinfo.presentation !== guid) return res.status(401).send("Unathorized. The user haven't got the guid as their presentation yet.");
 
 
  })
