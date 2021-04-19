@@ -6,22 +6,29 @@ BLThunderstorm is an <b>unofficial</b> dashboard and stats-tracking site for Bat
 </div>
 
 ## Monorepo
-Juggling a fullstack project over multiple repos is like trying to teach a newborn baby how to ride a bike.
 
-BLThunderstorm follows a monorepo approach, all officially maintained modules are in the same repo.
+Juggling a fullstack project over multiple repos is like trying to teach a
+newborn baby how to ride a bike.
 
-The main reason why I think monorepo is good is that you don't have to create a GitHub organization/GitLab group just to make one project. You can do it on one repo and it will go easy with Vercel's free plan.
+BLThunderstorm follows a monorepo approach, all officially maintained modules
+are in the same repo.
 
-This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse), [Babel](https://github.com/babel/babel/), [React](https://github.com/facebook/react/), and others!
+The main reason why I think monorepo is good is that you don't have to create a
+GitHub organization/GitLab group just to make one project. You can do it on one
+repo and it will go easy with Vercel's free plan.
+
+This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
+[Babel](https://github.com/babel/babel/),
+[React](https://github.com/facebook/react/), and others!
 
 ## Codebases
 
-| Name | Desccription | 
-| ----- | ------- | 
-| frontend | The frontend Nuxt server. |
-| backend | The backend server for the site. | 
-
+| Name     | Desccription                     |
+| -------- | -------------------------------- |
+| frontend | The frontend Nuxt server.        |
+| backend  | The backend server for the site. |
 
 ## Contributing
-Want to contribute to BLThunderstorm and it's projects?
-Read [the Contributing guide](./CONTRIBUTING.md).
+
+Want to contribute to BLThunderstorm and it's projects? Read
+[the Contributing guide](./CONTRIBUTING.md).
