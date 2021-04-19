@@ -73,6 +73,17 @@ The frontend app cannot be used in static mode. But it is possible to use SPA mo
 
 
 ### Backend
+
+#### Requirements
+- 2GB of RAM (If you are running on a Docker container 1GB should work)
+- Some enough amount of vCPU
+- Some gigabytes of storage. The app itself isn't that big but the `node_modules` folder maybe is.
+
+
+#### Environment variables
+In order to be able to run the backend, you need to get the MongoDB connection URI and put it into the MONGO_URI environment variable.
+
+Also, pass the MONGO_DB_NAME environment variable with the name of your designated database name. It's optional tho, will use main as the default.
 ```bash
 # Run Babel first
 yarn build
