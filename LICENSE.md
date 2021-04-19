@@ -24,7 +24,7 @@ Licensor: Nefomemes
 <details>
   <summary> View MIT Lisence </summary>
   <br/>
-  
+
   Copyright 2021 Nefomemes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
