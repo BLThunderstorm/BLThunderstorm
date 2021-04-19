@@ -84,6 +84,8 @@ The frontend app cannot be used in static mode. But it is possible to use SPA mo
 In order to be able to run the backend, you need to get the MongoDB connection URI and put it into the MONGO_URI environment variable.
 
 Also, pass the MONGO_DB_NAME environment variable with the name of your designated database name. It's optional tho, will use main as the default.
+
+#### Run scripts
 ```bash
 # Run Babel first
 yarn build
