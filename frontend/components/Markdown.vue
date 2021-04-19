@@ -19,7 +19,7 @@ remark()
   .use(remarkGFM)
   .use(remarkRehype)
   .use(rehypeSanitize)
-  .process(this.content, (err, file) => { 
+  .process(this.content, (err, file) => {
   if(err){
   console.log(this.content);
   return this.parsedContent = `${err.stack ||  err.toString()}`;

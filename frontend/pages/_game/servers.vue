@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div v-if="!server || !server.length">
-                
+
                 </div>
 
             </div>
@@ -46,7 +46,7 @@
 
             return s;
         })
-        
+
         return {servers};
         }
 

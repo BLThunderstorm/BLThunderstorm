@@ -16,7 +16,7 @@
     </NuxtLink>
     </h3>
     </div>
-    
+
     </div>
   </v-app>
 </template>
@@ -47,25 +47,25 @@ export default {
 </script>
 
 <style lang="sass">
-#error-page h1 
+#error-page h1
  font-size: 30px
  font-weight: 600
 
-#error h2 
+#error h2
  font-size: 20px
 
 #box-error
  width: 50%
  text-align: center
 
-#error-page a 
+#error-page a
  color: white !important
 
 #error-page
  display: grid
  place-items: center
  height: 100%
- 
+
 <style scoped lang="sass">
 
 .jokomium
@@ -78,7 +78,7 @@ export default {
 
 
 
-#error h2 
+#error h2
  font-size: 20px
 
 #box-error

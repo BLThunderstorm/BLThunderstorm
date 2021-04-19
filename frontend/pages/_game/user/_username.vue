@@ -100,7 +100,7 @@ return userified;
 @import '~vuetify/src/styles/styles.sass'
 
 
-#error-page h1 
+#error-page h1
  font-size: 30px
  font-weight: 600
 
@@ -108,22 +108,22 @@ return userified;
 .content-order-container, .user-readme
  padding: 20px
  background-color: map-get($material-dark, "background")
- 
+
 .content-order-container .content-order
  display: flex
 
-#error-page h2 
+#error-page h2
  font-size: 20px
 
-#box-error 
+#box-error
  width: calc(100% - 80px)
  text-align: center
 
 
-#error-page a 
+#error-page a
  color: white !important
 
-#error-page 
+#error-page
  display: grid
  place-items: center
  height: 100%
@@ -133,9 +133,9 @@ return userified;
 #user-page
  position: relative
 
- .user-page-content 
+ .user-page-content
   margin-bottom: 20px
- 
+
 .user-wallpaper
  background-color: black
  color: white
@@ -158,7 +158,7 @@ return userified;
 
 
 
-.user-wallpaper .user-name 
+.user-wallpaper .user-name
  font-weight: 600
  font-size: 35px
 </style>
