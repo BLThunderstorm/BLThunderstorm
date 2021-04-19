@@ -1,5 +1,8 @@
 # Contributing to BLThunderstorm
 
+## For the frontend, please develop with serverless in mind
+As you can see, we deploy the frontend to Vercel, a serverless hosting service. So, please develop with serverless in mind.
+
 ## Locally git-ignoring files
 Do **not** change the `.gitignore` file. This may cause a merge conflict when you send a PR, You can, however, use the `.git/info/exclude` file, it's exactly share the same syntax as `.gitignore`. [Credit](https://stackoverflow.com/a/1753078/13415044)
 
