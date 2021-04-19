@@ -1,5 +1,8 @@
 <div> <p align="center"><img src="https://gitlab.com/BLThunderstorm/about/-/raw/master/brand/Twitter%20header/Twitter%20header.png" height="200px"/>
 </p>
+  <p align="center">
+    <a href="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm"><img src="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm/badge" alt="CodeFactor" /></a>
+    </p>
 <p align="center">
 BLThunderstorm is an <b>unofficial</b> dashboard and stats-tracking site for Battlelog games. BLThunderstorm is still work in progress and not production-ready.</p>
 
