@@ -15,7 +15,7 @@ The footer section on the bottom of the page.
 
 **Props**
 
-### ****Footer#links****
+### \***\*Footer#links\*\***
 
 An array containing all data to be put in the navigation links. (expects
 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[FooterLinksCategory](#FooterLinksCategory)>)
