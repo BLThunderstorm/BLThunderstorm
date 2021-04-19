@@ -1,5 +1,8 @@
 # Contributing to BLThunderstorm
 
+## Locally git-ignoring files
+Do **not** change the `.gitignore` file. This may cause a merge conflict when you send a PR, You can, however, use the `.git/info/exclude` file, it's exactly share the same syntax as `.gitignore`. [Credit](https://stackoverflow.com/a/1753078/13415044)
+
 ## Commits Convention
 I personally follow the Conventional Commits specification that can be read [here](https://www.conventionalcommits.org/en/v1.0.0/). Please use it in all of your commits.
 
@@ -48,14 +51,7 @@ The frontend itself is deployed to Vercel, it should work out of the box there. 
  </div>
 
 #### Environment variables
-In order to run this thing you need the following environment variables.
-
-| Name                 | Description 
-| -------------------- | ----------- |
-| `GITHUB_CLIENT_SECRET` | A secret token for your GitHub OAuth app.             |
-| `GITHUB_CLIENT_ID`    | The ID of your GitHub OAuth app. |
-
-[Click here](https://docs.github.com/en/developers/apps/creating-an-oauth-app) for more information on how to create an OAuth app on GitHub.
+In order to run the frontend you need to add the  `GITHUB_CLIENT_SECRET`,  `GITHUB_CLIENT_ID`environment variable you get after creating a new GitHub OAuth app. [Click here](https://docs.github.com/en/developers/apps/creating-an-oauth-app) for more information on how to create an OAuth app on GitHub.
 
 #### Run script
 
@@ -81,9 +77,9 @@ The frontend app cannot be used in static mode. But it is possible to use SPA mo
 
 
 #### Environment variables
-In order to be able to run the backend, you need to get the MongoDB connection URI and put it into the MONGO_URI environment variable.
+In order to be able to run the backend, you need to get the MongoDB connection URI and put it into the `MONGO_URI` environment variable.
 
-Also, pass the MONGO_DB_NAME environment variable with the name of your designated database name. It's optional tho, will use main as the default.
+Also, pass the `MONGO_DB_NAME` environment variable with the name of your designated database name. It's optional tho, will use main as the default.
 
 #### Run scripts
 ```bash
