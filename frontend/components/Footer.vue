@@ -5,7 +5,7 @@
 <nav v-if="links && links.length" class="nefo-navi-links" >
 			<ul v-for="category in links" class="nefo-links-bar" >
 				<li class="nefo-link-title" v-html="category.title">
-					
+
 				</li>
 			<span v-if="category.links && category.links.length">
 			<li v-for="link in category.links">
@@ -27,7 +27,7 @@
 		<div v-for="icon in icons" class="nefo-icons" :key="Math.random()"><a v-bind:href="icon.href"><img v-if="icon.name" class="nefo-simple-icons" v-bind:src="`https://simple-icons.github.io/simple-icons-website/icons/${icon.name}.svg`" style="filter: invert(100%)"/><img v-else v-bind:src="icon.imageUrl"></a></div>
 			</div>
 </footer>
-		
+
 
 </template>
 <script>
@@ -44,7 +44,7 @@ async asyncData(){
 }
 </script>
 <style lang="sass">
-.nefo-footer 
+.nefo-footer
  background-color: #212121
  color: white
  padding-top: 20px
@@ -54,13 +54,13 @@ async asyncData(){
  padding-right: 40px
  margin-top: -20px
  position: relative
-			
+
 .nefo-footer	.nefo-navi-links
  flex-wrap: wrap
  display: flex
  margin-bottom: 20px
  justify-content: space-between
- 
+
 .nefo-footer .nefo-footer-links
  display: flex
  margin-top: 0px
@@ -79,10 +79,10 @@ async asyncData(){
 width: 50px
 height: 50px
 
- 
+
 .nefo-footer .nefo-link-title {
-font-size: 20px;    
-font-weight: bold;      
+font-size: 20px;
+font-weight: bold;
 color: white;
 }
 
@@ -95,11 +95,11 @@ list-style: none;
 }
 
 	.nefo-footer nefo-copyright {
-		
+
 			width: calc(100% - 90px);
 			margin-left: 40px;
 			text-align: center;
 			}
-			
-			
+
+
 			</style>

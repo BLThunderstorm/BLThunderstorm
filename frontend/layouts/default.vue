@@ -29,10 +29,10 @@
 Sign in
 </v-btn>
 </v-app-bar>
-    	
+
 
 </div>
-    
+
     </div>
 <div id="right-side-base-header">
 <SignInButton/>
@@ -48,7 +48,7 @@ Sign in
     </video>-->
 
    </div>
- 
+
     <div id="template-container">
     <Nuxt/>
     </div>
@@ -61,9 +61,9 @@ Sign in
 </v-app>
 >>>>>>> frontend/master
  </div>
- 
 
- 
+
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> frontend/master
@@ -88,8 +88,8 @@ export default {
 #intro {
 			height: 100vh;
 			width: 100vw;
-    
-      
+
+
 
 		}
 
@@ -100,10 +100,10 @@ export default {
 
   left: 50%;
   transform: translate(-50%, -50%);
-		
-		
-		
-			
+
+
+
+
 		}
 
 		  #things-container  video {
@@ -126,26 +126,26 @@ export default {
   }
     #base-header {
       height: 75px;
-      
+
       position: fixed;
-      
+
    	width: 100vw;
       z-index: 10;
        background-color: black;
       color: white;
            display: flex;
-	        
+
     vertical-align: middle;
     justify-content: space-between;
     }
 
-	
+
 	#right-side-base-header, #left-side-base-header {
 		width: 50vw;
 		position: relative;
-    
- 
- 
+
+
+
 	}
     #left-side-base-header {
 	    display: flex;
@@ -159,7 +159,7 @@ export default {
 	    align-items: center;
 	    margin-right: 25px;
     }
-    
+
     #template-container {
     	padding-top: 75px;
     }
@@ -170,8 +170,8 @@ export default {
 	align-items: center;
 	margin-left: 20px;
 	font-size: 25px;
-	
-	
+
+
 }
 #left-side-base-header-content {
 	display: flex;
@@ -196,7 +196,7 @@ export default {
 	       user: null
    };
   },
-  
+
   async asyncData({$auth}){
   this.user = $auth.user;
   }
@@ -206,23 +206,23 @@ export default {
 #intro
  height: 100vh
  width: 100vw
-    
+
 #title
  position: absolute
  top: 50%
  left: 50%
  transform: translate(-50%, -50%)
- 
-.title-header 
+
+.title-header
  font-size: 30px
- 
-.title-header .front 
+
+.title-header .front
  color: $front-logo-color
 
-.title-header .back 
+.title-header .back
  color: $back-logo-color
- 
-#things-container  .bg-picture 
+
+#things-container  .bg-picture
  background-image: url("https://i.imgur.com/dDyRt5Z.jpeg")
  background-repeat: no-repeat
  background-size: cover
@@ -233,43 +233,43 @@ export default {
  top: 0
  left: 0
 
-#base-header, #things-container .bg-picture 
+#base-header, #things-container .bg-picture
  grid-column: 1
  grid-row: 1
 
 .bebas-neue
  font-family: "Bebas Neue" !important
-  
+
 .nefo-app-bar
  position: fixed
  z-index: 10
-   
-#right-side-base-header, #left-side-base-header 
+
+#right-side-base-header, #left-side-base-header
  width: 50vw
  position: relative
- 
+
 #left-side-base-header
  display: flex
  justify-content: flex-start
-   
+
 #right-side-base-header
  display: flex
  justify-content: flex-end
  align-items: center
  margin-right: 25px
-    
-#template-container 
- padding-top: 48px
-    
 
-#left-side-base-header-content 
+#template-container
+ padding-top: 48px
+
+
+#left-side-base-header-content
  display: flex
  height: 100%
 
-.title-header a, .title-header a:link, .title-header a:visited 
+.title-header a, .title-header a:link, .title-header a:visited
  color: white
  text-decoration: none
- 
+
 #menu-button
  display: flex
  align-items: center
@@ -277,8 +277,8 @@ export default {
  width: 50px
  height: 100%
  border-right: 0.001px solid
-    
-.user-loggedout-header 
+
+.user-loggedout-header
  display: flex
  align-items: center
  justify-content: center
