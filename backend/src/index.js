@@ -3,7 +3,10 @@ import { Router } from "express";
 import uuid from "uuid";
 import axios from "axios";
 import { MongoClient } from 'node-grau';
-import bljs from "battlelog.js";
+import bljs from "battlelog.js/dist/dev";
+import express from "express";
+import path from "path";
+var app = express();
 var battlelog = bljs();
 
 var bf3 = battlelog.game("bf3");
@@ -45,9 +48,9 @@ await client.connect();
 
   }
 
- router.use('/blconnect', requireAuth);
+ app.use('/blconnect', requireAuth);
 
- router.post('/blconnect/request/:user', async (req, res) => {
+ app.post('/blconnect/request/:user', async (req, res) => {
  	if(!req.params.user) return res.status(401).send("Invalid request.")
  let guid =	uuid["v4"]();
   let pl;
@@ -59,7 +62,7 @@ let auth = { guid, date: Date.now(), userGitHubId: req.user.id, finished: false,
 connectSession[guid] = auth;
  });
 
- router.post('/blconnect/verify/:guid', async (req, res) => {
+ app.post('/blconnect/verify/:guid', async (req, res) => {
  	if(!req.params.guid) return res.status(400).send({code: 400, error: "InvalidRequestError", message: "Invalid request"});
 
  	let session = connectSession[req.params.guid];
@@ -76,4 +79,14 @@ try {
  })
 
 })()
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
+
+
+
+app.all("*", (req, res) => res.status(404).send("404 not found"))
 
