@@ -92,17 +92,14 @@ export default {
 
 @media (portrait: landscape)
 
-	#forums-container
-	 flex-direction: row
-	 align-items: flex-start
+ #forums-container
+  flex-direction: row
+  align-items: flex-start
 
-	#about .features
-	 width: 25%
-	 margin-right: 40px
+ #about .features
+  width: 25%
+  margin-right: 40px
 
-
-	#about #forum-features
-	 width: 30% !important
-
-
+ #about #forum-features
+  width: 30% !important
 </style>
