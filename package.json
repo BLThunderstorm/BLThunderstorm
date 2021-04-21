@@ -10,7 +10,7 @@
     "frontend",
     "backend"
   ],
-  "devDependencies":{
-    "@babel/eslint-parser":"^7.13.14"  
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14"
   }
 }
