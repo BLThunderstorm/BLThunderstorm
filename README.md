@@ -32,7 +32,10 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
 | backend  | The backend server for the site. |
 
 ## Sister projects
-BLThunderstorm have it's own GitHub organization! Check out [@BLThunderstorm](https://github.com/BLThunderstorm), the organization will store BLThunderstorm's sister projects!
+
+BLThunderstorm have it's own GitHub organization! Check out
+[@BLThunderstorm](https://github.com/BLThunderstorm), the organization will
+store BLThunderstorm's sister projects!
 
 ## Contributing
 
