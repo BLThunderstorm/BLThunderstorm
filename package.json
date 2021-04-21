@@ -6,7 +6,8 @@
   "author": "Nefomemes",
   "license": "MIT",
   "private": true,
-  "workspaces":[
-  "frontend", "backend"
+  "workspaces": [
+    "frontend",
+    "backend"
   ]
 }
