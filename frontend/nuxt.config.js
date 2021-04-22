@@ -4,33 +4,35 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - BLThunderstorm",
-    htmlAttrs: { lang: "en" },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    htmlAttrs: {lang: "en"},
+    meta:
+        [
+          {charset : "utf-8"},
+          {name : "viewport", content : "width=device-width, initial-scale=1"},
+          {hid : "description", name : "description", content : ""},
+        ],
+    link: [ {rel : "icon", type : "image/x-icon", href : "/favicon.ico"} ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/bl.js"],
+  plugins: [ "~/plugins/bl.js" ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended):
   // https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify",
-    "@nuxt/typescript-build",
-  ],
+  buildModules:
+      [
+        // https://go.nuxtjs.dev/vuetify
+        "@nuxtjs/vuetify",
+        "@nuxt/typescript-build",
+      ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/pwa", "@nuxtjs/auth-next"],
+  modules: [ "@nuxtjs/axios", "@nuxtjs/pwa", "@nuxtjs/auth-next" ],
   auth: {
     strategies: {
       github: {
@@ -43,7 +45,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ["~/assets/variables.sass"],
+    customVariables: [ "~/assets/variables.sass" ],
     theme: {
       dark: true,
       themes: {
@@ -65,5 +67,5 @@ export default {
       typeCheck: true,
     },
   },
-  server: { host: "0.0.0.0" },
+  server: {host: "0.0.0.0"},
 };
