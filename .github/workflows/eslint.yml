@@ -6,7 +6,8 @@ on:
     paths: |
       "**.js"
       "**.vue"
-      "eslintrc.json"
+      "eslintrc.yml"
+      ".github/workflows/eslint.yml"
 
 jobs:
   lint:
