@@ -1,4 +1,4 @@
-module.exports = {
+{
     "parser": "@babel/eslint-parser",
     "parserOptions": {
         "sourceType": "module",
@@ -26,4 +26,4 @@ module.exports = {
     "rules": {
         "vue/require-v-for-key":"off"
     }
-};
+}
