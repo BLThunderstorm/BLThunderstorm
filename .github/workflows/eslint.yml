@@ -6,6 +6,7 @@ on:
     paths: |
       "**.js"
       "**.vue"
+      "eslintrc.json"
 
 jobs:
   lint:
