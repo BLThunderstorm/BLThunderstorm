@@ -1,5 +1,6 @@
 name: ESlint
 on:
+  workflow_dispatch: 
   push:
     branches: |
       "*"
