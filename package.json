@@ -11,7 +11,7 @@
     "backend"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14"
+    "@babel/eslint-parser": "^7.13.14",
     "@babel/core":"^7.13.16",
     "@babel/eslint-plugin":"^7.13.16"
   }
