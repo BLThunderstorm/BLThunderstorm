@@ -16,5 +16,5 @@ extends:
   - standard
   - @nuxtjs/eslint-config-typescript
   - prettier
-rules":
+rules:
   vue/require-v-for-key: off
