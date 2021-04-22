@@ -18,8 +18,9 @@ module.exports = {
     "plugins": [
         "vue",
         "@typescript-eslint"
+        "@babel"
     ],
     "rules": {
-        "vue/require-v-for-key":"ignore"
+        "vue/require-v-for-key":"off"
     }
 };
