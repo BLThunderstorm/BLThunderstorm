@@ -10,8 +10,8 @@
     "frontend",
     "backend"
   ],
-  "scripts":{
-        "lint": "eslint ./ --fix",
+  "scripts": {
+    "lint": "eslint ./ --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./"
-    }
+  }
 }
