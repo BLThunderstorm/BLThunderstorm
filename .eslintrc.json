@@ -20,7 +20,7 @@
     },
     "plugins": [
         "vue",
-        "@typescript-eslint"
+        "@typescript-eslint",
         "@babel"
     ],
     "rules": {
