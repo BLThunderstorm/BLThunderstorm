@@ -1,6 +1,6 @@
 import bljs from "battlelog.js/dist/bundle.dev.js";
 
-export default function ({ params, $bljs, $client, $blclient }, inject) {
+export default function({params, $bljs, $client, $blclient}, inject) {
   if (!$bljs) {
     $bljs = bljs;
     inject("bljs", $bljs);
