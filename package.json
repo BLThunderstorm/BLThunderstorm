@@ -10,9 +10,8 @@
     "frontend",
     "backend"
   ],
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
-    "@babel/core": "^7.13.16",
-    "@babel/eslint-plugin": "^7.13.16"
-  }
+  "scripts":{
+        "lint": "eslint ./src --fix",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./src"
+    }
 }
