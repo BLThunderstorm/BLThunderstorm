@@ -1,20 +1,20 @@
 root: true
-parser: @typescript-eslint/parser
+parser: "@typescript-eslint/parser"
 plugins: 
-  - @typescript-eslint
-  - vue
+  - "@typescript-eslint"
+  - "vue"
 extends: 
-  - eslint:recommended
-  - plugin:@typescript-eslint/recommended
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
 parserOptions:
-  sourceType: module
+  sourceType: "module"
 env:
-  browser: true,
+  browser: true
   es2021: true
 extends: 
-  - plugin:vue/essential
-  - standard
-  - @nuxtjs/eslint-config-typescript
-  - prettier
+  - "plugin:vue/essential"
+  - "standard"
+  - "@nuxtjs/eslint-config-typescript"
+  - "prettier"
 rules:
   vue/require-v-for-key: off
