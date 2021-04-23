@@ -6,15 +6,14 @@ plugins:
 extends: 
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
+  - "plugin:vue/essential"
+  - "standard"
+  - "@nuxtjs/eslint-config-typescript"
+  - "prettier"
 parserOptions:
   sourceType: "module"
 env:
   browser: true
   es2021: true
-extends: 
-  - "plugin:vue/essential"
-  - "standard"
-  - "@nuxtjs/eslint-config-typescript"
-  - "prettier"
 rules:
   vue/require-v-for-key: off
