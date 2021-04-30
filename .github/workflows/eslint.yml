@@ -1,6 +1,6 @@
 name: ESlint
 on:
-  push:
+  push
   
 
 jobs:
