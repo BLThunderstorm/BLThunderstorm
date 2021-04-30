@@ -5,6 +5,7 @@ on:
      - '**.js'
      - '**.vue'
      - '**.ts'
+     - '.github/workflows/eslint,yml'
   
 
 jobs:
