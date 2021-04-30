@@ -1,6 +1,10 @@
 name: ESlint
 on:
-  push
+  push:
+    paths:
+     - '**.js'
+     - '**.vue'
+     - '**.ts'
   
 
 jobs:
