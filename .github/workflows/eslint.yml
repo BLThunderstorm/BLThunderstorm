@@ -2,9 +2,9 @@ name: ESlint
 on:
   push:
     paths: |
-      "**.js"
-      "**.vue"
-      "eslintrc.yml"
+      "*.js"
+      "*.vue"
+      "*/eslintrc.yml"
       ".github/workflows/eslint.yml"
   workflow_dispatch: 
 
