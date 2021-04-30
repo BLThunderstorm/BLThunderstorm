@@ -1,11 +1,6 @@
 name: ESlint
 on:
   push:
-    paths: |
-      "*.js"
-      "*.vue"
-      "*/eslintrc.yml"
-      ".github/workflows/eslint.yml"
   
 
 jobs:
@@ -23,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Test Code Linting
-        run: npm run lint
+        run: yarn lint
 
       - name: Commit the fix
         run: |
