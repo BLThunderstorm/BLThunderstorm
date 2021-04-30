@@ -11,7 +11,7 @@
     "backend"
   ],
   "scripts": {
-    "lint": "eslint ./ --fix",
-    "lint:report": "eslint --output-file eslint_report.json --format json ./"
+    "lint": "eslint ./ --fix -c .eslintrc.yml",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml"
   }
 }
