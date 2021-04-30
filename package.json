@@ -1,12 +1,17 @@
 {
   "name": "BLThunderstorm",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "https://github.com/Nefomemes/BLThunderstorm",
   "author": "Nefomemes",
   "license": "MIT",
   "private": true,
-  "workspaces":[
-  "frontend", "backend"
-  ]
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "lint": "eslint ./ --fix",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./"
+  }
 }

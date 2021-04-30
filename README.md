@@ -31,7 +31,13 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
 | frontend | The frontend Nuxt server.        |
 | backend  | The backend server for the site. |
 
+## Sister projects
+
+BLThunderstorm have it's own GitHub organization! Check out
+[@BLThunderstorm](https://github.com/BLThunderstorm), the organization will
+store BLThunderstorm's sister projects!
+
 ## Contributing
 
-Want to contribute to BLThunderstorm and it's projects? Read
+Want to contribute to BLThunderstorm? Read
 [the Contributing guide](./CONTRIBUTING.md).
