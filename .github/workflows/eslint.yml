@@ -6,7 +6,7 @@ on:
       "*.vue"
       "*/eslintrc.yml"
       ".github/workflows/eslint.yml"
-  workflow_dispatch: 
+  
 
 jobs:
   lint:
