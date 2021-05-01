@@ -1,6 +1,6 @@
 {
-  "name": "BLThunderstorm",
-  "version": "0.1.0",
+  "name": "@blthunderstorm/monorepo",
+  "version": "0.0.0",
   "main": "index.js",
   "repository": "https://github.com/Nefomemes/BLThunderstorm",
   "author": "Nefomemes",
@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "lint": "eslint ./ --fix -c .eslintrc.yml",
-    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml"
+    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml",
+    "frontend:dev":"cd frontend && yarn dev"
   }
 }

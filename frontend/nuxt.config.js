@@ -65,5 +65,11 @@ export default {
       typeCheck: true,
     },
   },
-  server: { host: "0.0.0.0" },
+  server: { host: process.env.HOST, port: process.env.PORT },
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
+  }
 };

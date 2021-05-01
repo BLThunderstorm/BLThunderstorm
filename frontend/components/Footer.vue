@@ -48,7 +48,7 @@ async asyncData(){
  background-color: #212121
  color: white
  padding-top: 20px
- padding-bottom: 40px;
+ padding-bottom: 40px
  padding-left: 40px
  padding-top: 60px
  padding-right: 40px
@@ -76,30 +76,23 @@ async asyncData(){
  color: white
 
 .nefo-footer .nefo-discord-icon
-width: 50px
-height: 50px
+ width: 50px
+ height: 50px
+
+.nefo-footer .nefo-link-title 
+ font-size: 20px
+ font-weight: bold
+ color: white
+
+.nefo-footer a:link, a:visited
+ color: white !important
+
+.nefo-footer .nefo-navi-links ul
+ list-style: none
 
 
-.nefo-footer .nefo-link-title {
-font-size: 20px;
-font-weight: bold;
-color: white;
-}
-
-.nefo-footer a:link, a:visited {
-color: white !important;
-}
-
-.nefo-footer .nefo-navi-links ul {
-list-style: none;
-}
-
-	.nefo-footer nefo-copyright {
-
-			width: calc(100% - 90px);
-			margin-left: 40px;
-			text-align: center;
-			}
-
-
-			</style>
+.nefo-footer nefo-copyright 
+ width: calc(100% - 90px)
+ margin-left: 40px
+ text-align: center
+</style>

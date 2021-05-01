@@ -47,36 +47,14 @@ export default {
 </script>
 
 <style lang="sass">
-#error-page h1
- font-size: 30px
- font-weight: 600
-
-#error h2
- font-size: 20px
-
-#box-error
- width: 50%
- text-align: center
-
-#error-page a
- color: white !important
-
-#error-page
- display: grid
- place-items: center
- height: 100%
-
-<style scoped lang="sass">
-
 .jokomium
  width: 100%
- max-width: 500px
+ max-width: 250px
+ max-height: 250px
 
 #error-page h1
  font-size: 30px
  font-weight: 600
-
-
 
 #error h2
  font-size: 20px
@@ -85,7 +63,6 @@ export default {
  width: 50%
  text-align: center
 
-
 #error-page a
  color: white !important
 
@@ -93,5 +70,4 @@ export default {
  display: grid
  place-items: center
  height: 100%
-
 </style>
