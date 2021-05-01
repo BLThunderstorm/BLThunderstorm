@@ -10,6 +10,7 @@
   <NavigationBar/>
   <div class="page-content">
   <div class="bg-picture"></div>
+
     <div id="template-container">
     <Nuxt/>
     </div>
@@ -72,28 +73,14 @@ export default class DefaultLayout extends Component {}
  height: 100vh
  width: 100vw
 
-#title
- position: absolute
- top: 50%
- left: 50%
- transform: translate(-50%, -50%)
-
-.title-header
- font-size: 30px
-
-.title-header .front
- color: $front-logo-color
-
-.title-header .back
- color: $back-logo-color
-
 .bg-picture
  background-image: url("https://i.imgur.com/dDyRt5Z.jpeg")
  background-repeat: no-repeat
+ background-position: 75%
  background-size: cover
+ filter: blur(25px)
  height: 100vh
  width: 100vw
- background-position: 75%
  position: fixed
  top: 0
  left: 0
