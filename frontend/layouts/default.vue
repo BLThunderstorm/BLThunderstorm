@@ -1,13 +1,12 @@
 <template>
-<div>
+<!-- <div>
 <script async src="https://arc.io/widget.min.js#pYA86F7H"></script>
-<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <v-app>
   <div class="page-container">
+    <div>
   <NavigationBar/>
+  </div>
   <div class="page-content">
   <div class="bg-picture"></div>
 
@@ -19,16 +18,29 @@
     
       <Footer v-bind:links="links" v-bind:icons="icons" v-bind:disclaimers="disclaimers"/>
 </div>   
+</div>
 </div> 
 </v-app>
 
- </div>
+ </div>-->
+ <v-app class="page-container">
+ <NavigationBar/>
+   <div class="page-content-container">
+   <div class="bg-picture">  </div>
+   <div class="pagecontent">
+     <Nuxt/>
+     </div>
+   </div>
+   <Footer :links="links" :icons="icons" :disclaimers="disclaimers"/>
+   </v-app>
 </template>
 <script lang="ts">
 import Component from 'vue-class-component';
+import Vue from 'vue';
 
-@Component({
- data () {
+@Component
+export default class DefaultLayout extends Vue {
+data() {
 return {
   "disclaimers":[
     "This project is neither developed by Electronic Arts Inc. or EA Digital Illusions CE AB nor affiliated with them. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc. All company, product, and service names, logos, and brands, and any other copyrighted materials are property of their respective owners and are used for identification purposes only. Use of these materials does not imply endorsement."
@@ -57,13 +69,8 @@ return {
 
 };
  
-  },
-
-  async asyncData({$auth}){
-  this.user = $auth.user;
   }
-})
-export default class DefaultLayout extends Component {}
+}
 </script>
 <style lang="sass">
 .page-container

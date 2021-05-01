@@ -1,13 +1,7 @@
 <template>
 
-  <div>
-
-  <style>
-
-  </style>
-
-  <div></div>
-  <div id="intro" class="box">
+  <div class="about-page">
+    <div id="intro" class="box">
 
 
 
@@ -27,9 +21,6 @@
 
 </div>
 
-
-
-<link href="/assets/styles/home.css" rel="stylesheet"/>
   </div>
   </div>
 
@@ -54,8 +45,12 @@ export default {
  line-height: 100px
  margin-bottom: -1px
 
+
 #intro
  position: relative
+ display: grid
+ place-items: center
+ width: 100%
 
 #intro .title
  position: absolute

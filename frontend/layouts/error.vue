@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+
   <div id="error-page">
   <div id="box-error">
   <video class="jokomium" muted loop controls autoplay nofullscreen src="/jokomium.mp4"></video>
@@ -18,31 +18,32 @@
     </div>
 
     </div>
-  </v-app>
+ 
 </template>
 
-<script>
-export default {
-  layout: 'empty',
-  props: {
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+@Component
+export default class ErrorPage extends Vue {
+  layout = 'empty';
+  props = {
     error: {
       type: Object,
       default: null
     }
-  },
-  data () {
+  };
+  data(): object {
     return {
       pageNotFound: '404 Not Found',
       otherError: 'An error occurred'
     }
-  },
-  head () {
+  };
+  head() {
     const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title
-    }
-  }
+      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
+    return { title:  title }
+  };
 }
 </script>
 
