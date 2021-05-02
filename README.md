@@ -6,6 +6,7 @@
 <p align="center">
 BLThunderstorm is an unofficial dashboard and stats-tracking site for Battlelog games.</p>
   
+  <h1 align=center>🚧 Work In Progress</h1>
   <p align="center">BLThunderstorm is still work in progress and not production-ready.</p>
 
 </div>
@@ -22,9 +23,7 @@ The main reason why I think monorepo is good is that you don't have to create a
 GitHub organization/GitLab group just to make one project. You can do it on one
 repo and it will go easy with Vercel's free plan.
 
-This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
-[Babel](https://github.com/babel/babel/),
-[React](https://github.com/facebook/react/), and others!
+This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse), [Babel](https://github.com/babel/babel/), [React](https://github.com/facebook/react/), and others!
 
 ## Codebases
 
@@ -32,12 +31,6 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
 | -------- | -------------------------------- |
 | frontend | The frontend Nuxt server.        |
 | backend  | The backend server for the site. |
-
-## Sister projects
-
-BLThunderstorm have it's own GitHub organization! Check out
-[@BLThunderstorm](https://github.com/BLThunderstorm), the organization will
-store BLThunderstorm's sister projects!
 
 ## Contributing
 
