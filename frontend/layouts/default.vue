@@ -24,14 +24,16 @@
 
  </div>-->
  <v-app class="page-container">
+      <div class="bg-picture">  </div>
  <NavigationBar/>
    <div class="page-content-container">
-   <div class="bg-picture">  </div>
+
    <div class="pagecontent">
      <Nuxt/>
      </div>
-   </div>
+   
    <Footer :links="links" :icons="icons" :disclaimers="disclaimers"/>
+   </div>
    </v-app>
 </template>
 <script lang="ts">
@@ -75,6 +77,13 @@ return {
 <style lang="sass">
 .page-container
  display: flex
+ flex-directio: row
+ justify-content: flex-start
+.page-content-container
+ position: relative
+ width: calc(100% - 75px)
+ margin-left: 75px
+ background-color: rgba(0, 0, 0, 0.5)
 
 #intro
  height: 100vh
@@ -85,7 +94,7 @@ return {
  background-repeat: no-repeat
  background-position: 75%
  background-size: cover
- filter: blur(25px)
+ filter: blur(10px)
  height: 100vh
  width: 100vw
  position: fixed

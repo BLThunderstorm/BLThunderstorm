@@ -27,6 +27,9 @@ import Component from "vue-class-component";
 @Component
 export default class ErrorPage extends Vue {
   layout = 'empty';
+  pageNotFound: string;
+  otherError: string;
+  error: {type: object, default: any, statusCode: number};
   props = {
     error: {
       type: Object,

@@ -45,7 +45,7 @@ async asyncData(){
 </script>
 <style lang="sass">
 .nefo-footer
- background-color: #212121
+ background-color: rgba(33, 33, 33, 0.5)
  color: white
  padding-top: 20px
  padding-bottom: 40px

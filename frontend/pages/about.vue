@@ -63,7 +63,7 @@ export default {
  font-weight: 600
 
 #about
- background-color: rgba(0, 0, 0, 0.4)
+
  min-height: 100vh
  max-height: auto
  min-width: calc(100% - 80px)
