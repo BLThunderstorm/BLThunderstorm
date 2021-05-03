@@ -3,7 +3,8 @@
 </h1>
   <p align=center>An unofficial dashboard and stats-tracking site for FPS games.</p>
   <p align="center">
-    <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg?branch=development"></a>
+    <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg"></a>
+  <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml"> <img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml/badge.svg"></a>
     </p>
   
   <h1 align=center>🚧 Work In Progress</h1>
