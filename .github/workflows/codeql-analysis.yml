@@ -14,9 +14,17 @@ name: "CodeQL"
 on:
   push:
     branches: [ development ]
+    paths:
+     - '**.js'
+     - '**.vue'
+     - '**.ts'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ development ]
+    paths:
+     - '**.js'
+     - '**.vue'
+     - '**.ts'
   schedule:
     - cron: '19 23 * * 5'
 
