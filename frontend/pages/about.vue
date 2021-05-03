@@ -26,15 +26,17 @@
 
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-export default {
+@Component
+export default class AboutPage from Vue {
   head(){
   return {
   title: "About"
   }
-  },
-
+  };
 }
 </script>
 <style lang="sass">
