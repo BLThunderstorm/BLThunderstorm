@@ -36,3 +36,13 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse), [
 
 Want to contribute to BLThunderstorm? Read
 [the Contributing guide](./CONTRIBUTING.md).
+
+## QnAs
+**Why the name "BLThunderstorm"?**
+BLThunderstorm is just a placeholder name. I haven't really figured oit what name to choose.
+
+BL stands for [Battlelog](https://battlelog.battlefield.com), the dashboard and stats-tracking site DICE made for the Battlefield games since BF3 until BF Hardline. It's not really great to use "BL" as the name of this project, 'cuz it's EA property. So I thought it would be great if I choose another name for this project, as the long-term plan is to support [Venice Unleashed](https://veniceunleashed.net) as well.
+
+And alternative placeholder name would be Project Thunderstorm or Prepare4Thunderstorm. But haven't thought which one to choose. Prepare4Thunderstorm sounds cool, but it's not good to be used across the project.
+
+****
