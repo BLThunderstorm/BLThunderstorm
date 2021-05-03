@@ -3,10 +3,8 @@
 </h1>
   <p align=center>An unofficial dashboard and stats-tracking site for FPS games.</p>
   <p align="center">
-    <a href="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm"><img src="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm/badge" alt="CodeFactor" /></a>
+    <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg?branch=development"></a>
     </p>
-<p align="center">
-BLThunderstorm is an unofficial dashboard and stats-tracking site for Battlelog games.</p>
   
   <h1 align=center>🚧 Work In Progress</h1>
   <p align="center">Project Thunderstorm is still work in progress and not production-ready.</p>
