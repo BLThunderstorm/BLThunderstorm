@@ -27,4 +27,5 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse), [
 ## Contributing
 
 Want to contribute to Project Thunderstorm? Read
-[the Contributing guide](./CONTRIBUTING.md]
+[the Contributing guide](./CONTRIBUTING.md)
+
