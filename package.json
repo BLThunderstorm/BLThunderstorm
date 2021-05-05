@@ -1,5 +1,5 @@
 {
-  "name": "BLThunderstorm",
+  "name": "@blthunderstorm/monorepo",
   "version": "0.0.0",
   "main": "index.js",
   "repository": "https://github.com/Nefomemes/BLThunderstorm",
@@ -11,18 +11,11 @@
     "backend"
   ],
   "scripts": {
-    "lint": "eslint ./ --fix -c .eslintrc.yml",
-    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml"
+    "lint": "eslint ./ --ext .ts,.js,.vue --fix -c .eslintrc.yml",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml",
+    "frontend:dev":"cd frontend && yarn dev",
   },
-  "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^6.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.21.0",
-    "@typescript-eslint/parser": "^4.21.0",
-    "eslint": "^7.25.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "typescript": "^4.2.3"
+  "devDependencies":{
+  "eslint-plugin-prettier":"^3.4.0"
   }
 }

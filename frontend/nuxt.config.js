@@ -61,9 +61,12 @@ export default {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    typescript: {
-      typeCheck: true,
-    },
-  },
-  server: { host: "0.0.0.0" },
+    babelrc: true  },
+  server: { host: process.env.HOST, port: process.env.PORT },
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
+  }
 };
