@@ -6,8 +6,6 @@ plugins:
 extends: 
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
-  - "plugin:vue/essential"
-  - "standard"
   - "@nuxtjs/eslint-config-typescript"
   - "prettier"
 parserOptions:

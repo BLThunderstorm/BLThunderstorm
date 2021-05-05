@@ -1,15 +1,15 @@
+import path from "path";
 import axios from "axios";
 import bljs from "battlelog.js/dist/dev";
-import { Router } from "express";
-import express from "express";
+import express, { Router } from "express";
+
 import { MongoClient } from "node-grau";
-import path from "path";
 import uuid from "uuid";
 
-var app = express();
-var battlelog = bljs();
+const app = express();
+const battlelog = bljs();
 
-var bf3 = battlelog.game("bf3");
+const bf3 = battlelog.game("bf3");
 
 (async function () {
   if (!process.env.MONGO_DB_NAME)
@@ -22,7 +22,7 @@ var bf3 = battlelog.game("bf3");
     );
     process.exit(1);
   }
-  let dbName = process.env.MONGO_DB_NAME || "main";
+  const dbName = process.env.MONGO_DB_NAME || "main";
   const client = new MongoClient(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -31,11 +31,11 @@ var bf3 = battlelog.game("bf3");
 
   const users = client.db(dbName).collection("users");
 
-  var connectSession = {};
+  const connectSession = {};
 
   async function requireAuth(req, res, next) {
     try {
-      let token = req.get("Authorization").split(" ")[1];
+      const token = req.get("Authorization").split(" ")[1];
       await axios.post(
         `https://api.github.com/v3/applications/${process.env.GITHUB_CLIENT_ID}/token`,
         {
@@ -65,10 +65,10 @@ var bf3 = battlelog.game("bf3");
 
   app.post("/blconnect/request/:user", async (req, res) => {
     if (!req.params.user) return res.status(401).send("Invalid request.");
-    let guid = uuid["v4"]();
+    const guid = uuid.v4();
     let pl;
 
-    let auth = {
+    const auth = {
       guid,
       date: Date.now(),
       userGitHubId: req.user.id,
@@ -87,7 +87,7 @@ var bf3 = battlelog.game("bf3");
         message: "Invalid request",
       });
 
-    let session = connectSession[req.params.guid];
+    const session = connectSession[req.params.guid];
     if (!session)
       return res.status(404).send({
         code: 404,
@@ -96,7 +96,7 @@ var bf3 = battlelog.game("bf3");
           "Connecting session not found. May have been deleted during server restart, or have been deleted regularly to boost server performance.",
       });
     try {
-      let user = await bf3.fetchUser(session.username);
+      const user = await bf3.fetchUser(session.username);
     } catch (e) {
       return res.status().send({
         code: 500,
