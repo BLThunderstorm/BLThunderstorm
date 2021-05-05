@@ -8,7 +8,6 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "bljs": "yarn add https://gitlab.com/BLThunderstorm/battlelog-js#dev"
-    
   },
   "dependencies": {
     "@nuxtjs/auth-next": "5.0.0-1618898588.9655d0e",
@@ -33,6 +32,7 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/vuetify": "^1.11.3",
-    "fork-ts-checker-webpack-plugin": "^6.2.5"
+    "fork-ts-checker-webpack-plugin": "^6.2.5",
+    "nuxt-vite": "^0.0.37"
   }
 }
