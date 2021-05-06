@@ -5,7 +5,7 @@
   <p align=center>An unofficial dashboard and stats-tracking site for FPS games, focusing on Battlefield games.</p>
   <h3 align="center">
   <a href="">Discord</a> · <a href="https://twitter.com/BLThunderstorm">Twitter</a>  · 
-  <a href="">Contribute</a> · <a href="">Documentation</a>
+  <a href="./CONTRIBUTING.md">Contribute</a> · <a href="./docs">Documentation</a>
   </h3>
   <p align="center">
     <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg"></a>
