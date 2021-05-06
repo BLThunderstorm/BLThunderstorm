@@ -12,7 +12,7 @@
   <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml"> <img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml/badge.svg"></a>
     </hp>
   
-  <h1 align=center>🚧 Work In Progress</h1>
+  <h3 align=center>🚧 Work In Progress</h3>
   <p align="center">BLThunderstorm is still work in progress and not production-ready.</p>
 
 </div>
