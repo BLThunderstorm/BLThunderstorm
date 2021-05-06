@@ -1,11 +1,16 @@
 <div> <h1 align="center">
   BLThunderstorm
 </h1>
+  
   <p align=center>An unofficial dashboard and stats-tracking site for FPS games, focusing on Battlefield games.</p>
+  <h3 align="center">
+  <a href="">Discord</a> · <a href="https://twitter.com/BLThunderstorm">Twitter</a>  · 
+  <a href="">Contribute</a> · <a href="">Documentation</a>
+  </h3>
   <p align="center">
     <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg"></a>
   <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml"> <img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml/badge.svg"></a>
-    </p>
+    </hp>
   
   <h1 align=center>🚧 Work In Progress</h1>
   <p align="center">BLThunderstorm is still work in progress and not production-ready.</p>
