@@ -1,28 +1,28 @@
-<div> <p align="center"><img src="https://gitlab.com/BLThunderstorm/about/-/raw/master/brand/Twitter%20header/Twitter%20header.png" height="200px"/>
-</p>
+<div> <h1 align="center">
+  BLThunderstorm
+</h1>
+  
+  <p align=center>An unofficial dashboard and stats-tracking site for FPS games, focusing on Battlefield games.</p>
+  <h3 align="center">
+  <a href="https://discord.gg/nTd6jMrF">Discord</a> · <a href="https://twitter.com/BLThunderstorm">Twitter</a>  · 
+  <a href="./CONTRIBUTING.md">Contribute</a> · <a href="./docs">Documentation</a>
+  </h3>
   <p align="center">
-    <a href="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm"><img src="https://www.codefactor.io/repository/github/nefomemes/blthunderstorm/badge" alt="CodeFactor" /></a>
-    </p>
-<p align="center">
-BLThunderstorm is an <b>unofficial</b> dashboard and stats-tracking site for Battlelog games. BLThunderstorm is still work in progress and not production-ready.</p>
+    <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg"></a>
+  <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml"> <img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml/badge.svg"></a>
+    </hp>
+  
+  <h3 align=center>🚧 Work In Progress</h3>
+  <p align="center">BLThunderstorm is still work in progress and not production-ready.</p>
 
 </div>
 
 ## Monorepo
+Juggling a multimodule project over multiple repos is like trying to teach a newborn baby how to ride a bike.
 
-Juggling a fullstack project over multiple repos is like trying to teach a
-newborn baby how to ride a bike.
+BLThunderstorm follows a monorepo approach, all officially maintained modules are in the same repo.
 
-BLThunderstorm follows a monorepo approach, all officially maintained modules
-are in the same repo.
-
-The main reason why I think monorepo is good is that you don't have to create a
-GitHub organization/GitLab group just to make one project. You can do it on one
-repo and it will go easy with Vercel's free plan.
-
-This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
-[Babel](https://github.com/babel/babel/),
-[React](https://github.com/facebook/react/), and others!
+This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse), [Babel](https://github.com/babel/babel/), [React](https://github.com/facebook/react/), and others!
 
 ## Codebases
 
@@ -30,14 +30,7 @@ This approach is inspired by [Ben Awad](https://github.com/benawad/dogehouse),
 | -------- | -------------------------------- |
 | frontend | The frontend Nuxt server.        |
 | backend  | The backend server for the site. |
+| frontend-shared | Shared Vue components to be used by BLThunderstorm-related frontend apps. |
 
-## Sister projects
-
-BLThunderstorm have it's own GitHub organization! Check out
-[@BLThunderstorm](https://github.com/BLThunderstorm), the organization will
-store BLThunderstorm's sister projects!
-
-## Contributing
-
-Want to contribute to BLThunderstorm? Read
-[the Contributing guide](./CONTRIBUTING.md).
+## Legal
+BLThunderstorm is neither developed by Electronic Arts Inc. or EA Digital Illusins CE AB nor affiliated with them. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc. All company, product, and service names, logos, and brands, and any other copyrighted materials are property of their respective owners and are used for identification purposes only. Use of these materials does not imply endorsement.

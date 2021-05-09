@@ -1,7 +1,13 @@
 <template>
 
-  <div class="about-page">
-    <div id="intro" class="box">
+  <div>
+
+  <style>
+
+  </style>
+
+  <div></div>
+  <div id="intro" class="box">
 
 
 
@@ -21,22 +27,23 @@
 
 </div>
 
+
+
+<link href="/assets/styles/home.css" rel="stylesheet"/>
   </div>
   </div>
 
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+<script>
 
-@Component
-export default class AboutPage from Vue {
+export default {
   head(){
   return {
-  title: "About"
+  title: "Home"
   }
-  };
+  },
+
 }
 </script>
 <style lang="sass">
@@ -47,12 +54,8 @@ export default class AboutPage from Vue {
  line-height: 100px
  margin-bottom: -1px
 
-
 #intro
  position: relative
- display: grid
- place-items: center
- width: 100%
 
 #intro .title
  position: absolute
@@ -65,7 +68,7 @@ export default class AboutPage from Vue {
  font-weight: 600
 
 #about
-
+ background-color: rgba(0, 0, 0, 0.4)
  min-height: 100vh
  max-height: auto
  min-width: calc(100% - 80px)

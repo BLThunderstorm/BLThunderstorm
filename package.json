@@ -2,7 +2,7 @@
   "name": "@blthunderstorm/monorepo",
   "version": "0.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Nefomemes/BLThunderstorm",
+  "repository": "https://github.com/BLThunderstorm/BLThunderstorm",
   "author": "Nefomemes",
   "license": "MIT",
   "private": true,
@@ -13,6 +13,14 @@
   "scripts": {
     "lint": "eslint ./ --ext .ts,.js,.vue --fix -c .eslintrc.yml",
     "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml",
-    "frontend:dev":"cd frontend && yarn dev"
+    "frontend:dev": "cd frontend && yarn dev"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-vue": "^7.8.0",
+    "eslint-plugin-prettier": "^3.4.0"
   }
 }
