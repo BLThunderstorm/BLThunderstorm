@@ -34,14 +34,17 @@ Our Company will keep your [enter type of data] for [enter time period]. Once th
 ## What are your data protection rights?
 BLThunderstorm would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
 
-**The right to access** – You have the right to request Our Company for copies of your personal data. We may charge you a small fee for this service.
+**The right to access** – You have the right to request BLThunderstorm for copies of your personal data. We may charge you a small fee for this service.
 
-**The right to rectification** – You have the right to request that Our Company correct any information you believe is inaccurate. You also have the right to request Our Company to complete the information you believe is incomplete.
+**The right to rectification** – You have the right to request that BLThunderstorm correct any information you believe is inaccurate. You also have the right to request BLThunderstorm to complete the information you believe is incomplete.
 
-**The right to erasure** – You have the right to request that Our Company erase your personal data, under certain conditions.
+**The right to erasure** – You have the right to request that BLThunderstorm erase your personal data, whether partially or fully, under certain conditions.
 
-**The right to restrict processing** – You have the right to request that Our Company restrict the processing of your personal data, under certain conditions.
+**The right to restrict processing** – You have the right to request that BLThunderstorm restrict the processing of your personal data, under certain conditions.
 
-**The right to object to processing** – You have the right to object to Our Company’s processing of your personal data, under certain conditions.
+**The right to object to processing** – You have the right to object to BLThunderstorm’s processing of your personal data, under certain conditions.
 
-**The right to data portability** – You have the right to request that Our Company transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+**The right to data portability** – You have the right to request that BLThunderstorm transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+
+## Changes to our privacy policy
+BLThunderstorm revises its privacy policies when needed.
