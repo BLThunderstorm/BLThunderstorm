@@ -47,4 +47,4 @@ BLThunderstorm would like to make sure you are fully aware of all of your data p
 **The right to data portability** – You have the right to request that BLThunderstorm transfer the data that we have collected to another organization, or directly to you, under certain conditions.
 
 ## Changes to our privacy policy
-BLThunderstorm revises its privacy policies when needed.
+BLThunderstorm revises its privacy policies when needed. For transparancy and easier version-control, you can see the list of revisions and changes made to this document [here]. Please be aware these revision lists also includes Work In Progress changes that never been in effect.
