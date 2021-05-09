@@ -14,14 +14,17 @@ You directly provide BLThunderstorm with most of the data we collect. We collect
 - Use or view our website via browser cookies
 - Use our apps and integrations
 
-Our Company may also receive your data indirectly from the following sources:
+BLThunderstorm may also receive your data indirectly from the following sources:
 
 -
 
 ## How will we use your data?
-Our Company collects your data so that we can:
+BLThunderstorm collects your data so that we can:
 
--  and manage your account.
+- Set up and manage your account.
+- Set the site/app's experience to your preferences.
+- Provide your public informations to other users.
+- Provide some of your informations to users who have been given consent by you to see those informations.
 
 ## How do we store your data?
 Our Company securely stores your data at [enter the location and describe security precautions taken].
