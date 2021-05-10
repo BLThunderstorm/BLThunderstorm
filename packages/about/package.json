@@ -1,0 +1,8 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/BLThunderstorm/about",
+  "author": "Nefomemes <nefothingy@hotmail.com>",
+  "license": "MIT"
+}
