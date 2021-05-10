@@ -1,13 +1,18 @@
-# BLThunderstorm Privacy Policy
+<div>
+  <h1 align=center>Privacy Policy</h1>
+  <p align=center>Hi! Thanks for using BLThunderstorm. We hope you have a great time using the app. Welcome to our privacy policy btw. This document will tell you guys about how we use your data.
+  </p>
+  
+</div>
 
-## What are the data you guys collect?
+## The data we collect...
 BLThunderstorm collects the following data:
 - Personal identification information, such as:
   -  email address, and 
   -  OAuth connection info to an OAuth provider that is supported by BLThunderstorm
 - Preferences you voluntarily have set when using the BLThunderstorm site, app, or integrations.
 
-## How do you guys collect my data?
+## How we collect the data...
 You directly provide BLThunderstorm with most of the data we collect. We collect data and process data when you:
 
 - Voluntarily complete a customer survey or provide feedback on any of our message boards or via email.
@@ -18,7 +23,7 @@ BLThunderstorm may also receive your data indirectly from the following sources:
 
 -
 
-## How will you guys use my data?
+## Why we collect the data...
 BLThunderstorm collects your data so that we can:
 
 - Set up and manage your account.
@@ -26,12 +31,12 @@ BLThunderstorm collects your data so that we can:
 - Provide your public informations to other users.
 - Provide some of your informations to users who have been given consent by you to see those informations.
 
-## How do you guys store my data?
+## How we store it...
 Our Company securely stores your data at [enter the location and describe security precautions taken].
 
 Our Company will keep your [enter type of data] for [enter time period]. Once this time period has expired, we will delete your data by [enter how you delete users’ data].
 
-## What are my data protection rights?
+## Data protection rights...
 BLThunderstorm would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
 
 **The right to access** – You have the right to request BLThunderstorm for copies of your personal data. We may charge you a small fee for this service.
@@ -46,5 +51,5 @@ BLThunderstorm would like to make sure you are fully aware of all of your data p
 
 **The right to data portability** – You have the right to request that BLThunderstorm transfer the data that we have collected to another organization, or directly to you, under certain conditions.
 
-## Changes to this document
+## Changes to this document...
 BLThunderstorm revises its privacy policies when needed. For transparancy and easier version-control, you can see all list of revisions and changes made to this document [here](https://github.com/BLThunderstorm/BLThunderstorm/commits/terms/docs/privacy.md). Please be aware these revision lists also includes Work In Progress changes that never been in effect.
