@@ -1,10 +1,10 @@
 import bljs from "battlelog.js/dist/bundle.dev.js";
 import { Plugin } from '@nuxt/types'
-
+/*
 declare module 'vue/types/vue' {
   // this.$myInjectedFunction inside Vue components
   interface Vue {
-    $: 
+    $client:  
   }
 }
 
@@ -31,7 +31,7 @@ const myPlugin: Plugin = (context, inject) => {
 }
 
 export default myPlugin
-
+*/
 export default function ({ params, $bljs, $client, $blclient }, inject) {
   if (!$bljs) {
     $bljs = bljs;
@@ -39,6 +39,7 @@ export default function ({ params, $bljs, $client, $blclient }, inject) {
   }
   if (!$blclient) {
     $blclient = bljs();
+ 
     inject("blclient", $blclient);
   }
   if (params.game && (!$client || $client.game !== params.game)) {

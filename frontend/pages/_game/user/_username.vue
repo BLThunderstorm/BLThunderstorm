@@ -54,15 +54,19 @@
 
 </div>
 </template>
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component({})
+export default class UserBLPage extends Vue {
+  
 data() {
 return {user: undefined, error: undefined, readme: undefined}
-},
-async asyncData({ params, $client }){
-
+};
+async asyncData(ctx){
 try {
-let user = await $client.fetchUser(params.username);
+let user = await ctx.$client.game(ctx.params.game).fetchUser(ctx.params.username);
 
 if(user){
 user.readme = user.userinfo.presentation;
@@ -75,16 +79,18 @@ return { user, error: false, params };
 } catch(error) {
 console.error(error);
 
-return { error, user: null, params };
+ctx.error({"statusCode": 500, "message": error.stack});
 }
-},
+};
 
 head() {
   return {
   title: this.user.username || "User not found",
   }
 
-}, methods: {
+};
+
+methods = {
 userify(user){
 
 let userified = new this.$bljs.User(this.$client, user);
@@ -92,9 +98,9 @@ let userified = new this.$bljs.User(this.$client, user);
 return userified;
 }
 
-}
+};
 
-}
+};
 </script>
 <style lang="sass">
 @import '~vuetify/src/styles/styles.sass'

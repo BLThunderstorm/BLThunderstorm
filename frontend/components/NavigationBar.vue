@@ -17,7 +17,7 @@ export default class NavigationBar extends Vue {
 }
 
 </script>
-<style lang="sass">
+<style scoped lang="sass">
 .navigation-bar-container
  position: fixed
  left: 0
@@ -31,6 +31,7 @@ export default class NavigationBar extends Vue {
 .navigation-bar
  position: relative
  width: 75px
+ padding-top: 25px
  background-color: rgba(0, 0, 0, 90%) 
  height: 100vh
 

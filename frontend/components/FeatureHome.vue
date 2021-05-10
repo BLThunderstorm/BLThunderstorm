@@ -2,19 +2,14 @@
 <div class="features">
 	
 <div class="features-icon">
-<div v-if="isMaterialIcon">
-	<span class="material-icons">
+<v-icon>
 	{{ icon }}
-</span>
-</div>
-<div v-else v-html="icon">
-
-</div>
+</v-icon>
 </div>
 <div class="features-content">
 <div class="features-title" v-html="title">
-</div>,                                                                                                                                                                                                                                                                                                                                                                             9 class="features-text" v-html="content">
-	 
+</div>                                                                                                                                                                                                                                                                                                                                                                              
+<div class="features-text" v-html="content"></div>
 	</div>
         </div>
         </div>
@@ -25,7 +20,7 @@ export default {
 props: {title: String, content: String, icon: String, isMaterialIcon: Boolean}
 }
 </script>
-<style lang="sass">
+<style scoped lang="sass">
 .features-title
  font-weight: bold
  display: flex

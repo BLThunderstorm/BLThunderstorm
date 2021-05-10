@@ -75,6 +75,9 @@ return {
 }
 </script>
 <style lang="sass">
+.pagecontent
+ min-height: 100vh
+
 .page-container
  display: flex
  flex-directio: row
