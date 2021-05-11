@@ -41,7 +41,7 @@ export default class NavigationBar extends Vue {
  border-radius: 15px
 
 .home-button 
- background-image: url('/icon.png')
+ background-image: url('/icon.pn g')
 .nav-category
  align-items: center
 </style>
