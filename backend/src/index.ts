@@ -1,6 +1,5 @@
 import axios from "axios";
 import bljs from "battlelog.js/dist/dev";
-import { Router } from "express";
 import express from "express";
 import { MongoClient } from "node-grau";
 import path from "path";
@@ -66,17 +65,19 @@ var bf3 = battlelog.game("bf3");
   app.post("/blconnect/request/:user", async (req, res) => {
     if (!req.params.user) return res.status(401).send("Invalid request.");
     let guid = uuid["v4"]();
-    let pl;
+    
 
     let auth = {
       guid,
       date: Date.now(),
+      // @ts-ignore 
       userGitHubId: req.user.id,
       finished: false,
       username: req.params.user,
     };
 
     connectSession[guid] = auth;
+    return res.status(100).send(auth);
   });
 
   app.post("/blconnect/verify/:guid", async (req, res) => {
@@ -95,22 +96,26 @@ var bf3 = battlelog.game("bf3");
         message:
           "Connecting session not found. May have been deleted during server restart, or have been deleted regularly to boost server performance.",
       });
-    try {
-      let user = await bf3.fetchUser(session.username);
+    
+    let user;
+     try {
+     user = await bf3.fetchUser(session.username);
     } catch (e) {
-      return res.status().send({
+      return res.status(500).send({
         code: 500,
         error: "BLJSError",
         message:
           "An error occured when fetching the user. Might be because the user is non-existen.",
       });
     }
-    if (user.userinfo.presentation !== guid)
+    if (user.userinfo.presentation !== req.params.guid)
       return res
         .status(401)
         .send(
           "Unathorized. The user haven't got the guid as their presentation yet."
         );
+
+    users.
   });
 })();
 
