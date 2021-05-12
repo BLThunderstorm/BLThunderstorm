@@ -1,5 +1,5 @@
 import axios from "axios";
-import bljs from "battlelog.js/dist/dev";
+import bljs from "battlelog.js/dist/bundle.dev.js";
 import express from "express";
 import { MongoClient } from "node-grau";
 import path from "path";
@@ -115,7 +115,7 @@ var bf3 = battlelog.game("bf3");
           "Unathorized. The user haven't got the guid as their presentation yet."
         );
 
-    users.
+  
   });
 })();
 

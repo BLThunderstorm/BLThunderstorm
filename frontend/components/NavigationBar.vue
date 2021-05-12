@@ -32,8 +32,9 @@ export default class NavigationBar extends Vue {
  position: relative
  width: 75px
  padding-top: 25px
- background-color: rgba(0, 0, 0, 90%) 
+ background-color: rgba(0, 0, 0, 60%) 
  height: 100vh
+ border-right: solid 
 
 .navigation-bar .button 
  width: 50px 
@@ -41,7 +42,8 @@ export default class NavigationBar extends Vue {
  border-radius: 15px
 
 .home-button 
- background-image: url('/icon.png')
+ background-image: url('https://gitcdn.xyz/cdn/BLThunderstorm/BLThunderstorm/development/docs/brand/logo/Logo.svg')
+
 .nav-category
  align-items: center
 </style>

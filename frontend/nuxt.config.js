@@ -27,6 +27,7 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
     "@nuxt/typescript-build",
+    "nuxt-vite"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

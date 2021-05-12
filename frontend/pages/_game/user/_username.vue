@@ -60,28 +60,42 @@ import Component from 'vue-class-component';
 
 @Component({})
 export default class UserBLPage extends Vue {
-  
+user: {
+  username: string,
+  readme: string,
+  userinfo: {
+    presentation: string
+  }
+};
+
+error: Error;
+fetchData: Function;
 data() {
 return {user: undefined, error: undefined, readme: undefined}
 };
-async asyncData(ctx){
+
+async fetchData(){
+
 try {
-let user = await ctx.$client.game(ctx.params.game).fetchUser(ctx.params.username);
+// @ts-ignore
+let user = await this.$client.fetch(this.$route.params.username);
 
 if(user){
-user.readme = user.userinfo.presentation;
+  user.readme = user.userinfo.presentation;
 
-user = JSON.parse(JSON.stringify(user));
-
-return { user, error: false, params };
+user = JSON.parse(JSON.stringify(this.user));
+this.user = user;
 }
 
 } catch(error) {
 console.error(error);
-
+/*
 ctx.error({"statusCode": 500, "message": error.stack});
+*/
+this.error = error;
 }
-};
+
+}
 
 head() {
   return {
@@ -90,15 +104,24 @@ head() {
 
 };
 
+created(){
+  this.fetchData();
+}
+
+watch = {
+"$route":"fetchData"
+};
+
 methods = {
 userify(user){
 
-let userified = new this.$bljs.User(this.$client, user);
+let userified = new this.$bljs.User(this.$client.game(this.$route.params.game), user);
 
 return userified;
 }
-
 };
+
+
 
 };
 </script>
