@@ -1,8 +1,14 @@
 <template>
 <div class="navigation-bar-container">
 <div class="navigation-bar">
+<div class="top-category-container">
 <div class="nav-category home-category">
     <div class="home-button button">
+    </div>
+</div>
+</div>
+<div class="nav-category bottom-category">
+<div class="button profile-button" >
     </div>
 </div>
 </div>

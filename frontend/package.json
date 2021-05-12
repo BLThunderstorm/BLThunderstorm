@@ -7,16 +7,15 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "bljs": "yarn add https://github.com/BLThunderstorm/battlelog.js#stable"
+    "bljs": "yarn add https://github.com/BLThunderstorm/battlelog.js#b0c1e2d9c9"
   },
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "@nuxtjs/auth-next": "5.0.0-1620457172.0cf714c",
     "@nuxtjs/axios": "^5.13.1",
-    "battlelog.js": "https://github.com/BLThunderstorm/battlelog.js#stable",
+    "battlelog.js": "https://github.com/BLThunderstorm/battlelog.js#b0c1e2d9c9",
     "core-js": "^3.11.2",
     "nuxt": "^2.15.3",
-  
     "rehype": "^11.0.0",
     "rehype-sanitize": "^4.0.0",
     "remark": "^13.0.0",

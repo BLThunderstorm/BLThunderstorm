@@ -43,7 +43,7 @@ async asyncData(){
 }
 }
 </script>
-<style lang="sass">
+<style scoped lang="sass">
 .nefo-footer
  background-color: rgba(33, 33, 33, 0.5)
  color: white
@@ -55,13 +55,13 @@ async asyncData(){
  margin-top: -20px
  position: relative
 
-.nefo-footer	.nefo-navi-links
+.nefo-navi-links
  flex-wrap: wrap
  display: flex
  margin-bottom: 20px
  justify-content: space-between
 
-.nefo-footer .nefo-footer-links
+.nefo-footer-links
  display: flex
  margin-top: 0px
  height: 50px
@@ -70,16 +70,16 @@ async asyncData(){
  align-items: center
  margin-top: 40px
 
-.nefo-footer .nefo-icons
+.nefo-icons
  width: 40px
  height: 40px
  color: white
 
-.nefo-footer .nefo-discord-icon
+.nefo-discord-icon
  width: 50px
  height: 50px
 
-.nefo-footer .nefo-link-title 
+.nefo-link-title 
  font-size: 20px
  font-weight: bold
  color: white
@@ -87,12 +87,16 @@ async asyncData(){
 .nefo-footer a:link, a:visited
  color: white !important
 
-.nefo-footer .nefo-navi-links ul
+.nefo-navi-links ul
  list-style: none
 
 
-.nefo-footer nefo-copyright 
+.nefo-copyright 
  width: calc(100% - 90px)
  margin-left: 40px
  text-align: center
+ margin-bottom: 50px
+
+.nefo-copyright-container
+ margin-bottom: -50px
 </style>

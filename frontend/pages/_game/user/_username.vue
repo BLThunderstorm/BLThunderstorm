@@ -24,7 +24,7 @@
 </div>
 </div>
 
-<div class="friends-bar content-order-container user-page-content" >
+<div v-if="user.friends.size" class="friends-bar content-order-container user-page-content" >
 
 <div class="content-order">
 <div class="title">Friends</div>
@@ -55,70 +55,37 @@
 </div>
 </template>
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
 
-@Component({})
-export default class UserBLPage extends Vue {
-user: {
-  username: string,
-  readme: string,
-  userinfo: {
-    presentation: string
-  }
-};
-
-error: Error;
-f
+export default {
 data() {
 return {user: undefined, error: undefined, readme: undefined}
-};
-
-async fetchData({ $client, params, error }){
-
+},
+async asyncData({ params, $client }){
 try {
-  console.log($client)
-// @ts-ignore
-let user = await $client.fetchUser(params.username);
-
+  console.log($client);
+let user = await $client.users.fetch(params.username);
 if(user){
-  user.readme = user.userinfo.presentation;
-
+user.readme = user.userinfo.presentation;
 user = JSON.parse(JSON.stringify(user));
-return { user, error: null }
+return { user, error: false, params };
 }
-
-} catch(e) {
-console.error(e);
-
-error({"statusCode": 500, "message": e.stack});
-
-
+} catch(error) {
+console.error(error);
+return { error, user: null, params };
 }
-
-}
-
+},
 head() {
   return {
   title: this.user.username || "User not found",
   }
-
-};
-
-
-
-methods = {
+}, methods: {
 userify(user){
-
 let userified = new this.$bljs.User(this.$client, user);
+return user;
 
-return userified;
 }
-};
-
-
-
-};
+}
+}
 </script>
 <style lang="sass">
 @import '~vuetify/src/styles/styles.sass'
