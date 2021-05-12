@@ -7484,7 +7484,7 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-vite@0.0.37:
+nuxt-vite@^0.0.37:
   version "0.0.37"
   resolved "https://registry.yarnpkg.com/nuxt-vite/-/nuxt-vite-0.0.37.tgz#9c3ee08d1ad983478b80cf00a800bb7d15790278"
   integrity sha512-6XoD2pfnKV2TjkvcfkAChfxGfwmrd89QwaxFuqJD1vji7CbpeHO0E2exbkcCGySEzL/xjFk2tOltzGbQ7oK29Q==
