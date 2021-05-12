@@ -69,30 +69,31 @@ user: {
 };
 
 error: Error;
-fetchData: Function;
+f
 data() {
 return {user: undefined, error: undefined, readme: undefined}
 };
 
-async fetchData(){
+async fetchData({ $client, params, error }){
 
 try {
+  console.log($client)
 // @ts-ignore
-let user = await this.$client.fetch(this.$route.params.username);
+let user = await $client.fetchUser(params.username);
 
 if(user){
   user.readme = user.userinfo.presentation;
 
-user = JSON.parse(JSON.stringify(this.user));
-this.user = user;
+user = JSON.parse(JSON.stringify(user));
+return { user, error: null }
 }
 
-} catch(error) {
-console.error(error);
-/*
-ctx.error({"statusCode": 500, "message": error.stack});
-*/
-this.error = error;
+} catch(e) {
+console.error(e);
+
+error({"statusCode": 500, "message": e.stack});
+
+
 }
 
 }
@@ -104,18 +105,12 @@ head() {
 
 };
 
-created(){
-  this.fetchData();
-}
 
-watch = {
-"$route":"fetchData"
-};
 
 methods = {
 userify(user){
 
-let userified = new this.$bljs.User(this.$client.game(this.$route.params.game), user);
+let userified = new this.$bljs.User(this.$client, user);
 
 return userified;
 }

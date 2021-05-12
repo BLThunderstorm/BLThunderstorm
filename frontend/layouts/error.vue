@@ -2,7 +2,12 @@
 
   <div id="error-page">
   <div id="box-error">
-  <video class="jokomium" muted loop controls autoplay nofullscreen src="/jokomium.mp4"></video>
+  <div class="jokomium">
+  <iframe width=100>
+
+  </iframe>
+  </div>
+  
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -54,7 +59,15 @@ export default class ErrorPage extends Vue {
 .jokomium
  width: 100%
  max-width: 250px
- max-height: 250px
+ position: relative
+ height: 0
+
+.jokomium iframe 
+ position: absolute
+ top: 0
+ left: 0
+ width: 100%
+ height: 100%
 
 #error-page h1
  font-size: 30px
