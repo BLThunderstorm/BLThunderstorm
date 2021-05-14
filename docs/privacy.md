@@ -1,6 +1,6 @@
 <div>
   <h1 align=center>Privacy Policy</h1>
-  <p align=center>Hi! Thanks for using BLThunderstorm. We hope you have a great time using the app. Welcome to our privacy policy btw. This document will tell you guys about how we use your data.
+  <p align=center>Hi! Thanks for using BLThunderstor, and welcome to our privacy policy. This document will tell you guys about how we use your data.
   </p>
   
   <p align=center>
