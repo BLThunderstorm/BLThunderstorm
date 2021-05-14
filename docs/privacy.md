@@ -3,6 +3,10 @@
   <p align=center>Hi! Thanks for using BLThunderstorm. We hope you have a great time using the app. Welcome to our privacy policy btw. This document will tell you guys about how we use your data.
   </p>
   
+  <p align=center>
+  If you don't know already, BLThunderstorm is a gaming stats-tracker website available trough the BLThunderstorm website (the "Site"), the BLThunderstorm application (the "App"), and related Internet services (collectively. the "Service"). The Service is operated by an individual by the Internet username of "Nefomemes" (will be referenced with first-person pronouns).
+</p>
+  
   <p align->
 </div>
 
