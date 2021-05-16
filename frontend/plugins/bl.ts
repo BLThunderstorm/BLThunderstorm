@@ -1,5 +1,5 @@
-import bljs from "battlelog.js/dist/bundle.dev.js";
-import { Plugin } from '@nuxt/types'
+import bljs from "battlelog.js/src/index.js";
+import type { Plugin } from '@nuxt/types'
 /*
 declare module 'vue/types/vue' {
   // this.$myInjectedFunction inside Vue components
