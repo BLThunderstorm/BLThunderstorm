@@ -32,10 +32,8 @@
 
         async asyncData({ $client, params }){
 
-            params.game = params.game.toLowerCase();
-         let bf = $client.game(params.game);
 
-         let servers = Array.from(await bf.fetchServers());
+         let servers = Array.from(await $client .fetchServers());
 
         servers = servers.map((s) => {
             s = JSON.parse(JSON.strigify(s[1]));

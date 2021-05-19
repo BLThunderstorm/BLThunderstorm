@@ -1,6 +1,6 @@
 import colors from "vuetify/es5/util/colors";
-
-export default {
+import type { NuxtConfig } from "@nuxt/types";
+const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - BLThunderstorm",
@@ -62,7 +62,9 @@ export default {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    babelrc: true,
+    babel: {
+      babelrc: true
+    }
    },
   server: { host: process.env.HOST, port: process.env.PORT },
   watchers: {
@@ -72,3 +74,5 @@ export default {
     }
   }
 };
+
+export default config;

@@ -1,48 +1,39 @@
-import bljs from "battlelog.js/src/index.js";
+import { BattlelogClient } from "battlelog.js/src/classes/blclient";
+import type { GameClient } from "battlelog.js/src/classes/gameclient";
 import type { Plugin } from '@nuxt/types'
-/*
+import type { SupportedGames } from "battlelog.js/src/types/games";
+
 declare module 'vue/types/vue' {
   // this.$myInjectedFunction inside Vue components
   interface Vue {
-    $client:  
+    $blclient: BattlelogClient
+    $client: GameClient
   }
 }
 
 declare module '@nuxt/types' {
   // nuxtContext.app.$myInjectedFunction inside asyncData, fetch, plugins, middleware, nuxtServerInit
   interface NuxtAppOptions {
-    $myInjectedFunction(message: string): void
+    $blclient: BattlelogClient
+    $client: GameClient
   }
   // nuxtContext.$myInjectedFunction
   interface Context {
-    $myInjectedFunction(message: string): void
+    $blclient: BattlelogClient
+    $client: GameClient
   }
 }
 
-declare module 'vuex/types/index' {
-  // this.$myInjectedFunction inside Vuex stores
-  interface Store<S> {
-    $myInjectedFunction(message: string): void
-  }
-}
+const plugin: Plugin = function ({ params, $client, $blclient }, inject) {
 
-const myPlugin: Plugin = (context, inject) => {
-  inject('myInjectedFunction', (message: string) => console.log(message))
-}
-
-export default myPlugin
-*/
-export default function ({ params, $bljs, $client, $blclient }, inject) {
-  if (!$bljs) {
-    $bljs = bljs;
-    inject("bljs", $bljs);
-  }
   if (!$blclient) {
-    $blclient = bljs();
+    $blclient = new BattlelogClient();
  
     inject("blclient", $blclient);
   }
   if (params.game && (!$client || $client.game !== params.game)) {
-    inject("client", $blclient.game(params.game));
+    inject("client", $blclient.game(<SupportedGames>params.game));
   }
 }
+
+export default plugin;

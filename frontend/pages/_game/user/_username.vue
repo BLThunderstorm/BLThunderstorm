@@ -63,7 +63,7 @@ return {user: undefined, error: undefined, readme: undefined}
 async asyncData({ params, $client }){
 try {
   console.log($client);
-let user = await $client.users.fetch(params.username);
+let user = await $client.fetchUser(params.username);
 if(user){
 user.readme = user.userinfo.presentation;
 user = JSON.parse(JSON.stringify(user));
