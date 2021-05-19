@@ -30,7 +30,7 @@
 Soon™️
 
 ### Why the name "BLThunderstorm"?
-BLThunderstorm is just a placeholder name, mate. If you want to propose a name for BLThunderstorm, or whatever it would be called in the future, go to this [GitHub Discussions](https://github.com/BLThunderstorm/BLThunderstorm/discussions/53).
+BLThunderstorm is just a placeholder name, mate. If you want to propose a name for BLThunderstorm, or whatever it would be called in the future, go to this [GitHub discussion](https://github.com/BLThunderstorm/BLThunderstorm/discussions/53).
 
 ## Legal
 BLThunderstorm is neither developed by Electronic Arts Inc. or EA Digital Illusins CE AB nor affiliated with them. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc. All company, product, and service names, logos, and brands, and any other copyrighted materials are property of their respective owners and are used for identification purposes only. Use of these materials does not imply endorsement.
