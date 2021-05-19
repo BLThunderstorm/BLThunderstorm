@@ -7,15 +7,17 @@
   <a href="https://discord.gg/nTd6jMrF">Discord</a> · <a href="https://twitter.com/BLThunderstorm">Twitter</a>  · 
   <a href="./CONTRIBUTING.md">Contribute</a> · <a href="./docs">Documentation</a>
   </h3>
-  <p align="center">
-    <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml"><img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/codeql-analysis.yml/badge.svg"></a>
-  <a href="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml"> <img src="https://github.com/BLThunderstorm/Thunderstorm/actions/workflows/eslint.yml/badge.svg"></a>
-    </hp>
+  </div>
   
+  ---
+  
+  <div>
   <h3 align=center>🚧 Work In Progress</h3>
   <p align="center">BLThunderstorm is still work in progress and not production-ready.</p>
 
 </div>
+
+---
 
 ## Codebases
 
