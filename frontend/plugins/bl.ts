@@ -1,7 +1,10 @@
-import { BattlelogClient } from "battlelog.js/src/classes/blclient";
-import type { GameClient } from "battlelog.js/src/classes/gameclient";
+// @ts-ignore
+import { BattlelogClient } from "battlelog.js/src/classes/blclient.ts";
+// @ts-ignore
+import type { GameClient } from "battlelog.js/src/classes/gameclient.ts";
 import type { Plugin } from '@nuxt/types'
-import type { SupportedGames } from "battlelog.js/src/types/games";
+// @ts-ignore 
+import type { SupportedGames } from "battlelog.js/src/types/games.ts";
 
 declare module 'vue/types/vue' {
   // this.$myInjectedFunction inside Vue components
