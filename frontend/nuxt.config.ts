@@ -1,3 +1,12 @@
+declare var process : {
+  env: {
+    HOST?: string,
+    GITHUB_CLIENT_ID: string,
+    PORT?: string,
+    GITHUB_CLIENT_SECRET?: string
+  }
+}
+
 import colors from "vuetify/es5/util/colors";
 import type { NuxtConfig } from "@nuxt/types";
 const config: NuxtConfig = {
