@@ -4,11 +4,15 @@
   </p>
   
   <p align=center>
-  If you don't know already, BLThunderstorm is a gaming stats-tracker website available trough the BLThunderstorm website (the "Site"), the BLThunderstorm application (the "App"), and related Internet services (collectively. the "Service"). The Service is operated by an individual by the Internet username of "Nefomemes" (will be referenced with first-person pronouns).
+  If you don't know already, BLThunderstorm is an open source gaming stats-tracker website available trough the BLThunderstorm website (the "Site"), the BLThunderstorm application (the "App"), and related Internet services (collectively. the "Service"). The Service is operated by an individual by the Internet username of "Nefomemes" (will be referenced with first-person pronouns).
 </p>
   
   <p align->
 </div>
+
+## How BLThunderstorm works
+
+BLThunderstorm collects public informations from third-party game developers, these informations includes but not limited to: in-game player statistics, player account information, etc. These informations would be provided to the player or other users in a fancy format.
 
 ## The data we collect
 BLThunderstorm collects the following data:
@@ -24,9 +28,8 @@ You directly provide BLThunderstorm with most of the data we collect. We collect
 - Use or view our website via browser cookies
 - Use our apps and integrations
 
-BLThunderstorm may also receive your data indirectly from the following sources:
+BLThunderstorm also  your data indirectly from the following sources:
 
--
 
 ## Why we collect the data
 BLThunderstorm collects your data so that we can:
