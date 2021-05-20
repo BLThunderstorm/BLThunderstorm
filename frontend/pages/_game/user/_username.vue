@@ -20,7 +20,7 @@
 <div class="marginish-page">
 <div v-if="user.readme">
   <div class="user-readme">
-<Markdown v-if="user.readme" :content="user.readme"/>
+
 </div>
 </div>
 
@@ -66,7 +66,9 @@ try {
   
 let user = await ctx.$client.fetchUser(ctx.params.username);
 if(user){
-user.readme = user.userinfo.presentation;
+user.readme = await ctx.$markdown(user.userinfo.presentation);
+
+
 user = JSON.parse(JSON.stringify(user));
 return { user, error: false };
 }
