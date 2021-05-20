@@ -46,7 +46,7 @@
     "nuxt-vite": "^0.1.0",
     "typescript": "^4.2.3"
   },
-  "resolutions": {
+   "resolutions": {
     "postcss": "^8.0.0"
   }
 }
