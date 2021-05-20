@@ -15,7 +15,8 @@
       "@/*": ["./*"]
     },
     "types": ["@types/node", "@nuxt/types", "@nuxtjs/auth-next"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   
   },
   "exclude": ["node_modules"]

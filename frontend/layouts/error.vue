@@ -13,7 +13,7 @@
     </h1>
     <div v-else>
       <h1>Error {{ error.statusCode }} </h1>
-      <h2>{{ error.message }}</h2>
+      <h2>{{ error.stack || error }}</h2>
     </div>
     <h3>
     <NuxtLink to="/">

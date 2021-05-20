@@ -6,9 +6,9 @@
 <div class="user-wallpaper-content">
 <div class="user-username-box">
 <p class="user-name">
-{{ user.username }}
+{{ user.user.username }}
 </p>
-<p class="user-id"> {{ user.userId }} </p>
+<p class="user-id"> {{ user.user.userId }} </p>
 </div>
 <img v-bind:src="userify(user).displayAvatarURL({size: 2048})" class="user-avatar-box"/>
 </div>
@@ -55,23 +55,25 @@
 </div>
 </template>
 <script lang="ts">
-
+// @ts-ignore
+import { User } from "battlelog.js/src/classes/user.ts";
 export default {
 data() {
 return {user: undefined, error: undefined, readme: undefined}
 },
-async asyncData({ params, $client }){
+async asyncData(ctx){
 try {
-  console.log($client);
-let user = await $client.fetchUser(params.username);
+  
+let user = await ctx.$client.fetchUser(ctx.params.username);
 if(user){
 user.readme = user.userinfo.presentation;
 user = JSON.parse(JSON.stringify(user));
-return { user, error: false, params };
+return { user, error: false };
 }
 } catch(error) {
 console.error(error);
-return { error, user: null, params };
+ctx.error({status: 500, message: error});
+return { error, user: null  };
 }
 },
 head() {
@@ -80,8 +82,9 @@ head() {
   }
 }, methods: {
 userify(user){
-let userified = new this.$bljs.User(this.$client, user);
-return user;
+
+let userified = new User(this.$client, user);
+return userified;
 
 }
 }
