@@ -25,7 +25,7 @@ const config: NuxtConfig = {
   // Global CSS: https://go.nuxtjs.dev/config-css
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/bl.ts"],
+  plugins: ["~/plugins/bl.ts", "~/plugins/nfm.ts"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
