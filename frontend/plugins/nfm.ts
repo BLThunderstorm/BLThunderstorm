@@ -2,10 +2,10 @@
  * Nefomemes Flavored Markdown
  */
 
- import * as remark from "remark";
- import * as remarkRehype from "remark-rehype";
- import * as rehypeSanitize from "rehype-sanitize";
- import * as remarkGFM from "remark-gfm";
+ import remark from "remark";
+ import remarkRehype from "remark-rehype";
+ import rehypeSanitize from "rehype-sanitize";
+ import remarkGFM from "remark-gfm";
 import { Plugin } from "@nuxt/types";
 export type processMarkdownType = (markdown: string, options: {throwError: boolean}) => Promise<string>;
 
