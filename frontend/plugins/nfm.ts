@@ -7,9 +7,9 @@
  import rehypeSanitize from "rehype-sanitize";
  import remarkGFM from "remark-gfm";
 import { Plugin } from "@nuxt/types";
-export type processMarkdownType = (markdown: string, options: {throwError: boolean}) => Promise<string>;
+export type processMarkdownType = (markdown: string, options?: {throwError?: boolean}) => Promise<string>;
 
-const processMarkdown: processMarkdownType = function processMarkdown(markdown, options) {
+const processMarkdown: processMarkdownType = function processMarkdown(markdown, options = {}) {
  return new Promise(async (resolve, reject) => {
  // Module '"d:/Projects/BLThunderstorm/node_modules/remark-rehype/types/index"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
  return remark()
