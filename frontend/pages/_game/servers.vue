@@ -36,7 +36,7 @@
          let servers = Array.from(await $client .fetchServers());
 
         servers = servers.map((s) => {
-            s = JSON.parse(JSON.strigify(s[1]));
+            s = JSON.parse(JSON.stringify(s[1]));
 
             if(params.game === "bf3"){
                s.image = Math.floor((Math.random() * 3) + 1);
