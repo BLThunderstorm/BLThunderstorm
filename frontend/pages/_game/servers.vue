@@ -24,7 +24,6 @@
     </div>
 </template>
 <script>
-
     export default {
         head(){
             return {title: "Servers"}
@@ -32,8 +31,14 @@
 
         async asyncData({ $client, params }){
 
+        let maps = {};
 
-         let servers = Array.from(await $client .fetchServers());
+        try {
+            maps = await import(`~/assets/${params.game}/maps.json`);
+        } catch {
+
+        }
+         let servers = Array.from(await $client.fetchServers());
 
         servers = servers.map((s) => {
             s = JSON.parse(JSON.stringify(s[1]));
@@ -46,7 +51,7 @@
             return s;
         })
 
-        return {servers};
+        return {servers, maps};
         }
 
     }
