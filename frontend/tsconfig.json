@@ -7,7 +7,7 @@
     "moduleResolution": "Node", 
     "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
     "allowJs": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
