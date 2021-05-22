@@ -3,19 +3,14 @@
         <div class="marginish-page">
             <div class="server-list">
                 <div v-for="server in servers" class="server" :map="server.map" :image="server.image" :style="server.customCSS"  :key="server.guid">
-                    <div>
+                    <div class="title">
                         {{ server.name }}
                     </div>
                     <div>
-                    <div class="title">
-                        Map
-                    </div>
-                    <div>
-                        {{ maps[server.map] }}
-                    </div>
+                    {{ `${maps[server.map] || server.map} - ${(server.country || "IDK").toUpperCase()} - ${server.tickRateMax} ticks` }}
                     </div>
                 </div>
-                <div v-if="!server || !server.length">
+                <div v-if="!servers || !servers.length">
 
                 </div>
 
@@ -34,7 +29,7 @@
         let maps = {};
 
         try {
-            maps = await import(`~/assets/${params.game}/maps.json`);
+            maps = await import(`~/assets/maps.json`);
         } catch {
 
         }
@@ -45,7 +40,7 @@
 
             if(params.game === "bf3"){
                s.image = Math.floor((Math.random() * 3) + 1);
-               s.customCSS = `background-image: url("https://raw.githubusercontent.com/kaloczikvn/VU-Loading-Images/master/${s.map}/${s.image}.jpg");`;
+               s.customCSS = `background-image: url("https://gitcdn.xyz/repo/BLThunderstorm/Map-Images/master/${s.map}/0${s.image}.jpg");`;
             }
 
             return s;
@@ -59,7 +54,8 @@
 <style lang="sass">
 
 .server
- height: 200px
+ height: auto
+ padding: 10px
  width: 100%
  background-size: cover
  background-position: 50%
