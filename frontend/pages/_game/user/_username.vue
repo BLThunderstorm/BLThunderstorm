@@ -28,7 +28,7 @@
 
 <div class="content-order">
 <div class="title">Friends</div>
-<div v-for="friend in Array.from(user.friends)">
+<div v-for="friend in Array.from(user.friends)" :key="friend.user.userId">
 
 <a :href="friend.username"><v-avatar size="48"><img :src="userify(friend).displayAvatarURL({size: 128})"></v-avatar></a>
 
@@ -57,6 +57,8 @@
 <script lang="ts">
 // @ts-ignore
 import { User } from "battlelog.js/src/classes/user.ts";
+import { NuxtError } from '@nuxt/types';
+
 export default {
 data() {
 return {user: undefined, error: undefined, readme: undefined}
@@ -74,7 +76,7 @@ return { user, error: false };
 }
 } catch(error) {
 console.error(error);
-ctx.error({status: 500, message: error});
+ctx.error(<NuxtError>{status: 500, message: error});
 return { error, user: null  };
 }
 },
@@ -83,7 +85,7 @@ head() {
   title: this.user.username || "User not found",
   }
 }, methods: {
-userify(user){
+userify(user: User){
 
 let userified = new User(this.$client, user);
 return userified;

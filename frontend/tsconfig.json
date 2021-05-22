@@ -17,7 +17,8 @@
     "types": ["@types/node", "@nuxt/types", "@nuxtjs/auth-next"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true, 
+    "forceConsistentCasingInFileNames": false
   
   },
   "exclude": ["node_modules"]
