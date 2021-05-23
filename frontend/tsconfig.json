@@ -1,21 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ES2020",
     "experimentalDecorators":true,
     "strictFunctionTypes": false,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "ES2020",
+    "moduleResolution": "Node", 
     "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
-    "esModuleInterop": true,
     "allowJs": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "@nuxtjs/auth-next"]
+    "types": ["@types/node", "@nuxt/types", "@nuxtjs/auth-next"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, 
+    "forceConsistentCasingInFileNames": false
+  
   },
   "exclude": ["node_modules"]
 }
