@@ -7,7 +7,7 @@
                         {{ server.name }}
                     </div>
                     <div>
-                    {{ `${maps[server.map] || server.map} - ${(server.country || "IDK").toUpperCase()} - ${server.tickRateMax} ticks` }}
+                    {{ `${maps[server.map] || server.map} - ${(server.country || "IDK").toUpperCase()} - ${server.tickRate} ticks` }}
                     </div>
                 </div>
                 <div v-if="!servers || !servers.length">
