@@ -2,7 +2,7 @@
   BLThunderstorm
 </h1>
   
-  <p align=center>An unofficial dashboard and stats-tracking site for FPS games, focusing on Battlefield games, for now.</p>
+  <p align=center>An open source alternative for other gaming stats-tracker sites on the market.</p>
   <h3 align="center">
   <a href="https://discord.gg/nTd6jMrF">Discord</a> · <a href="https://twitter.com/BLThunderstorm">Twitter</a>  · 
   <a href="./CONTRIBUTING.md">Contribute</a> · <a href="./docs">Documentation</a>
