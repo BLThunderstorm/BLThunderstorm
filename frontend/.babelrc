@@ -1,0 +1,7 @@
+{
+    "loose":false,
+    "typescript": {
+        "typeCheck": true
+    },
+    "plugins": [["@babel/plugin-proposal-private-methods", { "loose": true }]] 
+}

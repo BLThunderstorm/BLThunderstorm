@@ -2,10 +2,10 @@ name: ESlint
 on:
   push:
     paths:
-     - '**.js'
-     - '**.vue'
-     - '**.ts'
-     - '.github/workflows/eslint.yml'
+     - 'frontend/**.js'
+     - 'frontend/**.vue'
+     - 'frontend/**.ts'
+     - '.github/workflows/frontend-eslint.yml'
   
 
 jobs:
@@ -16,12 +16,14 @@ jobs:
       - name: Checkout things
         uses: actions/checkout@v2.3.4
       - name: Node.JS 14.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: "14"
   
       - name: Install dependencies
         run: yarn install
+      - name: Move to ./frontend directory
+        run: cd frontend
       - name: Test Code Linting
         run: yarn lint
 
@@ -42,7 +44,7 @@ jobs:
         # npm script for ESLint
         # eslint --output-file eslint_report.json --format json src
         # See https://eslint.org/docs/user-guide/command-line-interface#options
-        run: npm run lint:report
+        run: yarn lint:report
         # Continue to the next step even if this fails
         continue-on-error: true
       - name: Annotate Code Linting Results
