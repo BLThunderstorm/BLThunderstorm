@@ -5,7 +5,7 @@ on:
      - 'frontend/**.js'
      - 'frontend/**.vue'
      - 'frontend/**.ts'
-     - '.github/workflows/frontend-eslint.yml'
+     - '.github/workflows/eslint.yml'
   
 
 jobs:
@@ -20,10 +20,7 @@ jobs:
         with:
           node-version: "14"
   
-      - name: Install dependencies
-        run: yarn install
-      - name: Move to ./frontend directory
-        run: cd frontend
+      
       - name: Test Code Linting
         run: yarn lint
 
