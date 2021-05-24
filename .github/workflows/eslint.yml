@@ -2,9 +2,8 @@ name: ESlint
 on:
   push:
     paths:
-     - '**.js'
-     - '**.vue'
-     - '**.ts'
+     - './backend/**.js'
+     - './backend/**.ts'
      - '.github/workflows/eslint.yml'
   
 
@@ -19,7 +18,8 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: "14"
-  
+      - name: Move backend directory
+        run: cd backend
       - name: Install dependencies
         run: yarn install
       - name: Test Code Linting
