@@ -11,8 +11,8 @@
     "backend"
   ],
   "scripts": {
-    "lint": "eslint ./ --ext .ts,.js,.vue --fix -c .eslintrc.yml",
-    "lint:report": "eslint --output-file eslint_report.json --format json ./ -c .eslintrc.yml",
+    "lint": "eslint ./ --ext .ts,.js,.vue --fix",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./  --ext .ts,.js,.vue ",
     "frontend:dev": "cd frontend && yarn dev"
   },
   "devDependencies": {
