@@ -1,15 +1,6 @@
-declare var process : {
-  env: {
-    HOST?: string,
-    GITHUB_CLIENT_ID: string,
-    PORT?: string,
-    GITHUB_CLIENT_SECRET?: string
-  }
-}
-
 import colors from "vuetify/es5/util/colors";
-import type { NuxtConfig } from "@nuxt/types";
-const config: NuxtConfig = {
+
+export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - BLThunderstorm",
@@ -25,7 +16,7 @@ const config: NuxtConfig = {
   // Global CSS: https://go.nuxtjs.dev/config-css
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/bl.ts", "~/plugins/nfm.ts"],
+  plugins: ["~/plugins/bl.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,7 +27,6 @@ const config: NuxtConfig = {
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
     "@nuxt/typescript-build",
-  ...(process.env.VITE ? ["nuxt-vite"] : [])
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -71,13 +61,7 @@ const config: NuxtConfig = {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    babel: {
-      babelrc: true
-    },
-    extend(config){
-      config.mode = "production";
-    }
-   },
+    babelrc: true  },
   server: { host: process.env.HOST, port: process.env.PORT },
   watchers: {
     webpack: {
@@ -86,5 +70,3 @@ const config: NuxtConfig = {
     }
   }
 };
-
-export default config;
