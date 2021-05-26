@@ -28,8 +28,11 @@
 <!-- | frontend-shared | Shared Vue components to be used by BLThunderstorm-related frontend apps. | -->
 
 ## FAQ
-### When the open beta will be held?
+### When the open alpha will be held?
 Soon™️
+
+### What's the status of the project?
+BLThunderstorm is way behind of something that can be called a "Minimum viable product" (MVP). The open alpha season will be focused on the core functionality and Battlelog games, but currently we're far way back due to bugs.
 
 ### Why the name "BLThunderstorm"?
 BLThunderstorm is just a placeholder name, mate. If you want to propose a name for BLThunderstorm, or whatever it would be called in the future, go to this [GitHub discussion](https://github.com/BLThunderstorm/BLThunderstorm/discussions/53).
