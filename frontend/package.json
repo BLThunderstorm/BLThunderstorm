@@ -31,15 +31,16 @@
     "vue-template-compiler": "^2.6.12",
     "vuetify": "^2.4.11",
     "vuetify-loader": "^1.7.2",
-    "webpack": "^5.36.2"
+    "webpack": "^5.36.2",
+     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/vuetify": "^1.11.3"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.14.2",
     "@nuxt/types": "^2.15.6",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.0",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/vuetify": "^1.11.3",
+   
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "fork-ts-checker-webpack-plugin": "^6.2.6",

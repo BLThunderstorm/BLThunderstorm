@@ -25,6 +25,7 @@
 | -------- | -------------------------------- |
 | frontend | The frontend Nuxt server.        |
 | backend  | The backend server for the site. |
+
 <!-- | frontend-shared | Shared Vue components to be used by BLThunderstorm-related frontend apps. | -->
 
 ## FAQ

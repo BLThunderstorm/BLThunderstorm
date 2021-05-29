@@ -19,6 +19,7 @@
     </div>
 </template>
 <script>
+import * as maps from "~/assets/maps.json";
     export default {
         head(){
             return {title: "Servers"}
@@ -26,13 +27,6 @@
 
         async asyncData({ $client, params }){
 
-        let maps = {};
-
-        try {
-            maps = await import(`~/assets/maps.json`);
-        } catch {
-
-        }
          let servers = Array.from(await $client.fetchServers());
 
         servers = servers.map((s) => {

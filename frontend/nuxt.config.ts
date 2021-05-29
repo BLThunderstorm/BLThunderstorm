@@ -4,6 +4,7 @@ declare var process : {
     GITHUB_CLIENT_ID: string,
     PORT?: string,
     GITHUB_CLIENT_SECRET?: string
+    VITE?: string
   }
 }
 
@@ -36,7 +37,7 @@ const config: NuxtConfig = {
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
     "@nuxt/typescript-build",
-  ...(process.env.VITE ? ["nuxt-vite"] : [])
+  "nuxt-vite"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

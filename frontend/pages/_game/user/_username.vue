@@ -95,7 +95,7 @@ return userified;
 }
 </script>
 <style lang="sass">
-@import '~vuetify/src/styles/styles.sass'
+@import 'vuetify/src/styles/styles.sass'
 
 
 #error-page h1
