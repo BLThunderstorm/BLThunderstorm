@@ -4,7 +4,9 @@
   
 @Component({})
 export default class IndexPage extends Vue {
-  async asyncData(){
+  async asyncData(ctx){
+    
+    (!$auth.loggedIn)
     }
 }
 </script>
