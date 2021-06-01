@@ -6,7 +6,9 @@
 export default class IndexPage extends Vue {
   async asyncData(ctx){
     
-    (!$auth.loggedIn)
-    }
+    !ctx.$auth.loggedIn ? ctx.redirect('/dashboard') : ctx.redirect('/about');
+    
+    return {};
+    
 }
 </script>
