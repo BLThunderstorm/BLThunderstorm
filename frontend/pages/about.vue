@@ -85,8 +85,6 @@ export default class AboutPage extends Vue {
 #about-content
  margin-left: 40px
 
-
-
 @media (portrait: landscape)
 
  #forums-container
