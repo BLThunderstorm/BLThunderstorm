@@ -30,8 +30,8 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-@Component({})
-export default class AboutPage extends Vue {
+@Component
+export default class AboutPage from Vue {
   head(){
   return {
   title: "About"
@@ -39,7 +39,7 @@ export default class AboutPage extends Vue {
   };
 }
 </script>
-<style scoped lang="sass">
+<style lang="sass">
 
 #service-name
  font-family: "Bebas Neue" !important
@@ -84,6 +84,8 @@ export default class AboutPage extends Vue {
 
 #about-content
  margin-left: 40px
+
+
 
 @media (portrait: landscape)
 
