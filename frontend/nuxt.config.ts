@@ -1,4 +1,8 @@
-declare var process : {
+import colors from "vuetify/es5/util/colors";
+import type { NuxtConfig } from "@nuxt/types";
+
+
+declare let process : {
   env: {
     HOST?: string,
     GITHUB_CLIENT_ID: string,
@@ -8,8 +12,6 @@ declare var process : {
   }
 }
 
-import colors from "vuetify/es5/util/colors";
-import type { NuxtConfig } from "@nuxt/types";
 const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
