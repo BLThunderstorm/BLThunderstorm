@@ -1,4 +1,3 @@
-import colors from "vuetify/es5/util/colors";
 import type { NuxtConfig } from "@nuxt/types";
 
 
@@ -36,9 +35,7 @@ const config: NuxtConfig = {
   // Modules for dev and build (recommended):
   // https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify",
-    "@nuxt/typescript-build",
+        "@nuxt/typescript-build",
   ...(process.env.VITE ? ["nuxt-vite"] : [])
   ],
 
@@ -54,24 +51,6 @@ const config: NuxtConfig = {
     watchLoggedIn: true,
   },
 
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-  vuetify: {
-    customVariables: ["~/assets/variables.sass"],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
-  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {

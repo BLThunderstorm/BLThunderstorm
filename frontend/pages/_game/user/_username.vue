@@ -95,8 +95,6 @@ return userified;
 }
 </script>
 <style lang="sass">
-@import '~vuetify/src/styles/styles.sass'
-
 
 #error-page h1
  font-size: 30px
@@ -105,7 +103,6 @@ return userified;
 
 .content-order-container, .user-readme
  padding: 20px
- background-color: map-get($material-dark, "background")
 
 .content-order-container .content-order
  display: flex

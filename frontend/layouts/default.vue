@@ -1,29 +1,5 @@
 <template>
-<!-- <div>
-<script async src="https://arc.io/widget.min.js#pYA86F7H"></script>
-
-<v-app>
-  <div class="page-container">
-    <div>
-  <NavigationBar/>
-  </div>
-  <div class="page-content">
-  <div class="bg-picture"></div>
-
-    <div id="template-container">
-    <Nuxt/>
-    </div>
-    
-
-    
-      <Footer v-bind:links="links" v-bind:icons="icons" v-bind:disclaimers="disclaimers"/>
-</div>   
-</div>
-</div> 
-</v-app>
-
- </div>-->
- <v-app class="page-container">
+ <div class="page-container">
       <div class="bg-picture">  </div>
  <NavigationBar/>
    <div class="page-content-container">
@@ -40,7 +16,7 @@
 import Component from 'vue-class-component';
 import Vue from 'vue';
 
-@Component
+@Component({})
 export default class DefaultLayout extends Vue {
 data() {
 return {
