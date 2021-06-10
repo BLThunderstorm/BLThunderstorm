@@ -88,3 +88,11 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# BLThunderstorm does not use Yarn's zero-install feature 
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
