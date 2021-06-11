@@ -1,6 +1,0 @@
-{
-    "loose":false,
-    "typescript": {
-        "typeCheck": true
-    }
-}
