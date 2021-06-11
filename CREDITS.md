@@ -1,5 +1,11 @@
 <div>
-<h1>Credits</h1>
+<h1 align=center>Credits</h1>
 </div>
 
-**Wallpaper** - https://imgur.com/gallery/mMXhn/comment/725630252
+## Misc
+
+- **Wallpaper** - https://imgur.com/gallery/mMXhn/comment/725630252
+
+## Problem-solving resources
+
+- https://github.com/styled-components/styled-components/issues/3082
