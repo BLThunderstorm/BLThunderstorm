@@ -10,7 +10,7 @@
    
    <Footer :links="links" :icons="icons" :disclaimers="disclaimers"/>
    </div>
-   </v-app>
+   </div>
 </template>
 <script lang="ts">
 import Component from 'vue-class-component';
