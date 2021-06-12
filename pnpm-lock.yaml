@@ -66,6 +66,7 @@ importers:
       remark-gfm: ^1.0.0
       remark-html: ^13.0.1
       remark-rehype: ^8.0.0
+      sass: ^1.34.1
       typescript: ^4.2.3
       vue: ^2.6.12
       vue-class-component: ^7.2.6
@@ -87,12 +88,13 @@ importers:
       remark-gfm: 1.0.0
       remark-html: 13.0.1
       remark-rehype: 8.1.0
+      sass: 1.34.1
       vue: 2.6.14
       vue-class-component: 7.2.6_vue@2.6.14
       vue-template-compiler: 2.6.14
     devDependencies:
       '@babel/plugin-proposal-export-namespace-from': 7.14.5_@babel+core@7.14.5
-      '@nuxt/types': 2.15.6
+      '@nuxt/types': 2.15.6_sass@1.34.1
       '@nuxt/typescript-build': 2.1.0_@nuxt+types@2.15.6
       '@nuxtjs/eslint-config-typescript': 6.0.1_typescript@4.3.2
       '@nuxtjs/pwa': 3.3.5
@@ -1498,7 +1500,7 @@ packages:
       std-env: 2.3.0
     dev: false
 
-  /@nuxt/types/2.15.6:
+  /@nuxt/types/2.15.6_sass@1.34.1:
     resolution: {integrity: sha512-3edRQDAMcpHN4cRWR9vB1ugyegJ+w8UV1vHSxV48/LK9qsgBE8P7wKSK6BvHLqHpnMoB0PxrUXizprpLluwpHA==}
     dependencies:
       '@types/autoprefixer': 9.7.2
@@ -1519,7 +1521,7 @@ packages:
       '@types/webpack-bundle-analyzer': 3.9.3
       '@types/webpack-dev-middleware': 4.1.2
       '@types/webpack-hot-middleware': 2.25.4
-      sass-loader: 10.1.1
+      sass-loader: 10.1.1_sass@1.34.1
     transitivePeerDependencies:
       - fibers
       - node-sass
@@ -1532,7 +1534,7 @@ packages:
     peerDependencies:
       '@nuxt/types': '>=2.13.1'
     dependencies:
-      '@nuxt/types': 2.15.6
+      '@nuxt/types': 2.15.6_sass@1.34.1
       consola: 2.15.3
       fork-ts-checker-webpack-plugin: 6.2.10
       ts-loader: 8.3.0_typescript@4.2.4
@@ -8336,7 +8338,7 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /sass-loader/10.1.1:
+  /sass-loader/10.1.1_sass@1.34.1:
     resolution: {integrity: sha512-W6gVDXAd5hR/WHsPicvZdjAWHBcEJ44UahgxcIE196fW2ong0ZHMPO1kZuI5q0VlvMQZh32gpv69PLWQm70qrw==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -8355,9 +8357,18 @@ packages:
       klona: 2.0.4
       loader-utils: 2.0.0
       neo-async: 2.6.2
+      sass: 1.34.1
       schema-utils: 3.0.0
       semver: 7.3.5
     dev: true
+
+  /sass/1.34.1:
+    resolution: {integrity: sha512-scLA7EIZM+MmYlej6sdVr0HRbZX5caX5ofDT9asWnUJj21oqgsC+1LuNfm0eg+vM0fCTZHhwImTiCU0sx9h9CQ==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.1
+    dev: false
 
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
