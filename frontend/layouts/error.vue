@@ -2,12 +2,7 @@
 
   <div id="error-page">
   <div id="box-error">
-  <div class="jokomium">
-  <iframe width=100 src="jokomium.mp4">
 
-  </iframe> 
-  </div>
-  
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -41,10 +36,9 @@ export default class ErrorPage extends Vue {
   layout = 'empty';
   pageNotFound: string;
   otherError: string;
-  error: {message: string, statusCode: number} = {statusCode: 500, message: "Internal server error"};
   props = {
     error: {
-      type: Object,
+      type: {message: String, statusCode: Number},
       default: null
     }
   };
