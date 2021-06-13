@@ -38,7 +38,9 @@ const config: NuxtConfig = {
     ...(process.env.VITE ? ["nuxt-vite"] : []),
     "@nuxtjs/vuetify",
   ],
-
+  vuetify: {
+    optionsPath: "~/vuetify.config.ts"
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/axios",
