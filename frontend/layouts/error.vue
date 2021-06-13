@@ -34,7 +34,7 @@ export default class ErrorPage extends Vue {
   layout = 'empty';
   pageNotFound: string;
   otherError: string;
-  error: {type: object, default: any, statusCode: number};
+  error: {message: string, statusCode: number} = {statusCode: 500, message: "Internal server error"};
   props = {
     error: {
       type: Object,
@@ -45,7 +45,7 @@ export default class ErrorPage extends Vue {
     return {
       pageNotFound: '404 Not Found',
       otherError: 'An error occurred'
-    }
+    } 
   };
   head() {
     const title =
