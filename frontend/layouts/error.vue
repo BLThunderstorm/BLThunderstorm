@@ -3,17 +3,24 @@
   <div id="error-page">
   <div id="box-error">
   <div class="jokomium">
-  <iframe width=100>
+  <iframe width=100 src="jokomium.mp4">
 
-  </iframe>
+  </iframe> 
   </div>
   
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
     <div v-else>
-      <h1>Error {{ error.statusCode }} </h1>
+    <div v-if="!error.statusCode">
+      <h1>You found a mythical bug!</h1>
       <h2>{{ error.stack || error }}</h2>
+    </div>
+    <div v-else>
+      <h1>Error {{error.statusCode}}</h1>
+      <h2>{{ error.message || error }}</h2>  
+    </div>
+
     </div>
     <h3>
     <NuxtLink to="/">
@@ -29,7 +36,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-@Component
+@Component({})
 export default class ErrorPage extends Vue {
   layout = 'empty';
   pageNotFound: string;
@@ -48,43 +55,44 @@ export default class ErrorPage extends Vue {
     } 
   };
   head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
-    return { title:  title }
+    return {title: "Error"};
   };
 }
 </script>
 
-<style lang="sass">
-.jokomium
- width: 100%
- max-width: 250px
- position: relative
- height: 0
+<style scoped lang="scss">
+.jokomium {
+ width: 100%;
+ max-width: 250px;
+ position: relative;
 
-.jokomium iframe 
- position: absolute
- top: 0
- left: 0
- width: 100%
- height: 100%
+  iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+}
+#error-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+ 
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+  
 
-#error-page h1
- font-size: 30px
- font-weight: 600
 
-#error h2
- font-size: 20px
+#error h2 {
+ font-size: 20px;
+}
+#box-error {
+ width: 50%;
+ text-align: center;
+}
 
-#box-error
- width: 50%
- text-align: center
-
-#error-page a
- color: white !important
-
-#error-page
- display: grid
- place-items: center
- height: 100%
 </style>
