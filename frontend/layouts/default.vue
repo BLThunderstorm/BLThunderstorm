@@ -1,5 +1,5 @@
 <template>
- <div class="page-container">
+ <v-app class="page-container">
       <div class="bg-picture">  </div>
  <NavigationBar/>
    <div class="page-content-container">
@@ -10,7 +10,8 @@
    
    <Footer :links="links" :icons="icons" :disclaimers="disclaimers"/>
    </div>
-   </div>
+   
+   </v-app>
 </template>
 <script lang="ts">
 import Component from 'vue-class-component';
@@ -57,7 +58,7 @@ return {
 
 .page-container
  display: flex
- flex-directio: row
+ flex-direction: row
  justify-content: flex-start
 .page-content-container
  position: relative

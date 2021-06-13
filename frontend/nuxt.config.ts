@@ -1,15 +1,14 @@
 import type { NuxtConfig } from "@nuxt/types";
 
-
-declare let process : {
+declare let process: {
   env: {
-    HOST?: string,
-    GITHUB_CLIENT_ID: string,
-    PORT?: string,
-    GITHUB_CLIENT_SECRET?: string,
-    VITE?: boolean
-  }
-}
+    HOST?: string;
+    GITHUB_CLIENT_ID: string;
+    PORT?: string;
+    GITHUB_CLIENT_SECRET?: string;
+    VITE?: boolean;
+  };
+};
 
 const config: NuxtConfig = {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -35,12 +34,18 @@ const config: NuxtConfig = {
   // Modules for dev and build (recommended):
   // https://go.nuxtjs.dev/config-modules
   buildModules: [
-        "@nuxt/typescript-build",
-  ...(process.env.VITE ? ["nuxt-vite"] : [])
+    "@nuxt/typescript-build",
+    ...(process.env.VITE ? ["nuxt-vite"] : []),
+    "@nuxtjs/vuetify",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios", "@nuxtjs/pwa", "@nuxtjs/auth-next"],
+  modules: [
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/auth-next",
+    "@nuxtjs/style-resources",
+  ],
   auth: {
     strategies: {
       github: {
@@ -54,19 +59,23 @@ const config: NuxtConfig = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
-      babelrc: true
+      babelrc: true,
     },
-    extend(config){
+    extend(config) {
       config.mode = "production";
-    }
-   },
+    },
+  },
   server: { host: process.env.HOST, port: process.env.PORT },
   watchers: {
     webpack: {
       aggregateTimeout: 300,
-      poll: 1000
-    }
-  }
+      poll: 1000,
+    },
+  },
+
+  styleResources: {
+    scss: ["~/assets/theme.scss"],
+  },
 };
 
 export default config;
