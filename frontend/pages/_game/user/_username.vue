@@ -11,7 +11,7 @@
           </div>
           <img
             v-bind:src="userify(user).displayAvatarURL({ size: 2048 })"
-           
+            class="user-avatar-image"
           />
         </div>
       </div>
@@ -32,7 +32,7 @@
                   {{
                     soldier.persona.clanTag
                       ? "[" + soldier.persona.clanTag + "] "
-                      : "" + soldier.persona.personaName
+                      : "" + (soldier.persona.personaName || user.user.username)
                   }}
                 </div>
               </div>
@@ -82,7 +82,16 @@ export default {
       let user = await ctx.$client.fetchUser(ctx.params.username);
       if (user) {
         user.readme = await ctx.$markdown(user.userinfo.presentation);
+        switch(ctx.$client.client.game){
+          case "bf3":{
 
+            user.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/bf3-${user.persona.picture}.png`
+           break;
+          };
+          case "bf4":{
+            
+          }
+        }
         user = JSON.parse(JSON.stringify(user));
         return { user, error: false };
       }
@@ -116,7 +125,7 @@ export default {
   height: 100%;
   color: white;
 
-  h1 {
+   h1 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -147,7 +156,30 @@ export default {
 #user-page {
   position: relative;
 
-  .user-page-content {
+  
+
+   
+
+  
+}
+
+.user-wallpaper-content {
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+    
+    }
+
+  .user-username-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+ .user-page-content {
     margin-bottom: 20px;
   }
 
@@ -157,25 +189,9 @@ export default {
     width: 100%;
     position: relative;
     height: 150px;
-
-    .user-name {
+  }
+   .user-name {
       font-weight: 600;
       font-size: 35px;
     }
-
-    .user-wallpaper-content {
-      padding: 20px;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-
-      .user-username-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-    }
-  }
-}
 </style>
