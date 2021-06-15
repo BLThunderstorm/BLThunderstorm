@@ -30,24 +30,24 @@
               >
                 <div class="title">
                   {{
-                    soldier.persona.clanTag
+                    (soldier.persona.clanTag
                       ? "[" + soldier.persona.clanTag + "] "
-                      : "" + (soldier.persona.personaName || user.user.username)
+                      : "") + (soldier.persona.personaName || user.user.username)
                   }}
                 </div>
               </div>
             </div>
             <div class="friends-bar content-order-container user-page-content">
-              <div class="content-order">
+             
+             
                 <div class="title">Friends</div>
+              <div class="content-order">
                 <div v-for="friend in user.friends" :key="friend.user.userId">
-                  <a :href="friend.username"
-                    ><v-avatar size="48"
+                <a><v-avatar size="48"
                       ><img
                         :src="
                           userify(friend).displayAvatarURL({ size: 128 })
-                        " /></v-avatar
-                  ></a>
+                        " /></v-avatar></a>
                 </div>
               </div>
             </div>
