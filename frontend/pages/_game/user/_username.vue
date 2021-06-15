@@ -119,6 +119,11 @@ export default {
   background-color: #303030;
 }
 
+.friends-bar {
+  display: flex;
+  flex-direction: column;
+}
+
 #error-page {
   display: grid;
   place-items: center;
