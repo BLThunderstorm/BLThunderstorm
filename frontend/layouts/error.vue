@@ -1,92 +1,96 @@
 <template>
+  <div class="__nuxt-error-page">
+    <div class="error">
+      <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="#DBE1EC" viewBox="0 0 48 48">
+        <path d="M22 30h4v4h-4zm0-16h4v12h-4zm1.99-10C12.94 4 4 12.95 4 24s8.94 20 19.99 20S44 35.05 44 24 35.04 4 23.99 4zM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16z" />
+      </svg>
 
-  <div id="error-page">
-  <div id="box-error">
-
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <div v-else>
-    <div v-if="!error.statusCode">
-      <h1>You found a mythical bug!</h1>
-      <h2>{{ error.stack || error }}</h2>
-    </div>
-    <div v-else>
-      <h1>Error {{error.statusCode}}</h1>
-      <h2>{{ error.message || error }}</h2>  
-    </div>
+      <div class="title">{{ message }}</div>
+      <p v-if="statusCode === 404" class="description">
+        <a v-if="typeof $route === 'undefined'" class="error-link" href="/"></a>
+        <NuxtLink v-else class="error-link" to="/">Back to home</NuxtLink>
+      </p>
+   
+      <p class="description" v-else></p>
+     
 
     </div>
-    <h3>
-    <NuxtLink to="/">
-      Return to home page
-    </NuxtLink>
-    </h3>
-    </div>
-
-    </div>
- 
+  </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-@Component({})
-export default class ErrorPage extends Vue {
-  layout = 'empty';
-  pageNotFound: string;
-  otherError: string;
-  props = {
+<script>
+export default {
+  name: 'NuxtError',
+  props: {
     error: {
-      type: {message: String, statusCode: Number},
+      type: Object,
       default: null
     }
-  };
-  data(): object {
+  },
+  computed: {
+    statusCode () {
+      return (this.error && this.error.statusCode) || 500
+    },
+    message () {
+      return this.error.message || 'An error occured!'
+    }
+  },
+  head () {
     return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
-    } 
-  };
-  head() {
-    return {title: "Error"};
-  };
+      title: this.message,
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0'
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style scoped lang="scss">
-.jokomium {
- width: 100%;
- max-width: 250px;
- position: relative;
-
-  iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }
+<style>
+.__nuxt-error-page {
+  padding: 1rem;
+  background: #F7F8FB;
+  color: #47494E;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: 100 !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-#error-page {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
- 
-  h1 {
-    font-size: 30px;
-    font-weight: 600;
-  }
+.__nuxt-error-page .error {
+  max-width: 450px;
 }
-  
-
-
-#error h2 {
- font-size: 20px;
+.__nuxt-error-page .title {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #47494E;
+  margin-bottom: 8px;
 }
-#box-error {
- width: 50%;
- text-align: center;
+.__nuxt-error-page .description {
+  color: #7F828B;
+  line-height: 21px;
+  margin-bottom: 10px;
 }
-
+.__nuxt-error-page a {
+  color: #7F828B !important;
+  text-decoration: none;
+}
+.__nuxt-error-page .logo {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+}
 </style>

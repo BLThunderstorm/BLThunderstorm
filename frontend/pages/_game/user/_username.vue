@@ -23,26 +23,33 @@
               <div class="user-readme"></div>
             </div>
             <div class="user-soldiers">
-              <div class="title">Soldiers</div>
+            
               <div
                 v-for="soldier in user.soldiers"
                 :key="soldier.persona.personaId"
+                class="soldier-box"
               >
-                <div class="title">
+              <div class="soldier-text soldier-content">               <div class="title">
                   {{
                     (soldier.persona.clanTag
                       ? "[" + soldier.persona.clanTag + "] "
                       : "") + (soldier.persona.personaName || user.user.username)
                   }}
                 </div>
+                <p class="info">{{ }}</p>
               </div>
+              <div class="soldier-portrait soldier-content" :style="soldier.soldierPic ? `background-image: url('${soldier.soldierPic}')` : ''">
+
+              </div>
+              </div>
+ 
             </div>
             <div class="friends-bar content-order-container user-page-content">
-             
-             
+              
                 <div class="title">Friends</div>
+            
               <div class="content-order">
-                <div v-for="friend in user.friends" :key="friend.user.userId">
+                <div v-for="friend  in user.friends" :key="friend.user.userId">
                 <a><v-avatar size="48"
                       ><img
                         :src="
@@ -72,26 +79,41 @@
 // @ts-ignore
 import { User } from "battlelog.js/src/classes/user.ts";
 import { NuxtError } from "@nuxt/types";
-
+import * as games from "@nefomemes/blscraps-strings/games.json";
 export default {
   data() {
-    return { user: undefined, error: undefined, readme: undefined };
+    return { user: undefined, error: undefined };
   },
   async asyncData(ctx) {
     try {
       let user = await ctx.$client.fetchUser(ctx.params.username);
       if (user) {
         user.readme = await ctx.$markdown(user.userinfo.presentation);
-        switch(ctx.$client.client.game){
-          case "bf3":{
 
-            user.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/bf3-${user.persona.picture}.png`
+        for(let soldier of user.soldiers){
+        switch(soldier.game){
+          case games["BF3"]:{
+
+            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`
            break;
           };
-          case "bf4":{
+          case games["BF4"]:{
             
+            break;
+          };
+          case games["BFH"]:{
+            break;
+          }
+
+          case games["MOHW"]:{
+            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${soldier.persona.picture || "default"}.png`;
+            break;
           }
         }
+
+        soldier.soldierPic = soldier.soldierPic || "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
+        }
+
         user = JSON.parse(JSON.stringify(user));
         return { user, error: false };
       }
@@ -122,6 +144,23 @@ export default {
 .friends-bar {
   display: flex;
   flex-direction: column;
+}
+.soldier-box {
+  position: relative;
+  height: 150px;
+}
+
+.soldier-content {
+  position: absolute;
+}
+
+.soldier-text {
+  z-index: 5;
+
+}
+
+.soldier-portrait {
+  z-index: 4;
 }
 
 #error-page {

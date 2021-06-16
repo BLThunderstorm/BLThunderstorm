@@ -63,9 +63,7 @@ const config: NuxtConfig = {
     babel: {
       babelrc: true,
     },
-    extend(config) {
-      config.mode = "production";
-    },
+
   },
   server: { host: process.env.HOST, port: process.env.PORT },
   watchers: {

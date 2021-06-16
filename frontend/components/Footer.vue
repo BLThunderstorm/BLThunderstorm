@@ -3,12 +3,12 @@
 <footer class="footer nefo-footer">
 
 <nav v-if="links && links.length" class="nefo-navi-links" >
-			<ul v-for="category in links" class="nefo-links-bar" >
+			<ul v-for="category in links" class="nefo-links-bar" :key="category">
 				<li class="nefo-link-title" v-html="category.title">
 
 				</li>
 			<span v-if="category.links && category.links.length">
-			<li v-for="link in category.links">
+			<li v-for="link in category.links" :key="link">
 				<a v-bind:href="link.href" v-html="link.title"></a>
 				</li>
 			</span>
@@ -16,7 +16,7 @@
 		</nav>
 
 <span  v-if="disclaimers && disclaimers.length">
-		<div v-for="disclaimer in disclaimers" class="nefo-copyright-container" :key="Math.random()">
+		<div v-for="disclaimer in disclaimers" class="nefo-copyright-container" :key="disclaimer.id">
 			<div class="nefo-copyright" v-html="disclaimer">
 
 			</div>
@@ -24,7 +24,6 @@
 		</span>
 
 		<div v-if="icons && icons.length" class="nefo-footer-links">
-		<div v-for="icon in icons" class="nefo-icons" :key="Math.random()"><a v-bind:href="icon.href"><img v-if="icon.name" class="nefo-simple-icons" v-bind:src="`https://simple-icons.github.io/simple-icons-website/icons/${icon.name}.svg`" style="filter: invert(100%)"/><img v-else v-bind:src="icon.imageUrl"></a></div>
 			</div>
 </footer>
 
