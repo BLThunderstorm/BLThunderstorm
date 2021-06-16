@@ -46,6 +46,7 @@ importers:
       '@babel/plugin-proposal-export-namespace-from': ^7.14.2
       '@babel/plugin-syntax-jsx': ^7.12.13
       '@babel/runtime-corejs3': ^7.14.0
+      '@nefomemes/blscraps-strings': ^1.0.0
       '@nuxt/types': ^2.15.6
       '@nuxt/typescript-build': ^2.1.0
       '@nuxtjs/auth-next': 5.0.0-1622918202.e815752
@@ -56,7 +57,7 @@ importers:
       '@nuxtjs/vuetify': ^1.11.3
       '@typescript-eslint/eslint-plugin': ^4.22.1
       '@typescript-eslint/parser': ^4.22.1
-      battlelog.js: https://github.com/BLThunderstorm/battlelog.js
+      battlelog.js: 0.3.0
       consola: ^2.15.3
       core-js: ^3.11.2
       fork-ts-checker-webpack-plugin: ^6.2.6
@@ -77,9 +78,10 @@ importers:
       '@babel/core': 7.14.5
       '@babel/plugin-syntax-jsx': 7.14.5_@babel+core@7.14.5
       '@babel/runtime-corejs3': 7.14.5
+      '@nefomemes/blscraps-strings': 1.0.0
       '@nuxtjs/auth-next': 5.0.0-1622918202.e815752_vue@2.6.14
       '@nuxtjs/axios': 5.13.6
-      battlelog.js: github.com/BLThunderstorm/battlelog.js/cc3700b18445bc36e70ebcd59f77c8904759fe43
+      battlelog.js: link:../../BattlelogJS/packages/lib
       consola: 2.15.3
       core-js: 3.14.0
       nuxt: 2.15.6_consola@2.15.3+typescript@4.3.2
@@ -1238,6 +1240,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@nefomemes/blscraps-strings/1.0.0:
+    resolution: {integrity: sha512-k+PtmB/Tem0cHoEmScm0+t5pMebAgWsS/p5oqZ99xGIrFsdh+OIu5F1XcAjTDmDsc7uehLH8dh+P9vk7YoEAIA==}
+    dev: false
 
   /@nicolo-ribaudo/chokidar-2/2.1.8-no-fsevents.2:
     resolution: {integrity: sha512-Fb8WxUFOBQVl+CX4MWet5o7eCc6Pj04rXIwVKZ6h1NnqTo45eOQW6aWyhG25NIODvWFwTDMwBsYxrQ3imxpetg==}
@@ -10091,17 +10097,6 @@ packages:
     version: 0.2.8
     dependencies:
       '@babel/runtime': 7.13.10
-      axios: 0.21.1
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  github.com/BLThunderstorm/battlelog.js/cc3700b18445bc36e70ebcd59f77c8904759fe43:
-    resolution: {tarball: https://codeload.github.com/BLThunderstorm/battlelog.js/tar.gz/cc3700b18445bc36e70ebcd59f77c8904759fe43}
-    name: battlelog.js
-    version: 0.3.0
-    dependencies:
-      '@babel/runtime': 7.14.5
       axios: 0.21.1
     transitivePeerDependencies:
       - debug
