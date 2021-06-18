@@ -78,7 +78,7 @@ importers:
       '@babel/core': 7.14.5
       '@babel/plugin-syntax-jsx': 7.14.5_@babel+core@7.14.5
       '@babel/runtime-corejs3': 7.14.5
-      '@nefomemes/blscraps-strings': 1.0.0
+      '@nefomemes/blscraps-strings': link:../../BattlelogScraps/packages/strings
       '@nuxtjs/auth-next': 5.0.0-1622918202.e815752_vue@2.6.14
       '@nuxtjs/axios': 5.13.6
       battlelog.js: link:../../BattlelogJS/packages/lib
@@ -1240,10 +1240,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@nefomemes/blscraps-strings/1.0.0:
-    resolution: {integrity: sha512-k+PtmB/Tem0cHoEmScm0+t5pMebAgWsS/p5oqZ99xGIrFsdh+OIu5F1XcAjTDmDsc7uehLH8dh+P9vk7YoEAIA==}
-    dev: false
 
   /@nicolo-ribaudo/chokidar-2/2.1.8-no-fsevents.2:
     resolution: {integrity: sha512-Fb8WxUFOBQVl+CX4MWet5o7eCc6Pj04rXIwVKZ6h1NnqTo45eOQW6aWyhG25NIODvWFwTDMwBsYxrQ3imxpetg==}
