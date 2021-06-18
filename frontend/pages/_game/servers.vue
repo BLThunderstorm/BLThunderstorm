@@ -13,7 +13,7 @@
                         {{ server.name }}
                     </div>
                     <div>
-                     {{ `${maps[server.map] || server.map} - ${(server.country || "IDK").toUpperCase()} - ${server.tickRate} ticks` }}
+                     {{ `${s.mapName} - ${(server.country || "IDK").toUpperCase()} - ${server.tickRate} ticks` }}
                     </div>
                 </div>
                 <div v-if="!servers || !servers.length">
@@ -30,7 +30,7 @@ import * as maps from "@blscraps/core";
 */
 import  Component  from "vue-class-component";
 import type { Server } from "battlelog.js/src/index";
-import * as maps from "~/assets/maps.json";
+import * as maps from "@nefomemes/blscraps-strings/maps.json";
 
 @Component({})
 export default class BLServers extends Vue {
@@ -38,14 +38,14 @@ export default class BLServers extends Vue {
             return {title: "Servers"}
         }; 
 
-        async asyncData(ctx) : Promise<{servers: Array<Server>, maps: {[name: string]: string}}> {
+        async asyncData(ctx) : Promise<{servers: Array<Server>}> {
 
          let servers: Array<Server> = Array.from(await ctx.$client.fetchServers());
 
         servers = servers.map((rawS) => {
             /* eslint-disable prefer-const */
             let s = JSON.parse(JSON.stringify(rawS[1]));
-
+            s.mapName = maps[ctx.$client.game][s.map] || s.map;
             if(ctx.params.game === "bf3"){
                s.image = Math.floor((Math.random() * 3) + 1);
                s.customCSS = `background-image: url("https://gitcdn.xyz/repo/BLThunderstorm/Map-Images/master/${s.map}/0${s.image}.jpg");`;
@@ -54,7 +54,7 @@ export default class BLServers extends Vue {
             return s;
         })
 
-        return {servers, maps};
+        return {servers};
         }
 
     }
