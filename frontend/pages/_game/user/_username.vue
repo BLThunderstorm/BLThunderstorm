@@ -7,7 +7,6 @@
             <p class="user-name title">
               {{ user.user.username }}
             </p>
-           
           </div>
           <img
             v-bind:src="userify(user).displayAvatarURL({ size: 2048 })"
@@ -23,38 +22,46 @@
               <div class="user-readme"></div>
             </div>
             <div class="user-soldiers">
-            
               <div
                 v-for="soldier in user.soldiers"
                 :key="soldier.persona.personaId"
                 class="soldier-box"
               >
-              <div class="soldier-text soldier-content">               <div class="title">
-                  {{
-                    (soldier.persona.clanTag
-                      ? "[" + soldier.persona.clanTag + "] "
-                      : "") + (soldier.persona.personaName || user.user.username)
-                  }}
+                <div class="soldier-text soldier-content">
+                  <div class="title">
+                    {{
+                      (soldier.persona.clanTag
+                        ? "[" + soldier.persona.clanTag + "] "
+                        : "") +
+                      (soldier.persona.personaName || user.user.username)
+                    }}
+                  </div>
+                  <p class="info">
+                    {{ `${soldier.gameName} - ${soldier.platformName}` }}
+                  </p>
                 </div>
-                <p class="info">{{ }}</p>
+                <div
+                  class="soldier-portrait soldier-content"
+                  :style="
+                    soldier.soldierPic
+                      ? `background-image: url('${soldier.soldierPic}')`
+                      : ''
+                  "
+                ></div>
               </div>
-              <div class="soldier-portrait soldier-content" :style="soldier.soldierPic ? `background-image: url('${soldier.soldierPic}')` : ''">
-
-              </div>
-              </div>
- 
             </div>
             <div class="friends-bar content-order-container user-page-content">
-              
-                <div class="title">Friends</div>
-            
+              <div class="title">Friends</div>
+
               <div class="content-order">
-                <div v-for="friend  in user.friends" :key="friend.user.userId">
-                <a><v-avatar size="48"
+                <div v-for="friend in user.friends" :key="friend.user.userId">
+                  <a
+                    ><v-avatar size="48"
                       ><img
                         :src="
                           userify(friend).displayAvatarURL({ size: 128 })
-                        " /></v-avatar></a>
+                        " /></v-avatar
+                  ></a>
                 </div>
               </div>
             </div>
@@ -80,6 +87,8 @@
 import { User } from "battlelog.js/src/classes/user.ts";
 import { NuxtError } from "@nuxt/types";
 import * as games from "@nefomemes/blscraps-strings/games.json";
+import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
+import * as bf4cdn from "@nefomemes/blscraps-strings/bf4_cdn.json";
 export default {
   data() {
     return { user: undefined, error: undefined };
@@ -89,29 +98,39 @@ export default {
       let user = await ctx.$client.fetchUser(ctx.params.username);
       if (user) {
         user.readme = await ctx.$markdown(user.userinfo.presentation);
+        let gameInverted = {};
+        Object.entries(games).map(([game, id]) => {
+          gameInverted[id] = game;
+        });
 
-        for(let soldier of user.soldiers){
-        switch(soldier.game){
-          case games["BF3"]:{
+        for (let soldier of user.soldiers) {
+          switch (soldier.game) {
+            case games["BF3"]: {
+              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`;
+              break;
+            }
+            case games["WARSAW"]: {
+              soldier.soldierPic = `https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/${
+                soldier.persona.picture
+              }-${bf4cdn["l_large"][soldier.persona.picture]}.png`;
+              break;
+            }
+            case games["BFH"]: {
+              break;
+            }
 
-            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`
-           break;
-          };
-          case games["BF4"]:{
-            
-            break;
-          };
-          case games["BFH"]:{
-            break;
+            case games["MOHW"]: {
+              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${
+                soldier.persona.picture || "default"
+              }.png`;
+              break;
+            }
           }
-
-          case games["MOHW"]:{
-            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${soldier.persona.picture || "default"}.png`;
-            break;
-          }
-        }
-
-        soldier.soldierPic = soldier.soldierPic || "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
+          soldier.platformName = platforms[soldier.platform];
+          soldier.gameName = gameInverted[soldier.game];
+          soldier.soldierPic =
+            soldier.soldierPic ||
+            "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
         }
 
         user = JSON.parse(JSON.stringify(user));
@@ -137,7 +156,8 @@ export default {
 };
 </script>
 <style lang="scss">
-.user-soldiers, .friends-bar {
+.user-soldiers,
+.friends-bar {
   background-color: #303030;
 }
 
@@ -156,11 +176,12 @@ export default {
 
 .soldier-text {
   z-index: 5;
-
 }
 
 .soldier-portrait {
   z-index: 4;
+  width: 100%;
+  height: 100%;
 }
 
 #error-page {
@@ -169,7 +190,7 @@ export default {
   height: 100%;
   color: white;
 
-   h1 {
+  h1 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -199,43 +220,35 @@ export default {
 
 #user-page {
   position: relative;
-
-  
-
-   
-
-  
 }
 
 .user-wallpaper-content {
-      padding: 20px;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
-    
-    }
+.user-username-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  .user-username-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
+.user-page-content {
+  margin-bottom: 20px;
+}
 
- .user-page-content {
-    margin-bottom: 20px;
-  }
-
-  .user-wallpaper {
-    background-color: black;
-    color: white;
-    width: 100%;
-    position: relative;
-    height: 150px;
-  }
-   .user-name {
-      font-weight: 600;
-      font-size: 35px;
-    }
+.user-wallpaper {
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: relative;
+  height: 150px;
+}
+.user-name {
+  font-weight: 600;
+  font-size: 35px;
+}
 </style>
