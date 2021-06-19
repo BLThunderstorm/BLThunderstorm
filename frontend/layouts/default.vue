@@ -135,16 +135,6 @@ return {
  padding: 5px
  border-radius: 5px
 
-.marginish-page-container
- height: 100%
- width: 100%
- display: flex
- flex-direction: column
- align-items: center
 
-.marginish-page
- width: calc(100% - 40px)
- margin-top: 20px
- position: relative
 
 </style>
