@@ -7,7 +7,6 @@
             <p class="user-name title">
               {{ user.user.username }}
             </p>
-           
           </div>
           <img
             v-bind:src="userify(user).displayAvatarURL({ size: 2048 })"
@@ -20,7 +19,7 @@
         <div class="marginish-page-container">
           <div class="marginish-page">
             <div v-if="user.readme">
-              <div class="user-readme"></div>
+              <div class="user-readme" v-html="user.readme"></div>
             </div>
             <div class="user-soldiers">
             
