@@ -52,7 +52,7 @@ export default {
 <style>
 .__nuxt-error-page {
   padding: 1rem;
-  background: #F7F8FB;
+ 
   color: #47494E;
   text-align: center;
   display: flex;
@@ -72,6 +72,7 @@ export default {
 }
 .__nuxt-error-page .error {
   max-width: 450px;
+  max-height: 450px;
 }
 .__nuxt-error-page .title {
   font-size: 1.5rem;
