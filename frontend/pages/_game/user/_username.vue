@@ -40,13 +40,15 @@
                     {{ `${soldier.gameName} - ${soldier.platformName}` }}
                   </p>
                 </div>
-                <p class="info">{{ }}</p>
+                <div
+                  class="soldier-portrait soldier-content"
+                  :style="
+                    soldier.soldierPic
+                      ? `background-image: url('${soldier.soldierPic}')`
+                      : ''
+                  "
+                ></div>
               </div>
-              <div class="soldier-portrait soldier-content" :style="soldier.soldierPic ? `background-image: url('${soldier.soldierPic}')` : ''">
-
-              </div>
-              </div>
- 
             </div>
             <div class="friends-bar content-order-container user-page-content">
               
@@ -172,11 +174,15 @@ export default {
 
 .soldier-text {
   z-index: 5;
-
+  position: absolute;
+  top: 30px;
+  left: 30px ;
 }
 
 .soldier-portrait {
   z-index: 4;
+  width: 100%;
+  height: 100%;
 }
 
 #error-page {
@@ -185,7 +191,7 @@ export default {
   height: 100%;
   color: white;
 
-   h1 {
+  h1 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -243,15 +249,13 @@ export default {
     margin-bottom: 20px;
   }
 
-  .user-wallpaper {
-    background-color: black;
-    color: white;
-    width: 100%;
-    position: relative;
-    height: 150px;
-  }
-   .user-name {
-      font-weight: 600;
-      font-size: 35px;
-    }
+.soldier-box {
+  width: 330px;
+  height: 330px;
+}
+
+.user-soldiers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 </style>
