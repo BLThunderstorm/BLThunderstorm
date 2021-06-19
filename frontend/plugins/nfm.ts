@@ -7,6 +7,7 @@
  import rehypeSanitize from "rehype-sanitize";
  import remarkGFM from "remark-gfm";
 import { Plugin } from "@nuxt/types";
+import html from "rehype-stringify";
 export type processMarkdownType = (markdown: string, options?: {throwError?: boolean}) => Promise<string>;
 
 const processMarkdown: processMarkdownType = function processMarkdown(markdown, options = {}) {
@@ -16,8 +17,9 @@ const processMarkdown: processMarkdownType = function processMarkdown(markdown, 
    .use(remarkGFM)
    .use(remarkRehype)
    .use(rehypeSanitize)
+   .use(html) // Forgot that you have to use the 'rehype-stringify' plugin at the end. Thanks, official docs.
    .process(markdown, (err, file) => {
-    if(file){
+    if(file){ 
         resolve(String(file));
     } else if(err){
         if(options.throwError) reject(err);
