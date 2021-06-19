@@ -22,18 +22,23 @@
               <div class="user-readme" v-html="user.readme"></div>
             </div>
             <div class="user-soldiers">
-            
               <div
                 v-for="soldier in user.soldiers"
                 :key="soldier.persona.personaId"
                 class="soldier-box"
               >
-              <div class="soldier-text soldier-content">               <div class="title">
-                  {{
-                    (soldier.persona.clanTag
-                      ? "[" + soldier.persona.clanTag + "] "
-                      : "") + (soldier.persona.personaName || user.user.username)
-                  }}
+                <div class="soldier-text soldier-content">
+                  <div class="title">
+                    {{
+                      (soldier.persona.clanTag
+                        ? "[" + soldier.persona.clanTag + "] "
+                        : "") +
+                      (soldier.persona.personaName || user.user.username)
+                    }}
+                  </div>
+                  <p class="soldier-info">
+                    {{ `${soldier.gameName} - ${soldier.platformName}` }}
+                  </p>
                 </div>
                 <p class="info">{{ }}</p>
               </div>
@@ -79,6 +84,8 @@
 import { User } from "battlelog.js/src/classes/user.ts";
 import { NuxtError } from "@nuxt/types";
 import * as games from "@nefomemes/blscraps-strings/games.json";
+import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
+import * as bf4cdn from "@nefomemes/blscraps-strings/bf4_cdn.json";
 export default {
   data() {
     return { user: undefined, error: undefined };
@@ -88,29 +95,39 @@ export default {
       let user = await ctx.$client.fetchUser(ctx.params.username);
       if (user) {
         user.readme = await ctx.$markdown(user.userinfo.presentation);
+        let gameInverted = {};
+        Object.entries(games).map(([game, id]) => {
+          gameInverted[id] = game;
+        });
 
-        for(let soldier of user.soldiers){
-        switch(soldier.game){
-          case games["BF3"]:{
+        for (let soldier of user.soldiers) {
+          switch (soldier.game) {
+            case games["BF3"]: {
+              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`;
+              break;
+            }
+            case games["WARSAW"]: {
+              soldier.soldierPic = `https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/${
+                soldier.persona.picture
+              }-${bf4cdn["l_large"][soldier.persona.picture]}.png`;
+              break;
+            }
+            case games["BFH"]: {
+              break;
+            }
 
-            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`
-           break;
-          };
-          case games["BF4"]:{
-            
-            break;
-          };
-          case games["BFH"]:{
-            break;
+            case games["MOHW"]: {
+              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${
+                soldier.persona.picture || "default"
+              }.png`;
+              break;
+            }
           }
-
-          case games["MOHW"]:{
-            soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${soldier.persona.picture || "default"}.png`;
-            break;
-          }
-        }
-
-        soldier.soldierPic = soldier.soldierPic || "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
+          soldier.platformName = platforms[soldier.platform];
+          soldier.gameName = gameInverted[soldier.game];
+          soldier.soldierPic =
+            soldier.soldierPic ||
+            "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
         }
 
         user = JSON.parse(JSON.stringify(user));
