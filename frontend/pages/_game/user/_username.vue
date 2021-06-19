@@ -51,16 +51,17 @@
               </div>
             </div>
             <div class="friends-bar content-order-container user-page-content">
-              
-                <div class="title">Friends</div>
-            
+              <div class="title">Friends</div>
+
               <div class="content-order">
-                <div v-for="friend  in user.friends" :key="friend.user.userId">
-                <a><v-avatar size="48"
+                <div v-for="friend in user.friends" :key="friend.user.userId">
+                  <a
+                    ><v-avatar size="48"
                       ><img
                         :src="
                           userify(friend).displayAvatarURL({ size: 128 })
-                        " /></v-avatar></a>
+                        " /></v-avatar
+                  ></a>
                 </div>
               </div>
             </div>
@@ -155,7 +156,14 @@ export default {
 };
 </script>
 <style lang="scss">
-.user-soldiers, .friends-bar {
+
+.user-readme {
+  background-color: #121212;
+  width: 100%;
+}
+
+.user-soldiers,
+.friends-bar {
   background-color: #303030;
 }
 
