@@ -229,33 +229,37 @@ export default {
 
 #user-page {
   position: relative;
-
-  
-
-   
-
-  
 }
 
 .user-wallpaper-content {
-      padding: 20px;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
-    
-    }
+.user-username-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  .user-username-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
+.user-page-content {
+  margin-bottom: 20px;
+}
 
- .user-page-content {
-    margin-bottom: 20px;
-  }
+.user-wallpaper {
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: relative;
+  height: 150px;
+}
+.user-name {
+  font-weight: 600;
+  font-size: 35px;
+}
 
 .soldier-box {
   width: 330px;
