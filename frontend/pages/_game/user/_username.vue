@@ -36,7 +36,11 @@
                       (soldier.persona.personaName || user.user.username)
                     }}
                   </div>
+<<<<<<< HEAD
                   <p class="soldier-info">
+=======
+                  <p class="info">
+>>>>>>> cc1654b4aa31c8336390a31651f56f97d45b9e97
                     {{ `${soldier.gameName} - ${soldier.platformName}` }}
                   </p>
                 </div>
@@ -182,12 +186,9 @@ export default {
 
 .soldier-text {
   z-index: 5;
-  position: absolute;
   top: 30px;
   left: 30px ;
 }
-
-.soldier-portrait {
   z-index: 4;
   width: 100%;
   height: 100%;
@@ -238,6 +239,7 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 
 .user-username-box {
   display: flex;

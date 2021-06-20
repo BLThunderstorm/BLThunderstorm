@@ -815,12 +815,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-<<<<<<< Updated upstream
-    depende
-=======
-    dependencies:
-      '@babel/core': 7.14.5
-      '@babel/helper-create-regexp-features-plugin': 7.14.5_@babel+core@7.14.5
       '@babel/helper-plugin-utils': 7.14.5
 
   /@babel/plugin-transform-duplicate-keys/7.14.5_@babel+core@7.14.5:
@@ -10177,4 +10171,3 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: false
->>>>>>> Stashed changes
