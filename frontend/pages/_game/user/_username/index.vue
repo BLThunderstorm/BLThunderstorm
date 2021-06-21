@@ -14,19 +14,20 @@
           />
         </div>
       </div>
-
-      <div id="user-presentation" class="user-page-content">
-        <div class="marginish-page-container">
-          <div class="marginish-page">
+      <div class="marginish-page-container">
+        <div class="marginish-page">
+          <div id="user-presentation" class="user-page-content">
             <div v-if="user.readme">
               <div class="user-readme" v-html="user.readme"></div>
             </div>
-            <div class="user-soldiers">
-              <div
-                v-for="soldier in user.soldiers"
-                :key="soldier.persona.personaId"
-                class="soldier-box"
-              >
+          </div>
+          <div class="user-soldiers user-page-content">
+            <div
+              v-for="soldier in user.soldiers"
+              :key="soldier.persona.personaId"
+              class="soldier-box"
+            >
+              <NuxtLink :to="soldier.url">
                 <div class="soldier-text soldier-content">
                   <div class="title">
                     {{
@@ -36,11 +37,7 @@
                       (soldier.persona.personaName || user.user.username)
                     }}
                   </div>
-<<<<<<< HEAD
                   <p class="soldier-info">
-=======
-                  <p class="info">
->>>>>>> cc1654b4aa31c8336390a31651f56f97d45b9e97
                     {{ `${soldier.gameName} - ${soldier.platformName}` }}
                   </p>
                 </div>
@@ -52,36 +49,40 @@
                       : ''
                   "
                 ></div>
-              </div>
+              </NuxtLink>
             </div>
-            <div class="friends-bar content-order-container user-page-content">
-              <div class="title">Friends</div>
+          </div>
+          <div class="friends-bar content-order-container user-page-content">
+            <div class="title">Friends</div>
 
-              <div class="content-order">
-                <div v-for="friend in user.friends" :key="friend.user.userId">
-                  <a
-                    ><v-avatar size="48"
-                      ><img
-                        :src="
-                          userify(friend).displayAvatarURL({ size: 128 })
-                        " /></v-avatar
-                  ></a>
-                </div>
+            <div class="content-order">
+              <div
+                v-for="friend in user.friends"
+                :key="friend.user.userId"
+                class="friend-box"
+              >
+                <a href=""
+                  ><v-avatar size="48"
+                    ><img
+                      :src="
+                        userify(friend).displayAvatarURL({ size: 128 })
+                      " /></v-avatar
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div v-if="error" id="error-page">
-        <div id="box-error">
-          <h1>
-            {{ error.toString() }}
-          </h1>
-          <h2>
-            {{ error.stack }}
-          </h2>
-          <div></div>
-        </div>
+    </div>
+    <div v-if="error" id="error-page">
+      <div id="box-error">
+        <h1>
+          {{ error.toString() }}
+        </h1>
+        <h2>
+          {{ error.stack }}
+        </h2>
+        <div></div>
       </div>
     </div>
   </div>
@@ -90,13 +91,20 @@
 // @ts-ignore
 import { User } from "battlelog.js/src/classes/user.ts";
 import { NuxtError } from "@nuxt/types";
-import * as games from "@nefomemes/blscraps-strings/games.json";
-import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
+import * as games from "~/assets/blassets/games.json";
+import * as platforms from "~/assets/blassets/platform-inv.json";
 import * as bf4cdn from "@nefomemes/blscraps-strings/bf4_cdn.json";
-export default {
+import getPortrait from "~/assets/utils/getportrait";
+import Component from "vue-class-component";
+import Vue from "vue";
+
+Component({})
+export default class BattlelogUserPage extends Vue {
   data() {
     return { user: undefined, error: undefined };
-  },
+  };
+
+  user: User = {};
   async asyncData(ctx) {
     try {
       let user = await ctx.$client.fetchUser(ctx.params.username);
@@ -106,35 +114,15 @@ export default {
         Object.entries(games).map(([game, id]) => {
           gameInverted[id] = game;
         });
-
-        for (let soldier of user.soldiers) {
-          switch (soldier.game) {
-            case games["BF3"]: {
-              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${soldier.persona.picture}.png`;
-              break;
-            }
-            case games["WARSAW"]: {
-              soldier.soldierPic = `https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/${
-                soldier.persona.picture
-              }-${bf4cdn["l_large"][soldier.persona.picture]}.png`;
-              break;
-            }
-            case games["BFH"]: {
-              break;
-            }
-
-            case games["MOHW"]: {
-              soldier.soldierPic = `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/mohw/soldiers/295x350/${
-                soldier.persona.picture || "default"
-              }.png`;
-              break;
-            }
-          }
+        
+      for(let soldier of user.soldiers){
           soldier.platformName = platforms[soldier.platform];
           soldier.gameName = gameInverted[soldier.game];
-          soldier.soldierPic =
-            soldier.soldierPic ||
-            "https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/default-1066f14a.png";
+          soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
+
+          soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
+            user.user.username
+          }/soldier/${soldier.persona.personaId}`;
         }
 
         user = JSON.parse(JSON.stringify(user));
@@ -142,25 +130,24 @@ export default {
       }
     } catch (error) {
       console.error(error);
-      ctx.error(<NuxtError>{ status: 500, message: error });
+      ctx.error(<NuxtError>{ status: 500, message: error.stack });
       return { error, user: null };
-    }
-  },
+    };
+  };
   head() {
     return {
       title: this.user.user.username || "User not found",
     };
-  },
-  methods: {
+  };
+  methods =  {
     userify(user: User) {
       let userified = new User(this.$client, user);
       return userified;
-    },
-  },
+    }
+  };
 };
 </script>
 <style lang="scss">
-
 .user-readme {
   background-color: #121212;
   width: 100%;
@@ -187,8 +174,10 @@ export default {
 .soldier-text {
   z-index: 5;
   top: 30px;
-  left: 30px ;
+  left: 30px;
 }
+
+.soldier-portrait {
   z-index: 4;
   width: 100%;
   height: 100%;
@@ -239,7 +228,6 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 
 .user-username-box {
   display: flex;
@@ -271,5 +259,18 @@ export default {
 .user-soldiers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.user-soldiers,
+.friends-bar {
+  background: #121212;
+}
+
+.friends-bar .content-order {
+  flex-wrap: wrap;
+}
+
+.friends-bar .friend-box {
+  margin-right: 10px;
 }
 </style>
