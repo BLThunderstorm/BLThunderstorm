@@ -1,42 +1,42 @@
 <template>
-
   <div class="about-page">
     <div id="intro" class="box">
+      <div class="title">
+        <p id="service-name">BLThunderstorm</p>
+        <p class="message">
+          Unofficial stats-tracking and dashboard site for Battlefield games.
+        </p>
+      </div>
+    </div>
 
-
-
-        <div class="title">
-          <p id="service-name">BLThunderstorm</p>
-            <p class="message">Unofficial stats-tracking and dashboard site for Battlefield games.</p>
-          </div>
-
-     </div>
-
-
-        <div id="about" class="box">
-         <div id="features-container">
-	 <FeatureHome title="Forums, revived" icon="forum" is-material-icon content="Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff."/>
-	<FeatureHome title="It's hybrid" content="BLThunderstorm is made with Nuxt.js, a Vue.js framework which one of it's main features is it combines Server Side Rendering with Client Side Rendering." />
-
-
-</div>
-
+    <div id="about" class="box">
+      <div id="features-container">
+        <FeatureHome
+          title="Forums, revived"
+          icon="forum"
+          is-material-icon
+          content="Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff."
+        />
+        <FeatureHome
+          title="It's hybrid"
+          content="BLThunderstorm is made with Nuxt.js, a Vue.js framework which one of it's main features is it combines Server Side Rendering with Client Side Rendering."
+        />
+      </div>
+    </div>
   </div>
-  </div>
-
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import Vue from "vue";
+import Component from "vue-class-component";
 
 @Component({})
 export default class AboutPage extends Vue {
-  head(){
-  return {
-  title: "About"
+  head() {
+    return {
+      title: "About",
+    };
   }
-  };
 }
 </script>
 <style scoped lang="sass">

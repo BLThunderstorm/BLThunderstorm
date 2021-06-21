@@ -1,46 +1,39 @@
 <template>
+  <footer class="footer nefo-footer">
+    <nav v-if="links && links.length" class="nefo-navi-links">
+      <ul v-for="category in links" class="nefo-links-bar" :key="category">
+        <li class="nefo-link-title" v-html="category.title"></li>
+        <span v-if="category.links && category.links.length">
+          <li v-for="link in category.links" :key="link">
+            <a v-bind:href="link.href" v-html="link.title"></a>
+          </li>
+        </span>
+      </ul>
+    </nav>
 
-<footer class="footer nefo-footer">
+    <span v-if="disclaimers && disclaimers.length">
+      <div
+        v-for="disclaimer in disclaimers"
+        class="nefo-copyright-container"
+        :key="disclaimer.id"
+      >
+        <div class="nefo-copyright" v-html="disclaimer"></div>
+      </div>
+    </span>
 
-<nav v-if="links && links.length" class="nefo-navi-links" >
-			<ul v-for="category in links" class="nefo-links-bar" :key="category">
-				<li class="nefo-link-title" v-html="category.title">
-
-				</li>
-			<span v-if="category.links && category.links.length">
-			<li v-for="link in category.links" :key="link">
-				<a v-bind:href="link.href" v-html="link.title"></a>
-				</li>
-			</span>
-			</ul>
-		</nav>
-
-<span  v-if="disclaimers && disclaimers.length">
-		<div v-for="disclaimer in disclaimers" class="nefo-copyright-container" :key="disclaimer.id">
-			<div class="nefo-copyright" v-html="disclaimer">
-
-			</div>
-		</div>
-		</span>
-
-		<div v-if="icons && icons.length" class="nefo-footer-links">
-			</div>
-</footer>
-
-
+    <div v-if="icons && icons.length" class="nefo-footer-links"></div>
+  </footer>
 </template>
 <script>
 export default {
-props: {
-links: Array,
-disclaimers: Array,
-icons: Array
-},
+  props: {
+    links: Array,
+    disclaimers: Array,
+    icons: Array,
+  },
 
-async asyncData(){
-
-}
-}
+  async asyncData() {},
+};
 </script>
 <style scoped lang="sass">
 .nefo-footer
@@ -78,7 +71,7 @@ async asyncData(){
  width: 50px
  height: 50px
 
-.nefo-link-title 
+.nefo-link-title
  font-size: 20px
  font-weight: bold
  color: white
@@ -90,7 +83,7 @@ async asyncData(){
  list-style: none
 
 
-.nefo-copyright 
+.nefo-copyright
  width: calc(100% - 90px)
  margin-left: 40px
  text-align: center

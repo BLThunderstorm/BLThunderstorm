@@ -39,7 +39,7 @@ const config: NuxtConfig = {
     "@nuxtjs/vuetify",
   ],
   vuetify: {
-    optionsPath: "~/vuetify.config.ts"
+    optionsPath: "~/vuetify.config.ts",
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -63,7 +63,6 @@ const config: NuxtConfig = {
     babel: {
       babelrc: true,
     },
-
   },
   server: { host: process.env.HOST, port: process.env.PORT },
   watchers: {

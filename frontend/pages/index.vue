@@ -4,8 +4,8 @@ import Vue from "vue";
 
 @Component({})
 export default class IndexPage extends Vue {
-async asyncData(ctx){
-ctx.$auth?.loggedIn ? ctx.redirect("/dashboard") : ctx.redirect("/about")
-}
+  async asyncData(ctx) {
+    ctx.$auth?.loggedIn ? ctx.redirect("/dashboard") : ctx.redirect("/about");
+  }
 }
 </script>

@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "experimentalDecorators":true,
+    "experimentalDecorators": true,
     "strictFunctionTypes": false,
     "module": "ES2020",
-    "moduleResolution": "Node", 
+    "moduleResolution": "Node",
     "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
     "allowJs": true,
     "inlineSourceMap": true,
@@ -17,9 +17,8 @@
     "types": ["@types/node", "@nuxt/types", "@nuxtjs/auth-next"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true, 
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": false
-  
   },
   "exclude": ["node_modules"]
 }

@@ -1,54 +1,50 @@
 <template>
- <v-app class="page-container">
-      <div class="bg-picture">  </div>
- <NavigationBar/>
-   <div class="page-content-container">
+  <v-app class="page-container">
+    <div class="bg-picture"></div>
+    <NavigationBar />
+    <div class="page-content-container">
+      <div class="pagecontent">
+        <Nuxt />
+      </div>
 
-   <div class="pagecontent">
-     <Nuxt/>
-     </div>
-   
-   <Footer :links="links" :icons="icons" :disclaimers="disclaimers"/>
-   </div>
-   
-   </v-app>
+      <Footer :links="links" :icons="icons" :disclaimers="disclaimers" />
+    </div>
+  </v-app>
 </template>
 <script lang="ts">
-import Component from 'vue-class-component';
-import Vue from 'vue';
+import Component from "vue-class-component";
+import Vue from "vue";
 
 @Component({})
 export default class DefaultLayout extends Vue {
-data() {
-return {
-  "disclaimers":[
-    "BLThunderstorm is neither developed nor supported by Electronic Arts and Digital Illusions CE",
-    "Made with ❤ by Nefomemes" 
-  ],
-  "links":[
-    {
-      "title":"This website",
-      "links":[
+  data() {
+    return {
+      disclaimers: [
+        "BLThunderstorm is neither developed nor supported by Electronic Arts and Digital Illusions CE",
+        "Made with ❤ by Nefomemes",
+      ],
+      links: [
         {
-          "title":"GitHub Repo",
-          "href":"https://github.com/BLThunderstorm/BLThunderstorm"
-        }
-      ]
-    }
-  ],
-  "icons":[
-    {
-      "name":"github",
-      "href":"https://github.com/BLThunderstorm"
-    }, 
-    {
-      "name":"twitter",
-      "href":"https://twitter.com/BLThunderstorm"
-    }
-  ]
-
-};
- 
+          title: "This website",
+          links: [
+            {
+              title: "GitHub Repo",
+              href: "https://github.com/BLThunderstorm/BLThunderstorm",
+            },
+          ],
+        },
+      ],
+      icons: [
+        {
+          name: "github",
+          href: "https://github.com/BLThunderstorm",
+        },
+        {
+          name: "twitter",
+          href: "https://twitter.com/BLThunderstorm",
+        },
+      ],
+    };
   }
 }
 </script>
@@ -134,7 +130,4 @@ return {
  border: solid 1px
  padding: 5px
  border-radius: 5px
-
-
-
 </style>
