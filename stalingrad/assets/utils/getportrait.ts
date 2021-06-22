@@ -1,7 +1,7 @@
 import * as games from "@nefomemes/blscraps-strings/games.json";
 import * as bf4cdn from "@nefomemes/blscraps-strings/bf4_cdn.json";
 
-export default function getPortrait(game: string, personaPicture: string) : string {
+export default function getPortrait(game: number, personaPicture: string) : string {
           switch (game) {
             case games["BF3"]: {
               return `https://cdn.battlelog.com/bl-cdn/cdnprefix/1323198/public/profile/bf3/soldier/l/${
@@ -11,7 +11,7 @@ export default function getPortrait(game: string, personaPicture: string) : stri
             case games["BF4"]: {
               return `https://d34ymitoc1pg7m.cloudfront.net/bf4/soldier/large/${
                 personaPicture
-              }-${bf4cdn["l_large"][soldier.persona.picture]}.png`;
+              }-${bf4cdn["l_large"][personaPicture]}.png`;
             }
        
 
