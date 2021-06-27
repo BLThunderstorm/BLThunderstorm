@@ -1,45 +1,43 @@
+
 <template>
-  <div v-if="user" class="user-page">
+
+<div  v-if="user" class="user-page">
+
     <div class="user-wallpaper user-page-content">
-      <img
-        :src="user.staticAvatarURL"
-      />
-      <div>
-        <div>
-          <div>{{ user.user?.username }}</div>
-        </div>
-      </div>
+        <img :src="user.staticAvatarURL"/>
+        <div class="">
+          <p class="title"> {{ user.user?.username || "No name" }} </p>
+        
 
-      <div class="user-page-content">
-        <div v-if="user.readme" v-html="user.readme"></div>
-      </div>
-
-      <div class="user-page-content user-soldiers">
-        <div class="soldier-box" v-for="soldier in user.soldiers">
-          <NuxtLink :to="soldier.url">
-            <div class="soldier-text soldier-content">
-              <div class="title">
-                {{
-                 soldier.displayName
-                }}
-              </div>
-              <div  class="text">
-                {{ `${soldier.gameName} - ${soldier.platformName}` }}
-              </div>
-            </div>
-            <div class="soldier-portrait soldier-content"></div>
-          </NuxtLink>
         </div>
-      </div>
+    
+    
+    </div>
 
-      <div class="user-page-content friends-box">
-        <div>Friends</div>
-        <div class="friends-list">
-          <div v-for="friend in user.friends"></div>
-        </div>
+
+    <div class="user-page-content">
+      <div v-if="user.readme">
+            {{ user.readme }}
       </div>
     </div>
-  </div>
+
+    <div class="soldier-boxes user-page-content">
+      <div class="soldier-box" v-for="soldier in user.soldiers">
+        <NuxtLink>
+          <div class="soldier-text">
+            <p class="title"> {{ soldier.displayName }} </p>
+            <p class="text"> {{ soldier.displayText }} </p>
+          </div>
+          <div class="soldier-portrait">
+
+          </div>
+        </NuxtLink>
+      </div>
+
+    </div>
+
+</div>
+
 </template>
 <script lang="ts">
 // @ts-ignore
@@ -84,10 +82,14 @@ export default class BattlelogUserPage extends Vue {
           soldier.displayName =  (soldier.persona.clanTag
                     ? `[${soldier.persona.clanTag}]`
                     : "") + (soldier.persona.personaName || user.user.username);
-        }
-
+      
+          soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`
+      }
+      
         user = JSON.parse(JSON.stringify(user));
         return { user, error: false };
+      } else {
+        throw Error("No User found");
       };
     } catch (error) {
       console.error(error);
@@ -97,7 +99,7 @@ export default class BattlelogUserPage extends Vue {
   };
   head() {
     return {
-      title: this.user.user.username || "User not found",
+      title: this.user?.user?.username || "User not found",
     };
   }
   methods = {
