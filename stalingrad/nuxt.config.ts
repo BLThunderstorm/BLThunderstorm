@@ -3,9 +3,9 @@ import type { NuxtConfig } from "@nuxt/types";
 declare let process: {
   env: {
     HOST?: string;
-    GITHUB_CLIENT_ID: string;
+    GITHUB_ID: string;
     PORT?: string;
-    GITHUB_CLIENT_SECRET?: string;
+    GITHUB_SECRET?: string;
     VITE?: boolean;
   };
 };
@@ -51,8 +51,8 @@ const config: NuxtConfig = {
   auth: {
     strategies: {
       github: {
-        clientId: process.env.GITHUB_CLIENT_ID,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET,
+        clientId: process.env.GITHUB_ID,
+        clientSecret: process.env.GITHUB_SECRET,
       },
     },
     watchLoggedIn: true,

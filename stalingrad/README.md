@@ -20,14 +20,13 @@
 ---
 
 ### What is this?
+
 This is `@blthunderstorm/stalingrad`. It's the frontend website for BLThunderstorm. It is build with Nuxt.js
 
 ### How can I contribute?
-
 
 Before you run the `dev` command. Please git clone the [battlelog.js](https://github.com/BLThunderstorm/BattlelogJS) and [BattlelogScraps](https://github.com/BLThunderstorm/BattlelogScraps) and link the `packages/lib` and `packages/strings` packages of the respective repositories.
 
 BattlelogJS on the NPM registry is outdated and I haven't got time to publish the new version. Will do it soon™.
 
 Note that we use PNPM for BLThunderstorm. Do **not** use Yarn or NPM.
-

@@ -1,81 +1,46 @@
 <template>
-  <div>
-    <div v-if="user" class="user-page">
-      <div class="user-wallpaper user-page-content">
-        <div class="user-wallpaper-content">
-          <div class="user-username-box">
-            <p class="user-name title">
-              {{ user.user?.username }}
-            </p>
-          </div>
-          <img
-            v-bind:src="userify(user).displayAvatarURL({ size: 2048 })"
-            class="user-avatar-image"
-          />
+  <div v-if="user" class="user-page">
+    <div class="user-wallpaper user-page-content">
+      <img
+        :src="user.staticAvatarURL"
+      />
+      <div>
+        <div>
+          <div>{{ user.user?.username }}</div>
         </div>
       </div>
-      <div class="marginish-page-container">
-        <div class="marginish-page">
-          <div id="user-presentation" class="user-page-content">
-            <div v-if="user.readme">
-              <div class="user-readme" v-html="user.readme"></div>
-            </div>
-          </div>
-          <div class="user-soldiers user-page-content">
-            <div
-              v-for="soldier in user.soldiers"
-              :key="soldier.persona.personaId"
-              class="soldier-box"
-            >
-              <NuxtLink :to="soldier.url">
-                <div class="soldier-text soldier-content">
-                  <div class="title">
-                    {{
-                      (soldier.persona.clanTag
-                        ? "[" + soldier.persona.clanTag + "] "
-                        : "") +
-                      (soldier.persona.personaName || user.user.username)
-                    }}
-                  </div>
-                  <p class="soldier-info">
-                    {{ `${soldier.gameName} - ${soldier.platformName}` }}
-                  </p>
-                </div>
-                <div
-                  class="soldier-portrait soldier-content"
-                  :style="
-                    soldier.soldierPic
-                      ? `background-image: url('${soldier.soldierPic}')`
-                      : ''
-                  "
-                ></div>
-              </NuxtLink>
-            </div>
-          </div>
-          <div class="friends-bar content-order-container user-page-content">
-            <div class="title">Friends</div>
 
-            <div class="content-order">
-              <div
-                v-for="friend in user.friends"
-                :key="friend.user.userId"
-                class="friend-box"
-              >
-                <a href=""
-                  ><v-avatar size="48"
-                    ><img
-                      :src="
-                        userify(friend).displayAvatarURL({ size: 128 })
-                      " /></v-avatar
-                ></a>
+      <div class="user-page-content">
+        <div v-if="user.readme" v-html="user.readme"></div>
+      </div>
+
+      <div class="user-page-content user-soldiers">
+        <div class="soldier-box" v-for="soldier in user.soldiers">
+          <NuxtLink :to="soldier.url">
+            <div class="soldier-text soldier-content">
+              <div class="title">
+                {{
+                 soldier.displayName
+                }}
+              </div>
+              <div  class="text">
+                {{ `${soldier.gameName} - ${soldier.platformName}` }}
               </div>
             </div>
-          </div>
+            <div class="soldier-portrait soldier-content"></div>
+          </NuxtLink>
+        </div>
+      </div>
+
+      <div class="user-page-content friends-box">
+        <div>Friends</div>
+        <div class="friends-list">
+          <div v-for="friend in user.friends"></div>
         </div>
       </div>
     </div>
-    
-  </template>
+  </div>
+</template>
 <script lang="ts">
 // @ts-ignore
 import { User } from "battlelog.js/src/classes/user.ts";
@@ -87,7 +52,7 @@ import getPortrait from "~/assets/utils/getportrait";
 import Component from "vue-class-component";
 import Vue from "vue";
 
-Component({})
+Component({});
 export default class BattlelogUserPage extends Vue {
   data() {
     return { user: undefined, error: undefined };
@@ -100,24 +65,30 @@ export default class BattlelogUserPage extends Vue {
       if (user) {
         console.log(user);
         user.readme = await ctx.$markdown(user.userinfo.presentation);
+        user.staticAvatarURL = `https://gravatar.com/avatar/${user.gravatarMd5}?r=pg&d=retro`;
         let gameInverted = {};
         Object.entries(games).map(([game, id]) => {
           gameInverted[id] = game;
         });
-        
-      for(let soldier of user.soldiers){
+
+        for (let soldier of user.soldiers) {
           soldier.platformName = platforms[soldier.platform];
           soldier.gameName = gameInverted[soldier.game];
-          soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
-
+          soldier.soldierPic = getPortrait(
+            soldier.game,
+            soldier.persona.picture
+          );
           soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
             user.user.username
           }/soldier/${soldier.persona.personaId}`;
+          soldier.displayName =  (soldier.persona.clanTag
+                    ? `[${soldier.persona.clanTag}]`
+                    : "") + (soldier.persona.personaName || user.user.username);
         }
 
         user = JSON.parse(JSON.stringify(user));
         return { user, error: false };
-      }
+      };
     } catch (error) {
       console.error(error);
       ctx.error(<NuxtError>{ status: 500, message: error.stack });
@@ -128,12 +99,12 @@ export default class BattlelogUserPage extends Vue {
     return {
       title: this.user.user.username || "User not found",
     };
-  };
-  methods =  {
+  }
+  methods = {
     userify(user: User) {
       let userified = new User(this.$client, user);
       return userified;
-    }
+    },
   };
 };
 </script>
@@ -172,7 +143,6 @@ export default class BattlelogUserPage extends Vue {
   width: 100%;
   height: 100%;
 }
-
 
 .content-order-container,
 .user-readme {
