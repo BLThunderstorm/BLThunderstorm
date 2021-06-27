@@ -5,7 +5,7 @@
         <div class="user-wallpaper-content">
           <div class="user-username-box">
             <p class="user-name title">
-              {{ user.user.username }}
+              {{ user.user?.username }}
             </p>
           </div>
           <img
@@ -74,19 +74,8 @@
         </div>
       </div>
     </div>
-    <div v-if="error" id="error-page">
-      <div id="box-error">
-        <h1>
-          {{ error.toString() }}
-        </h1>
-        <h2>
-          {{ error.stack }}
-        </h2>
-        <div></div>
-      </div>
-    </div>
-  </div>
-</template>
+    
+  </template>
 <script lang="ts">
 // @ts-ignore
 import { User } from "battlelog.js/src/classes/user.ts";
@@ -109,6 +98,7 @@ export default class BattlelogUserPage extends Vue {
     try {
       let user = await ctx.$client.fetchUser(ctx.params.username);
       if (user) {
+        console.log(user);
         user.readme = await ctx.$markdown(user.userinfo.presentation);
         let gameInverted = {};
         Object.entries(games).map(([game, id]) => {
@@ -183,25 +173,6 @@ export default class BattlelogUserPage extends Vue {
   height: 100%;
 }
 
-#error-page {
-  display: grid;
-  place-items: center;
-  height: 100%;
-  color: white;
-
-  h1 {
-    font-size: 30px;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  a {
-    color: white !important;
-  }
-}
 
 .content-order-container,
 .user-readme {
