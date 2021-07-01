@@ -14,7 +14,7 @@
     "@babel/plugin-syntax-jsx": "7.14.5",
     "@babel/runtime-corejs3": "7.14.7",
     "@nefomemes/blscraps-strings": "1.0.0",
-    "@nuxtjs/auth-next": "5.0.0-1622918202.e815752",
+    "@nuxtjs/auth-next": "5.0.0-1624817847.21691f1",
     "@nuxtjs/axios": "5.13.6",
     "battlelog.js": "0.3.0",
     "consola": "2.15.3",
