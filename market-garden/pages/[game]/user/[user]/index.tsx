@@ -1,12 +1,29 @@
 import Link from "next/link";
-import { BattlelogClient, User } from "battlelog.js/src/index";
+import { BattlelogClient, Soldier, User } from "battlelog.js/src/index";
 import { GetServerSideProps, GetServerSidePropsResult, GetServerSidePropsContext } from "next";
 import { SupportedGames } from "battlelog.js/src/types/games";
+import * as gameInverted from "@nefomemes/blscraps-strings/inverted/games.json";
+import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
+import getPortrait from "~/util/getPortrait";
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
     params: {
         game: SupportedGames,
         user: string
     }
+};
+interface SuperSoldier extends Soldier {
+  platformName: string;
+  gameName: string;
+  soldierPic: string;
+  url: string;
+  displayName: string;
+  displayText: string;
+};
+interface SuperUser extends User {
+
+  soldiers: Array<SuperSoldier>;
+  staticAvatarURL: string;
+
 };
 
 export const getServerSideProps = async function getServerSideProps(ctx: BattlelogUserPageContext){
@@ -14,7 +31,28 @@ if(!!ctx.params.user || !!ctx.params.game) return { notFound: true }
 
 let battlelog = new BattlelogClient();
 let game = battlelog.game(ctx.params.game);
-let user = await game.fetchUser(ctx.params.user)
+// @ts-expect-error
+let user: SuperUser = await game.fetchUser(ctx.params.user);
+
+         user.staticAvatarURL = `https://gravatar.com/avatar/${user.gravatarMd5}?r=pg&d=retro`;
+
+        for (let soldier of user.soldiers) {
+          soldier.platformName = platforms[soldier.platform];
+          soldier.gameName = gameInverted[soldier.game];
+          soldier.soldierPic = getPortrait(
+            soldier.game,
+            soldier.persona.picture
+          );
+          soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
+            user.user.username
+          }/soldier/${soldier.persona.personaId}`;
+          soldier.displayName =  (soldier.persona.clanTag
+                    ? `[${soldier.persona.clanTag}]`
+                    : "") + (soldier.persona.personaName || user.user.username);
+      
+          soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`
+      }
+
 return {
     prop: {
         user
@@ -27,7 +65,7 @@ return {
   Type '{ prop: {}; }' is missing the following properties from type 'Promise<GetServerSidePropsResult<{ [key: string]: any; }>>': then, catch, finally, [Symbol.toStringTag]
  */
 
-export default function BattlelogUserPage(prop: {user: User}){
+export default function BattlelogUserPage(prop: {user: SuperUser}){
 return    <div  className="user-page">
 
     <div className="user-wallpaper user-page-content">
@@ -45,24 +83,32 @@ return    <div  className="user-page">
 
   
 
-    <div className="user-page-content">
-      <div v-if="user.readme">
-            {{ user.readme }}
-      </div>
+ <div className="user-page-content user-presentation">
+  <div className="user-presentation">
+    { !prop.user.userinfo.presentationHidden ?  prop.user.userinfo.presentation : "Privacy bits. The user's presentation is hidden. " }
     </div>
+ </div>
 
     <div className="soldier-boxes user-page-content">
-      <div className="soldier-box" v-for="soldier in user.soldiers">
+      {
+     prop.user.soldiers.map((soldier) => { 
+     return (
+       <div className="soldier-box">
         <Link href={soldier.url}>
           <div className="soldier-text">
-            <p className="title"> {{ soldier.displayName }} </p>
-            <p className="text"> {{ soldier.displayText }} </p>
+            <p className="title"> { soldier.displayName } </p>
+            <p className="text"> { soldier.displayText } </p>
           </div>
-          <div class="soldier-portrait">
+          <div className="soldier-portrait">
             <img v-key:src="user.soldierPic"/>
           </div>
         </Link>
-      </div>
+      </div>);
+      
+})
+}
+
+     
 
     </div>
 
