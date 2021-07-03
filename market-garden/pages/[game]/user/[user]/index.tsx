@@ -100,7 +100,7 @@ return    <div  className="user-page">
             <p className="text"> { soldier.displayText } </p>
           </div>
           <div className="soldier-portrait">
-            <img v-key:src="user.soldierPic"/>
+            <img src={ soldier.soldierPic }/>
           </div>
         </Link>
       </div>);
@@ -115,10 +115,13 @@ return    <div  className="user-page">
 
     <div className="friends-box">
         <div className="friends-list">
-          <div v-for="friend in user.friends" className="friend-box">
-              <img v-key:src="getAvatar(friend.gravatarMd5)"/>
-          </div>
-        </div>
+         {
+           prop.user.friends.map((friend) => {
+               <img src={ `https://gravatar.com/avatar/${friend.gravatarMd5}.jpg?r=pg&d=retro` }/>
+        
+           })
+}
+       </div>
 
     </div>
 
