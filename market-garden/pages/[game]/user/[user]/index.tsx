@@ -60,16 +60,11 @@ return {
 }
 };
 
-/**
- * Type '(ctx: GetServerSidePropsContext<ParsedUrlQuery>) => { prop: {}; }' is not assignable to type 'GetServerSideProps<{ [key: string]: any; }, ParsedUrlQuery>'.
-  Type '{ prop: {}; }' is missing the following properties from type 'Promise<GetServerSidePropsResult<{ [key: string]: any; }>>': then, catch, finally, [Symbol.toStringTag]
- */
-
 export default function BattlelogUserPage(prop: {user: SuperUser}){
 return    <div  className="user-page">
 
     <div className="user-wallpaper user-page-content">
-      <img v-key:src="user.staticAvatarURL"/>
+      <img src={ prop.user.staticAvatarURL }/>
       <div className="user-name">
           <p className="title"> { prop.user.user?.username || "No name" } </p>
         
