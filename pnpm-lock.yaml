@@ -11,7 +11,7 @@ importers:
       eslint-plugin-import: 2.23.4
       eslint-plugin-node: 11.1.0
       eslint-plugin-prettier: 3.4.0
-      eslint-plugin-vue: 7.12.1
+      eslint-plugin-vue: 7.13.0
     dependencies:
       enhanced-resolve: 5.8.2
     devDependencies:
@@ -21,7 +21,7 @@ importers:
       eslint-plugin-import: 2.23.4_eslint@7.29.0
       eslint-plugin-node: 11.1.0_eslint@7.29.0
       eslint-plugin-prettier: 3.4.0_8ba2f98f0791c0acf1d21c3ef32d35f1
-      eslint-plugin-vue: 7.12.1_eslint@7.29.0
+      eslint-plugin-vue: 7.13.0_eslint@7.29.0
 
   leningrad:
     specifiers:
@@ -62,7 +62,7 @@ importers:
       typescript: 4.3.5
     dependencies:
       '@prisma/client': 2.26.0
-      battlelog.js: link:../../battlelog.js/packages/lib
+      battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.29.0
       next: 11.0.1_f31b35bdaa3b7c2fce82404f09d2dac4
       next-auth: 3.27.1_95f109fa48aaad369d7e670d51de3d44
@@ -104,6 +104,12 @@ packages:
 
   /@babel/runtime/7.12.5:
     resolution: {integrity: sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==}
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+
+  /@babel/runtime/7.13.10:
+    resolution: {integrity: sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==}
     dependencies:
       regenerator-runtime: 0.13.7
     dev: false
@@ -593,6 +599,14 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: true
@@ -611,6 +625,15 @@ packages:
   /base64url/3.0.1:
     resolution: {integrity: sha512-ir1UPr3dkwexU7FdV8qBBbNDRUhMmIekYMFZfi+C/sLNnRESKPl23nB9b2pltqfOQNnGzsDdId90AEtG5tCx4A==}
     engines: {node: '>=6.0.0'}
+    dev: false
+
+  /battlelog.js/0.2.7:
+    resolution: {integrity: sha512-a/D9sQPtqtyITOlMB1u7kzWO/zaSMcmEUZFAkEJfTp2UDumMzjyybSlpZLdoC2rkpzYU2bgnidCT1XD/hbT1gw==}
+    dependencies:
+      '@babel/runtime': 7.13.10
+      axios: 0.21.1
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /big.js/5.2.2:
@@ -1427,8 +1450,8 @@ packages:
       string.prototype.matchall: 4.0.5
     dev: true
 
-  /eslint-plugin-vue/7.12.1_eslint@7.29.0:
-    resolution: {integrity: sha512-xHf/wCt88qmzqQerjaSteUFGASj7fPreglKD4ijnvoKRkoSJ3/H3kuJE8QFFtc+2wjw6hRDs834HH7vpuTJQzg==}
+  /eslint-plugin-vue/7.13.0_eslint@7.29.0:
+    resolution: {integrity: sha512-u0+jL8h2MshRuMTCLslktxRsPTjlENNcNufhgHu01N982DmHVdeFniyMPoVLLRjACQOwdz3FdlsgYGBMBG+AKg==}
     engines: {node: '>=8.10'}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0
@@ -1437,7 +1460,7 @@ packages:
       eslint-utils: 2.1.0
       natural-compare: 1.4.0
       semver: 7.3.5
-      vue-eslint-parser: 7.6.0_eslint@7.29.0
+      vue-eslint-parser: 7.8.0_eslint@7.29.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1782,6 +1805,16 @@ packages:
   /flatted/3.1.1:
     resolution: {integrity: sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==}
     dev: true
+
+  /follow-redirects/1.14.1:
+    resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}
@@ -3963,8 +3996,8 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: false
 
-  /vue-eslint-parser/7.6.0_eslint@7.29.0:
-    resolution: {integrity: sha512-QXxqH8ZevBrtiZMZK0LpwaMfevQi9UL7lY6Kcp+ogWHC88AuwUPwwCIzkOUc1LR4XsYAt/F9yHXAB/QoD17QXA==}
+  /vue-eslint-parser/7.8.0_eslint@7.29.0:
+    resolution: {integrity: sha512-ehmmrLZNYLUoKayvVW8l8HyPQIfuYZHiJoQLRP3dapDlTU7bGs4tqIKVGdAEpMuXS/b4R/PImCt7Tkj4UhX1SQ==}
     engines: {node: '>=8.10'}
     peerDependencies:
       eslint: '>=5.0.0'
@@ -3976,6 +4009,7 @@ packages:
       espree: 6.2.1
       esquery: 1.4.0
       lodash: 4.17.21
+      semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
     dev: true
