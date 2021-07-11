@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps =  async (ctx) => {
   if(!session){
     return {
       redirect: "/about",
-      permanent: false,
+   
       props: {
           auth: true
       }
@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps =  async (ctx) => {
   } else {
     return {
       redirect: "/",
-      permanent: false,
+ 
       props: {
        auth: false
       }
