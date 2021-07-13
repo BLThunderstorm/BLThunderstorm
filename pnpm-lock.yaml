@@ -50,7 +50,7 @@ importers:
     specifiers:
       '@prisma/client': 2.26.0
       '@types/react': 17.0.14
-      battlelog.js: ^0.2.7
+      battlelog.js: 0.2.7
       eslint: 7.30.0
       eslint-config-next: 11.0.1
       eslint-plugin-promise: 5.1.0
@@ -59,14 +59,14 @@ importers:
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
-      ts-loader: ^9.2.3
+      ts-loader: 9.2.3
       typescript: 4.3.5
-      webpack: ^5.44.0
+      webpack: 5.44.0
     dependencies:
       '@prisma/client': 2.26.0
-      battlelog.js: link:../../battlelog.js/packages/lib
+      battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.30.0
-      next: 11.0.1_f31b35bdaa3b7c2fce82404f09d2dac4
+      next: 11.0.1_24156b23a7980161026b4d2de0ef0d69
       next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
       prettier: 2.3.2
       react: 17.0.2
@@ -75,6 +75,7 @@ importers:
       '@types/react': 17.0.14
       eslint: 7.30.0
       eslint-config-next: 11.0.1_6b78ba35645ed557addbb8714920eb26
+      ts-loader: 9.2.3_typescript@4.3.5+webpack@5.44.0
       typescript: 4.3.5
       webpack: 5.44.0
 
@@ -389,21 +390,21 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/scope-manager/4.28.2:
-    resolution: {integrity: sha512-MqbypNjIkJFEFuOwPWNDjq0nqXAKZvDNNs9yNseoGBB1wYfz1G0WHC2AVOy4XD7di3KCcW3+nhZyN6zruqmp2A==}
+  /@typescript-eslint/scope-manager/4.28.0:
+    resolution: {integrity: sha512-eCALCeScs5P/EYjwo6se9bdjtrh8ByWjtHzOkC4Tia6QQWtQr3PHovxh3TdYTuFcurkYI4rmFsRFpucADIkseg==}
     engines: {node: ^8.10.0 || ^10.13.0 || >=11.10.1}
     dependencies:
-      '@typescript-eslint/types': 4.28.2
-      '@typescript-eslint/visitor-keys': 4.28.2
+      '@typescript-eslint/types': 4.28.0
+      '@typescript-eslint/visitor-keys': 4.28.0
     dev: true
 
-  /@typescript-eslint/types/4.28.2:
-    resolution: {integrity: sha512-Gr15fuQVd93uD9zzxbApz3wf7ua3yk4ZujABZlZhaxxKY8ojo448u7XTm/+ETpy0V0dlMtj6t4VdDvdc0JmUhA==}
+  /@typescript-eslint/types/4.28.0:
+    resolution: {integrity: sha512-p16xMNKKoiJCVZY5PW/AfILw2xe1LfruTcfAKBj3a+wgNYP5I9ZEKNDOItoRt53p4EiPV6iRSICy8EPanG9ZVA==}
     engines: {node: ^8.10.0 || ^10.13.0 || >=11.10.1}
     dev: true
 
-  /@typescript-eslint/typescript-estree/4.28.2_typescript@4.3.5:
-    resolution: {integrity: sha512-86lLstLvK6QjNZjMoYUBMMsULFw0hPHJlk1fzhAVoNjDBuPVxiwvGuPQq3fsBMCxuDJwmX87tM/AXoadhHRljg==}
+  /@typescript-eslint/typescript-estree/4.28.0_typescript@4.3.5:
+    resolution: {integrity: sha512-m19UQTRtxMzKAm8QxfKpvh6OwQSXaW1CdZPoCaQuLwAq7VZMNuhJmZR4g5281s2ECt658sldnJfdpSZZaxUGMQ==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
       typescript: '*'
@@ -411,8 +412,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/types': 4.28.2
-      '@typescript-eslint/visitor-keys': 4.28.2
+      '@typescript-eslint/types': 4.28.0
+      '@typescript-eslint/visitor-keys': 4.28.0
       debug: 4.3.2
       globby: 11.0.4
       is-glob: 4.0.1
@@ -423,11 +424,11 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/visitor-keys/4.28.2:
-    resolution: {integrity: sha512-aT2B4PLyyRDUVUafXzpZFoc0C9t0za4BJAKP5sgWIhG+jHECQZUEjuQSCIwZdiJJ4w4cgu5r3Kh20SOdtEBl0w==}
+  /@typescript-eslint/visitor-keys/4.28.0:
+    resolution: {integrity: sha512-PjJyTWwrlrvM5jazxYF5ZPs/nl0kHDZMVbuIcbpawVXaDPelp3+S9zpOz5RmVUfS/fD5l5+ZXNKnWhNYjPzCvw==}
     engines: {node: ^8.10.0 || ^10.13.0 || >=11.10.1}
     dependencies:
-      '@typescript-eslint/types': 4.28.2
+      '@typescript-eslint/types': 4.28.0
       eslint-visitor-keys: 2.1.0
     dev: true
 
@@ -1463,7 +1464,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.30.0
       eslint-plugin-react: 7.24.0_eslint@7.30.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.30.0
-      next: 11.0.1_f31b35bdaa3b7c2fce82404f09d2dac4
+      next: 11.0.1_24156b23a7980161026b4d2de0ef0d69
       typescript: 4.3.5
     transitivePeerDependencies:
       - supports-color
@@ -2735,6 +2736,10 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
+  /neo-async/2.6.2:
+    resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+    dev: true
+
   /next-auth/3.27.3_95f109fa48aaad369d7e670d51de3d44:
     resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
     peerDependencies:
@@ -2744,7 +2749,7 @@ packages:
       '@babel/runtime': 7.14.6
       '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_1cab5164588aaf1953619dc943fd2757
       '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.27.3
-      futoin-hkdf: 1.3.3
+      futoin-hkdf: 1.4.2
       jose: 1.28.1
       jsonwebtoken: 8.5.1
       nodemailer: 6.6.2
