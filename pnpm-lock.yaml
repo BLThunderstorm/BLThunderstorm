@@ -59,14 +59,15 @@ importers:
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
+      sass: ^1.35.2
       ts-loader: 9.2.3
       typescript: 4.3.5
       webpack: 5.44.0
     dependencies:
       '@prisma/client': 2.26.0
-      battlelog.js: 0.2.7
+      battlelog.js: link:../../battlelog.js/packages/lib
       eslint-plugin-promise: 5.1.0_eslint@7.30.0
-      next: 11.0.1_24156b23a7980161026b4d2de0ef0d69
+      next: 11.0.1_73a3b33f9c91d34f0e613b5ecdfc5061
       next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
       prettier: 2.3.2
       react: 17.0.2
@@ -75,6 +76,7 @@ importers:
       '@types/react': 17.0.14
       eslint: 7.30.0
       eslint-config-next: 11.0.1_6b78ba35645ed557addbb8714920eb26
+      sass: 1.35.2
       ts-loader: 9.2.3_typescript@4.3.5+webpack@5.44.0
       typescript: 4.3.5
       webpack: 5.44.0
@@ -647,7 +649,6 @@ packages:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.0
-    dev: false
 
   /app-root-path/3.0.0:
     resolution: {integrity: sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==}
@@ -803,7 +804,6 @@ packages:
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
-    dev: false
 
   /bn.js/4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
@@ -1005,6 +1005,21 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
+
+  /chokidar/3.5.2:
+    resolution: {integrity: sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: 3.1.2
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.1
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
 
   /chrome-trace-event/1.0.3:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
@@ -1446,7 +1461,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.30.0
       eslint-plugin-react: 7.24.0_eslint@7.30.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.30.0
-      next: 11.0.1_24156b23a7980161026b4d2de0ef0d69
+      next: 11.0.1_73a3b33f9c91d34f0e613b5ecdfc5061
       typescript: 4.3.5
     transitivePeerDependencies:
       - supports-color
@@ -2010,7 +2025,6 @@ packages:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
-    dev: false
     optional: true
 
   /function-bind/1.1.1:
@@ -2267,7 +2281,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       binary-extensions: 2.2.0
-    dev: false
 
   /is-boolean-object/1.1.1:
     resolution: {integrity: sha512-bXdQWkECBUIAcCkeH1unwJLIpZYaa5VvuygSyS/c2lf719mTKZDU5UdDRlpd01UjADgmW8RfqaP+mRaVPdr/Ng==}
@@ -2741,7 +2754,7 @@ packages:
       - supports-color
     dev: false
 
-  /next/11.0.1_24156b23a7980161026b4d2de0ef0d69:
+  /next/11.0.1_73a3b33f9c91d34f0e613b5ecdfc5061:
     resolution: {integrity: sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -2801,6 +2814,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
+      sass: 1.35.2
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -2880,7 +2894,6 @@ packages:
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /oauth/0.9.15:
     resolution: {integrity: sha1-vR/vr2hslrdUda7VGWQS/2DPucE=}
@@ -3501,6 +3514,13 @@ packages:
       picomatch: 2.3.0
     dev: false
 
+  /readdirp/3.6.0:
+    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.0
+    dev: true
+
   /reflect-metadata/0.1.13:
     resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
     dev: false
@@ -3611,6 +3631,14 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
+
+  /sass/1.35.2:
+    resolution: {integrity: sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
+    dev: true
 
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
