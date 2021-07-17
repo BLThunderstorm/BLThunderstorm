@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { BattlelogClient, Soldier, User } from "battlelog.js/src/index";
-import { GetServerSideProps, GetServerSidePropsResult, GetServerSidePropsContext } from "next";
+import { BattlelogClient, Soldier, Profile } from "battlelog.js/src/index";
+import { GetServerSidePropsContext } from "next";
 import { SupportedGames } from "battlelog.js/src/types/games";
 import * as gameInverted from "@nefomemes/blscraps-strings/inverted/games.json";
 import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
 import getPortrait from "~/util/getPortrait";
+
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
     params: {
         game: SupportedGames,
@@ -19,7 +20,7 @@ interface SuperSoldier extends Soldier {
   displayName: string;
   displayText: string;
 };
-interface SuperUser extends User {
+interface SuperUser extends Profile {
 
   soldiers: Array<SuperSoldier>;
   staticAvatarURL: string;
@@ -34,7 +35,7 @@ let game = battlelog.game(ctx.params.game);
 // @ts-expect-error
 let user: SuperUser = await game.fetchUser(ctx.params.user);
 
-         user.staticAvatarURL = `https://gravatar.com/avatar/${user.gravatarMd5}?r=pg&d=retro`;
+         user.staticAvatarURL = `https://gravatar.com/avatar/${user.user.gravatarMd5}?r=pg&d=retro`;
 
         for (let soldier of user.soldiers) {
           soldier.platformName = platforms[soldier.platform];
