@@ -49,30 +49,30 @@ importers:
   market-garden:
     specifiers:
       '@prisma/client': 2.26.0
-      '@types/react': 17.0.13
-      battlelog.js: ^0.2.7
+      '@types/react': 17.0.14
+      battlelog.js: 0.2.7
       eslint: 7.30.0
       eslint-config-next: 11.0.1
       eslint-plugin-promise: 5.1.0
       next: 11.0.1
-      next-auth: 3.27.2
+      next-auth: 3.27.3
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
-      ts-loader: ^9.2.3
+      ts-loader: 9.2.3
       typescript: 4.3.5
-      webpack: ^5.44.0
+      webpack: 5.44.0
     dependencies:
       '@prisma/client': 2.26.0
-      battlelog.js: link:../../battlelog.js/packages/lib
+      battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.30.0
       next: 11.0.1_24156b23a7980161026b4d2de0ef0d69
-      next-auth: 3.27.2_95f109fa48aaad369d7e670d51de3d44
+      next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
-      '@types/react': 17.0.13
+      '@types/react': 17.0.14
       eslint: 7.30.0
       eslint-config-next: 11.0.1_6b78ba35645ed557addbb8714920eb26
       ts-loader: 9.2.3_typescript@4.3.5+webpack@5.44.0
@@ -181,7 +181,7 @@ packages:
     resolution: {integrity: sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==}
     dev: true
 
-  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_b8c810960de7d29bc3dfe7972a1a3800:
+  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_1cab5164588aaf1953619dc943fd2757:
     resolution: {integrity: sha512-Pd2Y8b1ibDywrndbj3751VNKv1mVcg2w0uNIi01EBVkm5pqA1X+VnKWbPeHfh4arLYw93RPCvfLbWBZS7J1gZQ==}
     peerDependencies:
       '@prisma/client': ^2.16.1
@@ -189,10 +189,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.14.6
       '@prisma/client': 2.26.0
-      next-auth: 3.27.2_95f109fa48aaad369d7e670d51de3d44
+      next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
     dev: false
 
-  /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.2:
+  /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.3:
     resolution: {integrity: sha512-xEGz3TzBzz+5nXQ6BnC++KGfxTOAgztL32ZRLq47UKz9M0kFBP6pCMJjTszltsBHYUI/Wac2IG2egMTpHtppiQ==}
     peerDependencies:
       mongodb: ^3.5.9
@@ -211,7 +211,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.14.6
-      next-auth: 3.27.2_95f109fa48aaad369d7e670d51de3d44
+      next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -353,8 +353,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react/17.0.13:
-    resolution: {integrity: sha512-D/G3PiuqTfE3IMNjLn/DCp6umjVCSvtZTPdtAFy5+Ved6CsdRvivfKeCzw79W4AatShtU4nGqgvOv5Gro534vQ==}
+  /@types/react/17.0.14:
+    resolution: {integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -413,7 +413,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.28.0
       '@typescript-eslint/visitor-keys': 4.28.0
-      debug: 4.3.1
+      debug: 4.3.2
       globby: 11.0.4
       is-glob: 4.0.1
       semver: 7.3.5
@@ -2712,15 +2712,15 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth/3.27.2_95f109fa48aaad369d7e670d51de3d44:
-    resolution: {integrity: sha512-sKLALoj/0SlvlUZusB+nfJWgmOhQQgR/AC88o8LXERVEnE+PQVLEmHOCMF636asx+mTlfFaueOlf7uXuKt6WDw==}
+  /next-auth/3.27.3_95f109fa48aaad369d7e670d51de3d44:
+    resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
     peerDependencies:
       react: ^16.13.1 || ^17
       react-dom: ^16.13.1 || ^17
     dependencies:
       '@babel/runtime': 7.14.6
-      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_b8c810960de7d29bc3dfe7972a1a3800
-      '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.27.2
+      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_1cab5164588aaf1953619dc943fd2757
+      '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.27.3
       futoin-hkdf: 1.4.2
       jose: 1.28.1
       jsonwebtoken: 8.5.1
