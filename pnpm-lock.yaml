@@ -59,13 +59,13 @@ importers:
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
-      sass: ^1.35.2
+      sass: 1.35.2
       ts-loader: 9.2.3
       typescript: 4.3.5
       webpack: 5.44.0
     dependencies:
       '@prisma/client': 2.26.0
-      battlelog.js: link:../../battlelog.js/packages/lib
+      battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.30.0
       next: 11.0.1_73a3b33f9c91d34f0e613b5ecdfc5061
       next-auth: 3.27.3_95f109fa48aaad369d7e670d51de3d44
@@ -110,6 +110,12 @@ packages:
 
   /@babel/runtime/7.12.5:
     resolution: {integrity: sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==}
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+
+  /@babel/runtime/7.13.10:
+    resolution: {integrity: sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==}
     dependencies:
       regenerator-runtime: 0.13.7
     dev: false
@@ -777,6 +783,14 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query/2.2.0:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: true
@@ -795,6 +809,15 @@ packages:
   /base64url/3.0.1:
     resolution: {integrity: sha512-ir1UPr3dkwexU7FdV8qBBbNDRUhMmIekYMFZfi+C/sLNnRESKPl23nB9b2pltqfOQNnGzsDdId90AEtG5tCx4A==}
     engines: {node: '>=6.0.0'}
+    dev: false
+
+  /battlelog.js/0.2.7:
+    resolution: {integrity: sha512-a/D9sQPtqtyITOlMB1u7kzWO/zaSMcmEUZFAkEJfTp2UDumMzjyybSlpZLdoC2rkpzYU2bgnidCT1XD/hbT1gw==}
+    dependencies:
+      '@babel/runtime': 7.13.10
+      axios: 0.21.1
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /big.js/5.2.2:
@@ -2008,6 +2031,16 @@ packages:
   /flatted/3.2.1:
     resolution: {integrity: sha512-OMQjaErSFHmHqZe+PSidH5n8j3O0F2DdnVh8JB4j4eUQ2k6KvB0qGfrKIhapvez5JerBbmWkaLYUYWISaESoXg==}
     dev: true
+
+  /follow-redirects/1.14.1:
+    resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}
