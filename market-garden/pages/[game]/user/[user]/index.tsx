@@ -1,10 +1,12 @@
 import Link from "next/link";
+
 import { BattlelogClient, Soldier, Profile } from "battlelog.js/src/index";
 import { GetServerSidePropsContext } from "next";
 import { SupportedGames } from "battlelog.js/src/types/games";
 import * as gameInverted from "@nefomemes/blscraps-strings/inverted/games.json";
 import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
 import getPortrait from "~/util/getPortrait";
+import { DefaultLayout } from "~/components/DefaultLayout";
 
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
     params: {
@@ -62,7 +64,7 @@ return {
 };
 
 export default function BattlelogUserPage(prop: {user: SuperUser}){
-return    <div  className="user-page">
+return    (<DefaultLayout><div  className="user-page">
 
     <div className="user-wallpaper user-page-content">
       <img src={ prop.user.staticAvatarURL }/>
@@ -121,6 +123,6 @@ return    <div  className="user-page">
 
     </div>
 
-</div>
+</div></DefaultLayout>)
 
 }
