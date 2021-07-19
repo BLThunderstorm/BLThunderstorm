@@ -2,11 +2,10 @@ name: ESlint
 on:
   push:
     paths:
-     - 'frontend/**.js'
-     - 'frontend/**.vue'
-     - 'frontend/**.ts'
-     - '.github/workflows/eslint.yml'
-  
+      - "frontend/**.js"
+      - "frontend/**.vue"
+      - "frontend/**.ts"
+      - ".github/workflows/eslint.yml"
 
 jobs:
   lint:
@@ -19,7 +18,7 @@ jobs:
         uses: actions/setup-node@v2.2.0
         with:
           node-version: "16"
-      
+
       - name: Commit the fix
         run: |
           git add --all

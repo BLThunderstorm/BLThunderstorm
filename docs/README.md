@@ -4,6 +4,7 @@
 </div>
 
 Tables of content:
+
 - [Privacy Policy](./privacy.md)
 - [Terms of Service](./terms.md)
 - [Brand Guidelines](./brand)

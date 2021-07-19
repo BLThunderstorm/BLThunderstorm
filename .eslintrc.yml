@@ -1,9 +1,9 @@
 root: true
 parser: "vue-eslint-parser"
-plugins: 
+plugins:
   - "@typescript-eslint"
   - "vue"
-extends: 
+extends:
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
   - "plugin:vue/strongly-recommended"

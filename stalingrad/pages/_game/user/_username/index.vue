@@ -1,23 +1,15 @@
-
 <template>
-
-<div  v-if="user" class="user-page">
-
+  <div v-if="user" class="user-page">
     <div class="user-wallpaper user-page-content">
-        <img :src="user.staticAvatarURL"/>
-        <div class="">
-          <p class="title"> {{ user.user?.username || "No name" }} </p>
-        
-
-        </div>
-    
-    
+      <img :src="user.staticAvatarURL" />
+      <div class="">
+        <p class="title">{{ user.user?.username || "No name" }}</p>
+      </div>
     </div>
-
 
     <div class="user-page-content">
       <div v-if="user.readme">
-            {{ user.readme }}
+        {{ user.readme }}
       </div>
     </div>
 
@@ -25,19 +17,14 @@
       <div class="soldier-box" v-for="soldier in user.soldiers">
         <NuxtLink>
           <div class="soldier-text">
-            <p class="title"> {{ soldier.displayName }} </p>
-            <p class="text"> {{ soldier.displayText }} </p>
+            <p class="title">{{ soldier.displayName }}</p>
+            <p class="text">{{ soldier.displayText }}</p>
           </div>
-          <div class="soldier-portrait">
-
-          </div>
+          <div class="soldier-portrait"></div>
         </NuxtLink>
       </div>
-
     </div>
-
-</div>
-
+  </div>
 </template>
 <script lang="ts">
 // @ts-ignore
@@ -54,7 +41,7 @@ Component({});
 export default class BattlelogUserPage extends Vue {
   data() {
     return { user: undefined, error: undefined };
-  };
+  }
 
   user: User = {};
   async asyncData(ctx) {
@@ -79,24 +66,24 @@ export default class BattlelogUserPage extends Vue {
           soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
             user.user.username
           }/soldier/${soldier.persona.personaId}`;
-          soldier.displayName =  (soldier.persona.clanTag
-                    ? `[${soldier.persona.clanTag}]`
-                    : "") + (soldier.persona.personaName || user.user.username);
-      
-          soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`
-      }
-      
+          soldier.displayName =
+            (soldier.persona.clanTag ? `[${soldier.persona.clanTag}]` : "") +
+            (soldier.persona.personaName || user.user.username);
+
+          soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`;
+        }
+
         user = JSON.parse(JSON.stringify(user));
         return { user, error: false };
       } else {
         throw Error("No User found");
-      };
+      }
     } catch (error) {
       console.error(error);
       ctx.error(<NuxtError>{ status: 500, message: error.stack });
       return { error, user: null };
-    };
-  };
+    }
+  }
   head() {
     return {
       title: this.user?.user?.username || "User not found",
@@ -108,7 +95,7 @@ export default class BattlelogUserPage extends Vue {
       return userified;
     },
   };
-};
+}
 </script>
 <style lang="scss">
 .user-readme {

@@ -65,12 +65,11 @@ var bf3 = battlelog.game("bf3");
   app.post("/blconnect/request/:user", async (req, res) => {
     if (!req.params.user) return res.status(401).send("Invalid request.");
     let guid = uuid["v4"]();
-    
 
     let auth = {
       guid,
       date: Date.now(),
-      // @ts-ignore 
+      // @ts-ignore
       userGitHubId: req.user.id,
       finished: false,
       username: req.params.user,
@@ -96,10 +95,10 @@ var bf3 = battlelog.game("bf3");
         message:
           "Connecting session not found. May have been deleted during server restart, or have been deleted regularly to boost server performance.",
       });
-    
+
     let user;
-     try {
-     user = await bf3.fetchUser(session.username);
+    try {
+      user = await bf3.fetchUser(session.username);
     } catch (e) {
       return res.status(500).send({
         code: 500,
@@ -114,8 +113,6 @@ var bf3 = battlelog.game("bf3");
         .send(
           "Unathorized. The user haven't got the guid as their presentation yet."
         );
-
-  
   });
 })();
 

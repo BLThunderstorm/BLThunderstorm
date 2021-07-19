@@ -6,19 +6,17 @@ module.exports = {
     externalDir: true,
   },
   webpack: (config) => {
-
     config = {
       ...config,
       resolve: {
         ...config.resolve,
         alias: {
           ...config.resolve?.alias,
-          "~": path.resolve(__dirname)
-        }
-      }
-    }
+          "~": path.resolve(__dirname),
+        },
+      },
+    };
     // Important: return the modified config
-    return config
-  }
-
-}
+    return config;
+  },
+};
