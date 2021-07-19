@@ -1,3 +1,5 @@
+.layout {
+
 .pagecontent {
  min-height: 100vh;
 }
@@ -47,48 +49,16 @@
  z-index: 10;
 }
 
-#right-side-base-header, #left-side-base-header {
- width: 50vw;
- position: relative;
-}
 
-#left-side-base-header {
- display: flex;
- justify-content: flex-start;
-}
-#right-side-base-header {
- display: flex;
- justify-content: flex-end;
- align-items: center;
- margin-right: 25px;
-}
 #template-container {
  padding-top: 48px;
-}
-
-#left-side-base-header-content {
- display: flex;
- height: 100%;
 }
 .title-header a, .title-header a:link, .title-header a:visited {
  color: white;
  text-decoration: none;
 }
 
-#menu-button {
- display: flex;
- align-items: center;
- justify-content: center;
- width: 50px;
- height: 100%;
- border-right: 0.001px solid;
-}
 
-.user-loggedout-header {
- display: flex;
- align-items: center;
- justify-content: center;
- border: solid 1px;
- padding: 5px;
- border-radius: 5px;
+
+
 }

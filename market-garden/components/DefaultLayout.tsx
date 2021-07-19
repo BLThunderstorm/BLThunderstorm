@@ -2,16 +2,16 @@ import { FunctionComponent } from "react";
 import { NavigationBar } from "./navigationbar";
 import { Footer } from "./footer";
 import type { ReactElement } from "react";
-import "./DefaultLayout.module.scss";
+import styles from "./DefaultLayout.module.scss";
 export const DefaultLayout: FunctionComponent<{ children: ReactElement }> = ({ children }) => {
 
 
 
-  return (<div>
-    <div className="bg-picture"></div>
+  return (<div className={`${styles["layout"]} layout`}>
+    <div className={`${styles["bg-picture"]} bg-picture`}></div>
     <NavigationBar />
-    <div className="page-content-container">
-      <div className="pagecontent">
+    <div className={`${styles["page-content-container"]}page-content-container`}>
+      <div className={`${styles["pagecontent"]} pagecontent`}>
         {children}
       </div>
 
@@ -24,5 +24,4 @@ export const DefaultLayout: FunctionComponent<{ children: ReactElement }> = ({ c
       ]} />
     </div>
   </div>
-  );
-}
+  )};
