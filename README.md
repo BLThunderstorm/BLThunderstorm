@@ -23,8 +23,9 @@
 
 | Name     | Desccription                     |
 | -------- | -------------------------------- |
-| frontend | The frontend Nuxt server.        |
-| backend  | The backend server for the site. |
+| [Market Garden](./market-garden) | Current frontend server built on React and NextJS. |
+| [Stalingrad](./stalingrad) | Legacy frontend server built on Vue and NuxtJS. Deprecated in favor of Market Garden. |
+| [Leningrad](./leningrad)  | The backend server for the site. |
 
 <!--     | frontend-shared                  | Shared Vue components to be used by BLThunderstorm-related frontend apps. | -->
 
