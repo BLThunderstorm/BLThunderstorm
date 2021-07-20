@@ -19,8 +19,8 @@ export const Footer: FunctionComponent<{
               key={category.id}
             >
               <li className={`${styles["nefo-link-title"]} nefo-link-title`}>
-                {" "}
-                {category.title}{" "}
+
+                {category.title}
               </li>
 
               {category.links?.map((link) => {
