@@ -1,5 +1,5 @@
-import "../styles/About.module.scss";
-import { DefaultLayout } from "../components/DefaultLayout";
+import styles from "./About.module.scss";
+
 import Head from "next/head";
 export default function AboutPage() {
   return (
