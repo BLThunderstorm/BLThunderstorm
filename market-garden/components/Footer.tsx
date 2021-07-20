@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./Footer.module.sass";
+import styles from "./Footer.module.scss";
 
 export const Footer: FunctionComponent<{
   links?: Array<{
