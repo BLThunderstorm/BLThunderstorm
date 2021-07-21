@@ -10,9 +10,9 @@
     "lint": "pnpx eslint"
   },
   "dependencies": {
-    "@babel/core": "7.14.6",
+    "@babel/core": "7.14.8",
     "@babel/plugin-syntax-jsx": "7.14.5",
-    "@babel/runtime-corejs3": "7.14.7",
+    "@babel/runtime-corejs3": "7.14.8",
     "@nefomemes/blscraps-strings": "1.0.0",
     "@nuxtjs/auth-next": "5.0.0-1622918202.e815752",
     "@nuxtjs/axios": "5.13.6",
