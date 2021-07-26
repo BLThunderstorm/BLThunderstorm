@@ -1,29 +1,32 @@
-#service-name {
-  font-family: "Bebas Neue" !important;
-  font-size: 100px;
-  line-height: 100px;
-  margin-bottom: -1px;
-}
+.about-page {
+  .intro {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
 
-#intro {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 100%;
-}
+    .title {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      font-family: Arial;
+      color: white;
 
-#intro .title {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  font-family: Arial;
-  color: white;
-}
+      .service-name {
+        font-family: "Big Shoulders Text" !important;
+        font-size: 100px;
+        line-height: 100px;
+        margin-bottom: -1px;
+      }
 
-#intro .message {
-  font-weight: 600;
-}
+      .message {
+        font-weight: 600;
+      }
+    }
+  }
 
+  /*
 #about {
   min-height: 100vh;
   max-height: auto;
@@ -41,8 +44,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
+}*/
 
-#about-content {
-  margin-left: 40px;
+  #about-content {
+    margin-left: 40px;
+  }
 }
