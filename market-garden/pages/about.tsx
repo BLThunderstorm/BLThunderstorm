@@ -8,9 +8,9 @@ export default function AboutPage() {
         <Head>
           <title>About - BLTHunderstorm</title>
         </Head>
-        <div id="intro" className={`${styles["box"]} box`}>
+        <div className={`${styles["intro"]} box intro`}>
           <div className={`${styles["title"]} title`}>
-            <p id="service-name">BLThunderstorm</p>
+            <p className={`${styles["service-name"]} service-name`}>BLTHUNDERSTORM</p>
             <p className={`${styles["message"]} message`}>
               Unofficial stats-tracking and dashboard site for Battlefield
               games.
@@ -18,9 +18,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div id="about" className={`${styles["box"]} ${styles["about"]} box`}>
-          <div id={`${styles["features-container"]} features-container`}></div>
-        </div>
       </div>
   
   );
