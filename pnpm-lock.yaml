@@ -49,7 +49,7 @@ importers:
   market-garden:
     specifiers:
       '@prisma/client': 2.27.0
-      '@types/react': 17.0.14
+      '@types/react': 17.0.15
       battlelog.js: 0.2.7
       eslint: 7.31.0
       eslint-config-next: 11.0.1
@@ -73,7 +73,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
-      '@types/react': 17.0.14
+      '@types/react': 17.0.15
       eslint: 7.31.0
       eslint-config-next: 11.0.1_e9bd7c215b1c76b8938b8446225cb7ea
       sass: 1.36.0
@@ -356,8 +356,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react/17.0.14:
-    resolution: {integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==}
+  /@types/react/17.0.15:
+    resolution: {integrity: sha512-uTKHDK9STXFHLaKv6IMnwp52fm0hwU+N89w/p9grdUqcFA6WuqDyPhaWopbNyE1k/VhgzmHl8pu1L4wITtmlLw==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
