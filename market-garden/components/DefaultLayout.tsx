@@ -11,7 +11,7 @@ export const DefaultLayout: FunctionComponent<{ children: ReactElement }> = ({
       <div className={`${styles["bg-picture"]} bg-picture`}></div>
       <NavigationBar />
       <div
-        className={`${styles["page-content-container"]}page-content-container`}
+        className={`${styles["page-content-container"]} page-content-container`}
       >
         <div className={`${styles["pagecontent"]} pagecontent`}>{children}</div>
 
