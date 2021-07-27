@@ -104,7 +104,7 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
         <div className={`${styles["friends-box"]} friends-box`}>
           <div className={`${styles["friends-list"]} friends-list`}>
             {prop.user.friends.map((friend) => {
-             <img
+            return <img
                 src={`https://gravatar.com/avatar/${friend.gravatarMd5}.jpg?r=pg&d=retro`}
               />;
             })}
