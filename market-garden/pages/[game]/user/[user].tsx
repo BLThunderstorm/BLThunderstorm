@@ -59,6 +59,22 @@ export const getServerSideProps = async function getServerSideProps(
   };
 };
 
+function SoldierBox(props: {soldier: SuperSoldier}){
+  return  (<div className={` soldier-box-container`}>
+  <Link href={props.soldier.url}>
+    <div className={`soldier-box`}>
+    <div className={`${styles["soldier-text"]} ${styles["soldier-content"]} soldier-content soldier-text`}>
+      <p className={`${styles["title"]} title`}> {props.soldier.displayName} </p>
+      <p className={`${styles["text"]} text`}> {props.soldier.displayText} </p>
+    </div>
+    <div className={`${styles["soldier-portrait"]} ${styles["soldier-content"]} soldier-content soldier-portrait`}>
+      <img src={props.soldier.soldierPic} />
+    </div>
+    </div>
+  </Link>
+</div>)
+}
+
 export default function BattlelogUserPage(prop: { user: SuperUser }) {
 
   return (
@@ -77,22 +93,10 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
               : "Privacy bits. The user's presentation is hidden. "}</div> 
         </div>
 
-        <div className={`${styles["soldier-boxes"]} ${styles["user-page-content"]} soldier-boxes user-page-content`}>
+        <div className={`${styles["soldier-boxes"]} ${styles["user-page-cotent"]} soldier-boxes user-page-content`}>
           {prop.user.soldiers.map((soldier) => {
             return (
-              <div className={` soldier-box-container`}>
-                <Link href={soldier.url}>
-                  <div className={`soldier-box`}>
-                  <div className={`${styles["soldier-text"]} ${styles["soldier-content"]} soldier-content soldier-text`}>
-                    <p className={`${styles["title"]} title`}> {soldier.displayName} </p>
-                    <p className={`${styles["text"]} text`}> {soldier.displayText} </p>
-                  </div>
-                  <div className={`${styles["soldier-portrait"]} ${styles["soldier-content"]} soldier-content soldier-portrait`}>
-                    <img src={soldier.soldierPic} />
-                  </div>
-                  </div>
-                </Link>
-              </div>
+              <SoldierBox soldier={soldier} key={soldier.persona.personaId}></SoldierBox>
             );
           })}
         </div>
@@ -100,7 +104,7 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
         <div className={`${styles["friends-box"]} friends-box`}>
           <div className={`${styles["friends-list"]} friends-list`}>
             {prop.user.friends.map((friend) => {
-              <img
+             <img
                 src={`https://gravatar.com/avatar/${friend.gravatarMd5}.jpg?r=pg&d=retro`}
               />;
             })}
