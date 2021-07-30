@@ -62,12 +62,12 @@ importers:
       sass: 1.36.0
       ts-loader: 9.2.4
       typescript: 4.3.5
-      webpack: 5.47.0
+      webpack: 5.47.1
     dependencies:
       '@prisma/client': 2.28.0
       battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.31.0
-      next: 11.0.1_26dc91828c3cac20bc74b14618578358
+      next: 11.0.1_a8ede3483a7cc9241dce7576442818ce
       next-auth: 3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254
       prettier: 2.3.2
       react: 17.0.2
@@ -77,9 +77,9 @@ importers:
       eslint: 7.31.0
       eslint-config-next: 11.0.1_e9bd7c215b1c76b8938b8446225cb7ea
       sass: 1.36.0
-      ts-loader: 9.2.4_typescript@4.3.5+webpack@5.47.0
+      ts-loader: 9.2.4_typescript@4.3.5+webpack@5.47.1
       typescript: 4.3.5
-      webpack: 5.47.0
+      webpack: 5.47.1
 
 packages:
 
@@ -259,7 +259,7 @@ packages:
       strip-ansi: 6.0.0
     dev: false
 
-  /@next/react-refresh-utils/11.0.1_3d2f233779a4611c0efe7d919cdf4adb:
+  /@next/react-refresh-utils/11.0.1_4b0df7710730c14841cda587c44aead8:
     resolution: {integrity: sha512-K347DM6Z7gBSE+TfUaTTceWvbj0B6iNAsFZXbFZOlfg3uyz2sbKpzPYYFocCc27yjLaS8OfR8DEdS2mZXi8Saw==}
     peerDependencies:
       react-refresh: 0.8.3
@@ -269,7 +269,7 @@ packages:
         optional: true
     dependencies:
       react-refresh: 0.8.3
-      webpack: 5.47.0
+      webpack: 5.47.1
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -1471,7 +1471,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.31.0
       eslint-plugin-react: 7.24.0_eslint@7.31.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.31.0
-      next: 11.0.1_26dc91828c3cac20bc74b14618578358
+      next: 11.0.1_a8ede3483a7cc9241dce7576442818ce
       typescript: 4.3.5
     transitivePeerDependencies:
       - supports-color
@@ -2774,7 +2774,7 @@ packages:
       - supports-color
     dev: false
 
-  /next/11.0.1_26dc91828c3cac20bc74b14618578358:
+  /next/11.0.1_a8ede3483a7cc9241dce7576442818ce:
     resolution: {integrity: sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -2797,7 +2797,7 @@ packages:
       '@next/env': 11.0.1
       '@next/polyfill-module': 11.0.1
       '@next/react-dev-overlay': 11.0.1_react-dom@17.0.2+react@17.0.2
-      '@next/react-refresh-utils': 11.0.1_3d2f233779a4611c0efe7d919cdf4adb
+      '@next/react-refresh-utils': 11.0.1_4b0df7710730c14841cda587c44aead8
       assert: 2.0.0
       ast-types: 0.13.2
       browserify-zlib: 0.2.0
@@ -4038,7 +4038,7 @@ packages:
     resolution: {integrity: sha512-FBk4IesMV1rBxX2tfiK8RAmogtWn53puLOQlvO8XuwlgxcYbP4mVPS9Ph4aeamSyyVjOl24aYWAuc8U5kCVwMw==}
     engines: {node: '>=6'}
 
-  /terser-webpack-plugin/5.1.4_webpack@5.47.0:
+  /terser-webpack-plugin/5.1.4_webpack@5.47.1:
     resolution: {integrity: sha512-C2WkFwstHDhVEmsmlCxrXUtVklS+Ir1A7twrYzrDrQQOIMOaVAYykaoo/Aq1K0QRkMoY2hhvDQY1cm4jnIMFwA==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -4050,7 +4050,7 @@ packages:
       serialize-javascript: 6.0.0
       source-map: 0.6.1
       terser: 5.7.1
-      webpack: 5.47.0
+      webpack: 5.47.1
     dev: true
 
   /terser/5.7.1:
@@ -4118,7 +4118,7 @@ packages:
       punycode: 2.1.1
     dev: false
 
-  /ts-loader/9.2.4_typescript@4.3.5+webpack@5.47.0:
+  /ts-loader/9.2.4_typescript@4.3.5+webpack@5.47.1:
     resolution: {integrity: sha512-Ats2BCqPFBkgsoZUmmYMjuQu+iBNExt4o3QDsJqRMuPdStWlnOthdqX/GHHJnxSSgw7Gu6Hll/MD5b4usgKFOg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -4130,7 +4130,7 @@ packages:
       micromatch: 4.0.4
       semver: 7.3.5
       typescript: 4.3.5
-      webpack: 5.47.0
+      webpack: 5.47.1
     dev: true
 
   /ts-pnp/1.2.0_typescript@4.3.5:
@@ -4350,13 +4350,13 @@ packages:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
     dev: false
 
-  /webpack-sources/3.0.1:
-    resolution: {integrity: sha512-LkBxiXJ3tTuhLaS5gz6D6l77Et8mPWlghAe7bbnmi2PyN1CtkiL/YitR+I0pn9PtBC88Irqgg6F9dBJh8+sJRQ==}
+  /webpack-sources/3.1.1:
+    resolution: {integrity: sha512-ztUmIWq0LWaw+1YyR3bXtUPjt8vQedtI9WxGn/q1V1ASHsombnaso7MN9S25lzKS/OuC9Q8lEg3GsZexjDbdlQ==}
     engines: {node: '>=10.13.0'}
     dev: true
 
-  /webpack/5.47.0:
-    resolution: {integrity: sha512-soKLGwcUM1R3YEbJhJNiZzy7T43TnI7ENda/ywfDp9G1mDlDTpO+qfc8I5b0AzMr9xM3jyvQ0n7ctJyiXuXW6Q==}
+  /webpack/5.47.1:
+    resolution: {integrity: sha512-cW+Mzy9SCDapFV4OrkHuP6EFV2mAsiQd+gOa3PKtHNoKg6qPqQXZzBlHH+CnQG1osplBCqwsJZ8CfGO6XWah0g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -4385,9 +4385,9 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.1.0
       tapable: 2.2.0
-      terser-webpack-plugin: 5.1.4_webpack@5.47.0
+      terser-webpack-plugin: 5.1.4_webpack@5.47.1
       watchpack: 2.2.0
-      webpack-sources: 3.0.1
+      webpack-sources: 3.1.1
     dev: true
 
   /whatwg-url/7.1.0:
