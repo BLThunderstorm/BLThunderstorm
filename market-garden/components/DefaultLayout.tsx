@@ -1,7 +1,7 @@
-import { FunctionComponent } from "react";
+
 import { NavigationBar } from "./navigationbar";
 import { Footer } from "./Footer";
-import type { ReactElement } from "react";
+import type { ReactElement, FunctionComponent } from "react";
 import styles from "./DefaultLayout.module.scss";
 export const DefaultLayout: FunctionComponent<{ children: ReactElement }> = ({
   children,
