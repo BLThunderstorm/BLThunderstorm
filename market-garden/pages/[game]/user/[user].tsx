@@ -6,7 +6,7 @@ import * as gameInverted from "@nefomemes/blscraps-strings/inverted/games.json";
 import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
 import getPortrait from "~/util/getPortrait";
 import styles from "./BattlelogUserPage.module.scss";
-
+import { PageSpacer } from "~/components/pagespacer";
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
   params: {
     game: SupportedGames;
@@ -100,6 +100,18 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
             );
           })}
         </div>
+      </div>
+      <PageSpacer>
+        <div>
+          <div
+            className={`${styles["user-page-content"]} ${styles["user-presentation"]} user-page-content user-presentation`}
+          >
+            <article>
+              {!prop.user.userinfo.presentationHidden
+                ? prop.user.userinfo.presentation
+                : "Privacy bits. The user's presentation is hidden. "}
+            </article>
+          </div>
 
         <div className={`${styles["friends-box"]} friends-box`}>
           <div className={`${styles["friends-list"]} friends-list`}>
@@ -110,7 +122,7 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
             })}
           </div>
         </div>
-      </div>
-  
+      </PageSpacer>
+    </div>
   );
 }
