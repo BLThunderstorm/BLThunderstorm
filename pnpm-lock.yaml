@@ -59,7 +59,7 @@ importers:
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
-      sass: 1.36.0
+      sass: 1.37.0
       ts-loader: 9.2.4
       typescript: 4.3.5
       webpack: 5.47.1
@@ -67,7 +67,7 @@ importers:
       '@prisma/client': 2.28.0
       battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.31.0
-      next: 11.0.1_a8ede3483a7cc9241dce7576442818ce
+      next: 11.0.1_d0648b4dec9e74d460e0a3d88a4417d7
       next-auth: 3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254
       prettier: 2.3.2
       react: 17.0.2
@@ -76,7 +76,7 @@ importers:
       '@types/react': 17.0.15
       eslint: 7.31.0
       eslint-config-next: 11.0.1_e9bd7c215b1c76b8938b8446225cb7ea
-      sass: 1.36.0
+      sass: 1.37.0
       ts-loader: 9.2.4_typescript@4.3.5+webpack@5.47.1
       typescript: 4.3.5
       webpack: 5.47.1
@@ -1471,7 +1471,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1_eslint@7.31.0
       eslint-plugin-react: 7.24.0_eslint@7.31.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.31.0
-      next: 11.0.1_a8ede3483a7cc9241dce7576442818ce
+      next: 11.0.1_d0648b4dec9e74d460e0a3d88a4417d7
       typescript: 4.3.5
     transitivePeerDependencies:
       - supports-color
@@ -2774,7 +2774,7 @@ packages:
       - supports-color
     dev: false
 
-  /next/11.0.1_a8ede3483a7cc9241dce7576442818ce:
+  /next/11.0.1_d0648b4dec9e74d460e0a3d88a4417d7:
     resolution: {integrity: sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -2834,7 +2834,7 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
-      sass: 1.36.0
+      sass: 1.37.0
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -3652,8 +3652,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /sass/1.36.0:
-    resolution: {integrity: sha512-fQzEjipfOv5kh930nu3Imzq3ie/sGDc/4KtQMJlt7RRdrkQSfe37Bwi/Rf/gfuYHsIuE1fIlDMvpyMcEwjnPvg==}
+  /sass/1.37.0:
+    resolution: {integrity: sha512-B+Tu6cSAG8ffs/cqsZl/bgSH2pCmavDaPTYAoW8QA1qNHh/RqndNfVKuABKYkLjUQ5aq/BnCENVpE80cqdSM1w==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
