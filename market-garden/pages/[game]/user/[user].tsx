@@ -55,6 +55,7 @@ export const getServerSideProps = async function getServerSideProps(
   return {
     props: {
       user: JSON.parse(JSON.stringify(user)),
+      params: ctx.params,
     },
   };
 };
@@ -120,6 +121,24 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
                 src={`https://gravatar.com/avatar/${friend.gravatarMd5}.jpg?r=pg&d=retro`}
               />;
             })}
+          </div>
+
+          <div className={`${styles["friends-box"]} friends-box`}>
+            <div className={`${styles["friends-list"]} friends-list`}>
+              {prop.user.friends.map((friend) => {
+                return (
+                  <div key={friend.user.userId}>
+                    <Link
+                      href={`/${prop.params.game}/user/${friend.user.username}`}
+                    >
+                      <img
+                        src={`https://gravatar.com/avatar/${friend.user.gravatarMd5}.jpg?r=pg&d=retro`}
+                      />
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </PageSpacer>

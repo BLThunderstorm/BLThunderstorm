@@ -6,15 +6,6 @@
     width: 100%;
   }
 
-  .user-soldiers,
-  .friends-bar {
-    background-color: #303030;
-  }
-
-  .friends-bar {
-    display: flex;
-    flex-direction: column;
-  }
   .soldier-box {
     position: relative;
 
@@ -66,21 +57,18 @@
     display: flex;
 
     .user-name {
-        font-weight: 600;
-        font-size: 35px;
+      font-weight: 600;
+      font-size: 35px;
     }
 
     .user-wallpaper-content {
-        padding: 20px;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
   }
- 
-
- 
 
   .user-soldiers {
     display: grid;
@@ -90,13 +78,16 @@
   .user-soldiers,
   .friends-bar {
     background: #121212;
+
   }
 
-  .friends-bar .content-order {
-    flex-wrap: wrap;
-  }
+  .friends-box {
+    background: #121212;
+    padding: 5px;
 
-  .friends-bar .friend-box {
-    margin-right: 10px;
+    .friends-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
