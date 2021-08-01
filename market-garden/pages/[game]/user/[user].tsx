@@ -44,7 +44,9 @@ export const getServerSideProps = async function getServerSideProps(
     soldier.platformName = platforms[soldier.platform];
     soldier.gameName = gameInverted[soldier.game];
     soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
-    soldier.url = `/${soldier.gameName.toLowerCase()}/soldier/${soldier.persona.personaId}`;
+    soldier.url = `/${soldier.gameName.toLowerCase()}/soldier/${
+      soldier.persona.personaId
+    }`;
     soldier.displayName =
       (soldier.persona.clanTag ? `[${soldier.persona.clanTag}]` : "") +
       (soldier.persona.personaName || user.user.username);
@@ -59,46 +61,47 @@ export const getServerSideProps = async function getServerSideProps(
   };
 };
 
-function SoldierBox(props: {soldier: SuperSoldier}){
-  return  (<div className={` soldier-box-container`}>
-  <Link href={props.soldier.url}>
-    <div className={`soldier-box`}>
-    <div className={`${styles["soldier-text"]} ${styles["soldier-content"]} soldier-content soldier-text`}>
-      <p className={`${styles["title"]} title`}> {props.soldier.displayName} </p>
-      <p className={`${styles["text"]} text`}> {props.soldier.displayText} </p>
-    </div>
-    <div className={`${styles["soldier-portrait"]} ${styles["soldier-content"]} soldier-content soldier-portrait`}>
-      <img src={props.soldier.soldierPic} />
-    </div>
-    </div>
-  </Link>
-</div>)
-}
-
-export default function BattlelogUserPage(prop: { user: SuperUser }) {
-
+function SoldierBox(props: { soldier: SuperSoldier }) {
   return (
-  
-      <div className={`${styles["user-page"]} user-page`}>
-        <div className={` ${styles["user-wallpaper"]} ${styles["user-page-content"]} user-wallpaper user-page-content`}>
-          <img src={prop.user.staticAvatarURL} />
-          <div className={`${styles["user-name"]} user-name`}>
-            <p className={`${styles[`title`]} title`}> {prop.user.user?.username || "No name"} </p>
+    <div className={` soldier-box-container`}>
+      <Link href={props.soldier.url}>
+        <div className={`${styles["soldier-box"]} soldier-box`}>
+          <div
+            className={`${styles["soldier-text"]} ${styles["soldier-content"]} soldier-content soldier-text`}
+          >
+            <p className={`${styles["title"]} title`}>
+              {props.soldier.displayName}
+            </p>
+            <p className={`${styles["text"]} text`}>
+              {props.soldier.displayText}
+            </p>
+          </div>
+          <div
+            className={`${styles["soldier-portrait"]} ${styles["soldier-content"]} soldier-content soldier-portrait`}
+          >
+            <img src={props.soldier.soldierPic} />
           </div>
         </div>
+      </Link>
+    </div>
+  );
+}
 
-        <div className={`${styles["user-page-content"]} ${styles["user-presentation"]} user-page-content user-presentation`}>
-           <div>{!prop.user.userinfo.presentationHidden
-              ? prop.user.userinfo.presentation
-              : "Privacy bits. The user's presentation is hidden. "}</div> 
-        </div>
-
-        <div className={`${styles["soldier-boxes"]} ${styles["user-page-cotent"]} soldier-boxes user-page-content`}>
-          {prop.user.soldiers.map((soldier) => {
-            return (
-              <SoldierBox soldier={soldier} key={soldier.persona.personaId}></SoldierBox>
-            );
-          })}
+export default function BattlelogUserPage(prop: {
+  user: SuperUser;
+  params: { game: string };
+}) {
+  return (
+    <div className={`${styles["user-page"]} user-page`}>
+      <div
+        className={` ${styles["user-wallpaper"]} ${styles["user-page-content"]} user-wallpaper user-page-content`}
+      >
+        <img srcSet={`${prop.user.staticAvatarURL}&s=1024 1024w`} />
+        <div className={`${styles["user-name"]} user-name`}>
+          <p className={`${styles[`title`]} title`}>
+          
+            {prop.user.user?.username || "No name"}
+          </p>
         </div>
       </div>
       <PageSpacer>
