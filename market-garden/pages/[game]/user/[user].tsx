@@ -133,11 +133,15 @@ export default function BattlelogUserPage(prop: {
             <div className={`${styles["friends-list"]} friends-list`}>
               {prop.user.friends.map((friend) => {
                 return (
-                  <div key={friend.user.userId}>
+                  <div
+                    key={friend.user.userId}
+                    className={`${styles["user-friend"]} user-friend`}
+                  >
                     <Link
                       href={`/${prop.params.game}/user/${friend.user.username}`}
                     >
                       <img
+                        className={`${styles["friend-avatar"]}`}
                         src={`https://gravatar.com/avatar/${friend.user.gravatarMd5}.jpg?r=pg&d=retro`}
                       />
                     </Link>
