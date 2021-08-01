@@ -36,22 +36,21 @@ export const getServerSideProps = async function getServerSideProps(
   // @ts-expect-error
   let user: SuperUser = await game.fetchProfile(ctx.params.user);
 
+  if (!user.user.userId) return { notFound: true };
+
   user.staticAvatarURL = `https://gravatar.com/avatar/${user.user.gravatarMd5}?r=pg&d=retro`;
 
   for (let soldier of user.soldiersBox) {
     soldier.platformName = platforms[soldier.platform];
     soldier.gameName = gameInverted[soldier.game];
     soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
-    soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
-      user.user.username
-    }/soldier/${soldier.persona.personaId}`;
+    soldier.url = `/${soldier.gameName.toLowerCase()}/soldier/${soldier.persona.personaId}`;
     soldier.displayName =
       (soldier.persona.clanTag ? `[${soldier.persona.clanTag}]` : "") +
       (soldier.persona.personaName || user.user.username);
 
     soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`;
   }
-
   return {
     props: {
       user: JSON.parse(JSON.stringify(user)),
