@@ -83,11 +83,24 @@
 
   .friends-box {
     background: #121212;
-    padding: 5px;
+    padding: 100px;
 
     .friends-list {
       display: flex;
       flex-wrap: wrap;
+    
+    .user-friend {
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+  
+      .friend-avatar {
+      border-radius: 50px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
     }
   }
 }
