@@ -22,7 +22,7 @@ interface SuperSoldier extends Soldier {
   displayText: string;
 }
 interface SuperUser extends Profile {
-  soldiers: Array<SuperSoldier>;
+  soldiersBox: Array<SuperSoldier>;
   staticAvatarURL: string;
 }
 
@@ -38,7 +38,7 @@ export const getServerSideProps = async function getServerSideProps(
 
   user.staticAvatarURL = `https://gravatar.com/avatar/${user.user.gravatarMd5}?r=pg&d=retro`;
 
-  for (let soldier of user.soldiers) {
+  for (let soldier of user.soldiersBox) {
     soldier.platformName = platforms[soldier.platform];
     soldier.gameName = gameInverted[soldier.game];
     soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
@@ -114,12 +114,16 @@ export default function BattlelogUserPage(prop: { user: SuperUser }) {
             </article>
           </div>
 
-        <div className={`${styles["friends-box"]} friends-box`}>
-          <div className={`${styles["friends-list"]} friends-list`}>
-            {prop.user.friends.map((friend) => {
-            return <img
-                src={`https://gravatar.com/avatar/${friend.gravatarMd5}.jpg?r=pg&d=retro`}
-              />;
+          <div
+            className={`${styles["soldier-boxes"]} ${styles["user-page-cotent"]} soldier-boxes user-page-content`}
+          >
+            {prop.user.soldiersBox.map((soldier) => {
+              return (
+                <SoldierBox
+                  soldier={soldier}
+                  key={soldier.persona.personaId}
+                ></SoldierBox>
+              );
             })}
           </div>
 
