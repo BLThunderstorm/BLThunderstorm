@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BattlelogClient, Soldier, Profile } from "battlelog.js/src/index";
+import { BattlelogClient, Soldier, Profile } from "battlelog.js/src";
 import { GetServerSidePropsContext } from "next";
 import { SupportedGames } from "battlelog.js/src/types/games";
 import * as gameInverted from "@nefomemes/blscraps-strings/inverted/games.json";
