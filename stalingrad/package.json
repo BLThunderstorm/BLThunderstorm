@@ -39,7 +39,7 @@
     "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/eslint-config-typescript": "6.0.1",
     "@nuxtjs/pwa": "3.3.5",
-    "@nuxtjs/style-resources": "1.2.0",
+    "@nuxtjs/style-resources": "1.2.1",
     "@nuxtjs/vuetify": "1.12.1",
     "@typescript-eslint/eslint-plugin": "4.29.0",
     "@typescript-eslint/parser": "4.29.0",
