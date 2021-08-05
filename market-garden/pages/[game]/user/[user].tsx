@@ -42,7 +42,10 @@ export const getServerSideProps = async function getServerSideProps(
 
   for (let soldier of user.soldiersBox) {
     soldier.platformName = platforms[soldier.platform];
-    soldier.gameName = gameInverted[soldier.game];
+    soldier.gameName =
+      gameInverted[soldier.game] != "WARSAW"
+        ? gameInverted[soldier.game]
+        : "bf4";
     soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
     soldier.url = `/${soldier.gameName.toLowerCase()}/soldier/${
       soldier.persona.personaId
