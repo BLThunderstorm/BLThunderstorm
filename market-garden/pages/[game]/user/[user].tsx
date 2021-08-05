@@ -102,7 +102,6 @@ export default function BattlelogUserPage(prop: {
         <img srcSet={`${prop.user.staticAvatarURL}&s=1024 1024w`} />
         <div className={`${styles["user-name"]} user-name`}>
           <p className={`${styles[`title`]} title`}>
-          
             {prop.user.user?.username || "No name"}
           </p>
         </div>
