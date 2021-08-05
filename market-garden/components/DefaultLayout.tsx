@@ -1,4 +1,3 @@
-
 import { NavigationBar } from "./navigationbar";
 import { Footer } from "./Footer";
 import type { ReactElement, FunctionComponent } from "react";

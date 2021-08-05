@@ -19,7 +19,6 @@ export const Footer: FunctionComponent<{
               key={category.id}
             >
               <li className={`${styles["nefo-link-title"]} nefo-link-title`}>
-
                 {category.title}
               </li>
 
