@@ -47,9 +47,9 @@ export const getServerSideProps = async function getServerSideProps(
         ? gameInverted[soldier.game]
         : "bf4";
     soldier.soldierPic = getPortrait(soldier.game, soldier.persona.picture);
-    soldier.url = `/${soldier.gameName.toLowerCase()}/soldier/${
-      soldier.persona.personaId
-    }`;
+    soldier.url = `/${soldier.gameName.toLowerCase()}/user/${
+      user.user.username
+    }/soldier/${soldier.persona.personaId}/${soldier.platformName}`;
     soldier.displayName =
       (soldier.persona.clanTag ? `[${soldier.persona.clanTag}]` : "") +
       (soldier.persona.personaName || user.user.username);
