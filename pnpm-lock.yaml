@@ -60,7 +60,7 @@ importers:
       react: 17.0.2
       react-dom: 17.0.2
       sass: 1.37.5
-      ts-loader: 9.2.4
+      ts-loader: 9.2.5
       typescript: 4.3.5
       webpack: 5.48.0
     dependencies:
@@ -77,7 +77,7 @@ importers:
       eslint: 7.32.0
       eslint-config-next: 11.0.1_364f6739f1a077bdf2998405af31cd57
       sass: 1.37.5
-      ts-loader: 9.2.4_typescript@4.3.5+webpack@5.48.0
+      ts-loader: 9.2.5_typescript@4.3.5+webpack@5.48.0
       typescript: 4.3.5
       webpack: 5.48.0
 
@@ -4165,8 +4165,8 @@ packages:
       punycode: 2.1.1
     dev: false
 
-  /ts-loader/9.2.4_typescript@4.3.5+webpack@5.48.0:
-    resolution: {integrity: sha512-Ats2BCqPFBkgsoZUmmYMjuQu+iBNExt4o3QDsJqRMuPdStWlnOthdqX/GHHJnxSSgw7Gu6Hll/MD5b4usgKFOg==}
+  /ts-loader/9.2.5_typescript@4.3.5+webpack@5.48.0:
+    resolution: {integrity: sha512-al/ATFEffybdRMUIr5zMEWQdVnCGMUA9d3fXJ8dBVvBlzytPvIszoG9kZoR+94k6/i293RnVOXwMaWbXhNy9pQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
