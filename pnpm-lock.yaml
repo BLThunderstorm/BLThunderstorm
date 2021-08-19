@@ -48,7 +48,7 @@ importers:
 
   market-garden:
     specifiers:
-      '@prisma/client': 2.28.0
+      '@prisma/client': 2.29.1
       '@types/react': 17.0.18
       battlelog.js: 0.2.7
       eslint: 7.32.0
@@ -64,11 +64,11 @@ importers:
       typescript: 4.3.5
       webpack: 5.48.0
     dependencies:
-      '@prisma/client': 2.28.0
+      '@prisma/client': 2.29.1
       battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.32.0
       next: 11.1.0_96c815a906f9e79aa99511b5fe4ccf62
-      next-auth: 3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254
+      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -212,15 +212,15 @@ packages:
     resolution: {integrity: sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==}
     dev: false
 
-  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_3eefcce3204a2568e0e9b751b9292090:
+  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_8c29dadd5052df9e2da49b9def14c19e:
     resolution: {integrity: sha512-Pd2Y8b1ibDywrndbj3751VNKv1mVcg2w0uNIi01EBVkm5pqA1X+VnKWbPeHfh4arLYw93RPCvfLbWBZS7J1gZQ==}
     peerDependencies:
       '@prisma/client': ^2.16.1
       next-auth: ^3.17.2
     dependencies:
       '@babel/runtime': 7.14.6
-      '@prisma/client': 2.28.0
-      next-auth: 3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254
+      '@prisma/client': 2.29.1
+      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
     dev: false
 
   /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.3:
@@ -242,7 +242,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.14.6
-      next-auth: 3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254
+      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -327,8 +327,8 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /@prisma/client/2.28.0:
-    resolution: {integrity: sha512-iwdxpy0Nz8N40MnhdlRvhZOBk8+GawpEsY5FU8Tfw1k9rvIeTAi+wBHrqhY8bXq6pneZkzrdQ1Hj3tqkrbRmoQ==}
+  /@prisma/client/2.29.1:
+    resolution: {integrity: sha512-GhieSvHGPIV5IwRYIkJ4FrGSNfX18lPhFtlyVWxhvX0ocdy8oTnjNZVTFgGxB6qVmJIUpH1HsckAzIoAX689IA==}
     engines: {node: '>=12.2'}
     requiresBuild: true
     peerDependencies:
@@ -337,11 +337,11 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 2.28.0-17.89facabd0366f63911d089156a7a70125bfbcd27
+      '@prisma/engines-version': 2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a
     dev: false
 
-  /@prisma/engines-version/2.28.0-17.89facabd0366f63911d089156a7a70125bfbcd27:
-    resolution: {integrity: sha512-BWTvF1mGxjG8EtG215uhxdeW5Uf5aiH4xhfzcFPFC3Ux5BdEM1uEBrLIixX67mI+ZNhqNZSBPf0DSf2I1IsaZw==}
+  /@prisma/engines-version/2.29.0-34.1be4cd60b89afa04b192acb1ef47758a39810f3a:
+    resolution: {integrity: sha512-BU1DNNDhdzqjHtycpUzDrU8+jf6ZY+fbXvCV/rbqG+0JifljlIo4vbkHDMg97gBi1Do8pTLZGlTH16FlniKgAg==}
     dev: false
 
   /@rushstack/eslint-patch/1.0.6:
@@ -2822,14 +2822,14 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth/3.27.3_c87e4f35e1e98006f42ca1bd3f2ec254:
+  /next-auth/3.27.3_594ab0771edd3748ee7cecb9511b7c4f:
     resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
     peerDependencies:
       react: ^16.13.1 || ^17
       react-dom: ^16.13.1 || ^17
     dependencies:
       '@babel/runtime': 7.14.6
-      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_3eefcce3204a2568e0e9b751b9292090
+      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_8c29dadd5052df9e2da49b9def14c19e
       '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.27.3
       futoin-hkdf: 1.4.2
       jose: 1.28.1
