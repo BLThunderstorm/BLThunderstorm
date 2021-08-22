@@ -55,7 +55,7 @@ importers:
       eslint-config-next: 11.1.0
       eslint-plugin-promise: 5.1.0
       next: 11.1.0
-      next-auth: 3.27.3
+      next-auth: 3.28.0
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
@@ -68,7 +68,7 @@ importers:
       battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.32.0
       next: 11.1.0_96c815a906f9e79aa99511b5fe4ccf62
-      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -212,7 +212,7 @@ packages:
     resolution: {integrity: sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==}
     dev: false
 
-  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_8c29dadd5052df9e2da49b9def14c19e:
+  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_988434a19438480c37e2aadb0b96e774:
     resolution: {integrity: sha512-Pd2Y8b1ibDywrndbj3751VNKv1mVcg2w0uNIi01EBVkm5pqA1X+VnKWbPeHfh4arLYw93RPCvfLbWBZS7J1gZQ==}
     peerDependencies:
       '@prisma/client': ^2.16.1
@@ -220,10 +220,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.14.6
       '@prisma/client': 2.29.1
-      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
     dev: false
 
-  /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.27.3:
+  /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.28.0:
     resolution: {integrity: sha512-xEGz3TzBzz+5nXQ6BnC++KGfxTOAgztL32ZRLq47UKz9M0kFBP6pCMJjTszltsBHYUI/Wac2IG2egMTpHtppiQ==}
     peerDependencies:
       mongodb: ^3.5.9
@@ -242,7 +242,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.14.6
-      next-auth: 3.27.3_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -2786,15 +2786,15 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth/3.27.3_594ab0771edd3748ee7cecb9511b7c4f:
-    resolution: {integrity: sha512-U7LRrSc3ZBUKQcOpqJfVui80jPpx0MQAmtCPI7dJ9DjDg8AfxRBzk59oNCE5MLlbMDb83gEtOu+Mr5hi28qmCg==}
+  /next-auth/3.28.0_594ab0771edd3748ee7cecb9511b7c4f:
+    resolution: {integrity: sha512-k79s1DRmExG+pLQaMkEazMe6MOR8IG1NMgFVGZoJ82bVuasU8oTlLWhGaU6zOY3BiH3WQYs1jl1wj0mg+sfFIw==}
     peerDependencies:
       react: ^16.13.1 || ^17
       react-dom: ^16.13.1 || ^17
     dependencies:
       '@babel/runtime': 7.14.6
-      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_8c29dadd5052df9e2da49b9def14c19e
-      '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.27.3
+      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_988434a19438480c37e2aadb0b96e774
+      '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.28.0
       futoin-hkdf: 1.4.2
       jose: 1.28.1
       jsonwebtoken: 8.5.1
@@ -3463,7 +3463,7 @@ packages:
   /querystring/0.2.1:
     resolution: {integrity: sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==}
     engines: {node: '>=0.4.x'}
-    deprecated: The
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
     dev: false
 
   /queue-microtask/1.2.3:
