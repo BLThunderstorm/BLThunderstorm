@@ -55,7 +55,7 @@ importers:
       eslint-config-next: 11.1.0
       eslint-plugin-promise: 5.1.0
       next: 11.1.0
-      next-auth: 3.28.0
+      next-auth: 3.29.0
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2
@@ -68,7 +68,7 @@ importers:
       battlelog.js: 0.2.7
       eslint-plugin-promise: 5.1.0_eslint@7.32.0
       next: 11.1.0_ed914d9b81d7896ee11f699506f561dd
-      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.29.0_594ab0771edd3748ee7cecb9511b7c4f
       prettier: 2.3.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -212,19 +212,19 @@ packages:
     resolution: {integrity: sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==}
     dev: false
 
-  /@next-auth/prisma-legacy-adapter/0.0.1-canary.127_988434a19438480c37e2aadb0b96e774:
-    resolution: {integrity: sha512-Pd2Y8b1ibDywrndbj3751VNKv1mVcg2w0uNIi01EBVkm5pqA1X+VnKWbPeHfh4arLYw93RPCvfLbWBZS7J1gZQ==}
+  /@next-auth/prisma-legacy-adapter/0.1.2_a82d26b06a6c5d989f5d42f77578507f:
+    resolution: {integrity: sha512-QpGcRvrnFERkvVFroqS89qDbnskw9AjhvWxO095u3xl/8QVI++Y+doluQdZWuV6PewjrV7xY+uVUEnRhnGM8yQ==}
     peerDependencies:
       '@prisma/client': ^2.16.1
       next-auth: ^3.17.2
     dependencies:
       '@babel/runtime': 7.14.6
       '@prisma/client': 2.29.1
-      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.29.0_594ab0771edd3748ee7cecb9511b7c4f
     dev: false
 
-  /@next-auth/typeorm-legacy-adapter/0.0.2-canary.129_next-auth@3.28.0:
-    resolution: {integrity: sha512-xEGz3TzBzz+5nXQ6BnC++KGfxTOAgztL32ZRLq47UKz9M0kFBP6pCMJjTszltsBHYUI/Wac2IG2egMTpHtppiQ==}
+  /@next-auth/typeorm-legacy-adapter/0.1.4_next-auth@3.29.0:
+    resolution: {integrity: sha512-UDnctrPiUU0yaPNeFhD6uw0FAuWGvx6IUVwUYTEzZm26RCEe/BBjkpGLYk43M3rcnkBPfkiljomAs/O7Uzh12w==}
     peerDependencies:
       mongodb: ^3.5.9
       mssql: ^6.2.1
@@ -242,7 +242,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.14.6
-      next-auth: 3.28.0_594ab0771edd3748ee7cecb9511b7c4f
+      next-auth: 3.29.0_594ab0771edd3748ee7cecb9511b7c4f
       require_optional: 1.0.1
       typeorm: 0.2.34
     transitivePeerDependencies:
@@ -2826,15 +2826,15 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next-auth/3.28.0_594ab0771edd3748ee7cecb9511b7c4f:
-    resolution: {integrity: sha512-k79s1DRmExG+pLQaMkEazMe6MOR8IG1NMgFVGZoJ82bVuasU8oTlLWhGaU6zOY3BiH3WQYs1jl1wj0mg+sfFIw==}
+  /next-auth/3.29.0_594ab0771edd3748ee7cecb9511b7c4f:
+    resolution: {integrity: sha512-B//4QTv/1Of0D+roZ82URmI6L2JSbkKgeaKI7Mdrioq8lAzp9ff8NdmouvZL/7zwrPe2cUyM6MLYlasfuI3ZIQ==}
     peerDependencies:
       react: ^16.13.1 || ^17
       react-dom: ^16.13.1 || ^17
     dependencies:
       '@babel/runtime': 7.14.6
-      '@next-auth/prisma-legacy-adapter': 0.0.1-canary.127_988434a19438480c37e2aadb0b96e774
-      '@next-auth/typeorm-legacy-adapter': 0.0.2-canary.129_next-auth@3.28.0
+      '@next-auth/prisma-legacy-adapter': 0.1.2_a82d26b06a6c5d989f5d42f77578507f
+      '@next-auth/typeorm-legacy-adapter': 0.1.4_next-auth@3.29.0
       futoin-hkdf: 1.4.2
       jose: 1.28.1
       jsonwebtoken: 8.5.1
