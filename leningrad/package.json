@@ -19,7 +19,7 @@
   "dependencies": {
     "fastify": "^3.20.2",
     "fastify-passport": "^0.4.3",
-    "fastify-secure-session": "^2.3.1",
+    "fastify-secure-session": "^3.0.0",
     "passport-github": "^1.1.0",
     "serverless-postgres": "^1.9.6"
   },
