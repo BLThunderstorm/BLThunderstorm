@@ -1,6 +1,7 @@
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/client";
-import { FunctionComponent } from "react";
+import { FunctionComponent, Props, useEffect } from "react";
+import React from "react";
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   let session = await getSession({ req: ctx.req });
@@ -10,15 +11,15 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       redirect: "/about",
 
       props: {
-        auth: true,
+        auth: false,
       },
     };
   } else {
     return {
-      redirect: "/",
+      redirect: "/home",
 
       props: {
-        auth: false,
+        auth: true,
       },
     };
   }
@@ -27,8 +28,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 const IndexPage: FunctionComponent<{ auth: boolean }> = (props) => {
   return (
     <div>
-      `Redirecting you to your home... $
-      {props.auth ? "You are loggen in." : "You are not logged in."}`
+      Redirecting you to your home...
+      {props.auth ? "You are logged in." : "You are not logged in."}
     </div>
   );
 };
