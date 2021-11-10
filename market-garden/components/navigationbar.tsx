@@ -1,7 +1,12 @@
-import { FunctionComponent } from "react";
-import styles from "./NavigationBar.module.sass";
-
-export const NavigationBar: FunctionComponent = () => {
+import Link from "next/link";
+import { Session } from "next-auth";
+import { FunctionComponent, useEffect } from "react";
+import styles from "./NavigationBar.module.scss";
+import { useSession } from "next-auth/client";
+export const NavigationBar: FunctionComponent<{
+  session?: Session | null;
+}> = (props) => {
+  let [session, isSession] = useSession();
   return (
     <div
       className={`${styles["navigation-bar-container"]} navigation-bar-container`}
@@ -13,13 +18,17 @@ export const NavigationBar: FunctionComponent = () => {
           <div
             className={`${styles["nav-category"]} ${styles["home-category"]} nav-category home-category`}
           >
-            <div
-              className={`${styles["home-button"]} ${styles["button"]} home-button button`}
-            ></div>
+            <Link href="/">
+              <div
+                className={`${styles["home-button"]} ${styles["button"]} home-button button`}
+              ></div>
+            </Link>
           </div>
         </div>
-        <div className="nav-category bottom-category">
-          <div className="button profile-button"></div>
+        <div className={`${styles["nav-category"]} bottom-category`}>
+          <div className={`${styles["profile"]} ${styles["button"]}`}>
+            <img alt={session?.user.name} src={session?.user?.image}></img>
+          </div>
         </div>
       </div>
     </div>
