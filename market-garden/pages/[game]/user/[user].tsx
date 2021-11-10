@@ -7,24 +7,16 @@ import * as platforms from "@nefomemes/blscraps-strings/inverted/platform.json";
 import getPortrait from "~/util/getPortrait";
 import styles from "./BattlelogUserPage.module.scss";
 import { PageSpacer } from "~/components/pagespacer";
+import { SuperUser, SuperSoldier } from "../../../lib/data/bl-user";
+
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
   params: {
     game: SupportedGames;
     user: string;
   };
 }
-interface SuperSoldier extends Soldier {
-  platformName: string;
-  gameName: string;
-  soldierPic: string;
-  url: string;
-  displayName: string;
-  displayText: string;
-}
-interface SuperUser extends Profile {
-  soldiersBox: Array<SuperSoldier>;
-  staticAvatarURL: string;
-}
+
+
 
 export const getServerSideProps = async function getServerSideProps(
   ctx: BattlelogUserPageContext
@@ -33,8 +25,8 @@ export const getServerSideProps = async function getServerSideProps(
 
   let battlelog = new BattlelogClient();
   let game = battlelog.game(ctx.params.game);
-  // @ts-expect-error
-  let user: SuperUser = await game.fetchProfile(ctx.params.user);
+
+  let user = (await game.fetchProfile(ctx.params.user)) as SuperUser;
 
   if (!user.user.userId) return { notFound: true };
 
@@ -56,6 +48,7 @@ export const getServerSideProps = async function getServerSideProps(
 
     soldier.displayText = `${soldier.gameName} - ${soldier.platformName}`;
   }
+
   return {
     props: {
       user: JSON.parse(JSON.stringify(user)),
