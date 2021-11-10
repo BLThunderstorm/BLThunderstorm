@@ -126,7 +126,7 @@ export default function BattlelogUserPage(prop: {
 
           <div className={`${styles["friends-box"]} friends-box`}>
             <div className={`${styles["friends-list"]} friends-list`}>
-              {prop.user.friends.map((friend) => {
+              {prop.user.tenFriends.map((friend) => {
                 return (
                   <div
                     key={friend.user.userId}
