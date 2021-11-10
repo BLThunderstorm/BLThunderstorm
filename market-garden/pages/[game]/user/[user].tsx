@@ -8,15 +8,13 @@ import getPortrait from "~/util/getPortrait";
 import styles from "./BattlelogUserPage.module.scss";
 import { PageSpacer } from "~/components/pagespacer";
 import { SuperUser, SuperSoldier } from "../../../lib/data/bl-user";
-
+import { SoldierBox } from "../../../components/user/soldier-box";
 interface BattlelogUserPageContext extends GetServerSidePropsContext<any> {
   params: {
     game: SupportedGames;
     user: string;
   };
 }
-
-
 
 export const getServerSideProps = async function getServerSideProps(
   ctx: BattlelogUserPageContext
@@ -56,32 +54,6 @@ export const getServerSideProps = async function getServerSideProps(
     },
   };
 };
-
-function SoldierBox(props: { soldier: SuperSoldier }) {
-  return (
-    <div className={` soldier-box-container`}>
-      <Link href={props.soldier.url}>
-        <div className={`${styles["soldier-box"]} soldier-box`}>
-          <div
-            className={`${styles["soldier-text"]} ${styles["soldier-content"]} soldier-content soldier-text`}
-          >
-            <p className={`${styles["title"]} title`}>
-              {props.soldier.displayName}
-            </p>
-            <p className={`${styles["text"]} text`}>
-              {props.soldier.displayText}
-            </p>
-          </div>
-          <div
-            className={`${styles["soldier-portrait"]} ${styles["soldier-content"]} soldier-content soldier-portrait`}
-          >
-            <img src={props.soldier.soldierPic} />
-          </div>
-        </div>
-      </Link>
-    </div>
-  );
-}
 
 export default function BattlelogUserPage(prop: {
   user: SuperUser;

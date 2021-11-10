@@ -6,29 +6,6 @@
     width: 100%;
   }
 
-  .soldier-box {
-    position: relative;
-
-    width: 330px;
-    height: 330px;
-
-    .soldier-content {
-      position: absolute;
-    }
-
-    .soldier-portrait {
-      z-index: 4;
-      width: 100%;
-      height: 100%;
-    }
-
-    .soldier-text {
-      z-index: 5;
-      top: 30px;
-      left: 30px;
-    }
-  }
-
   .content-order-container,
   .user-readme {
     padding: 20px;
