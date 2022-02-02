@@ -26,7 +26,7 @@ importers:
   leningrad:
     specifiers:
       '@types/node': 16.11.7
-      dotenv: 14.2.0
+      dotenv: 15.0.1
       dotenv-cli: 4.1.0
       fastify: ^3.23.1
       fastify-passport: ^0.4.3
@@ -42,7 +42,7 @@ importers:
       serverless-postgres: 1.9.7
     devDependencies:
       '@types/node': 16.11.7
-      dotenv: 14.2.0
+      dotenv: 15.0.1
       dotenv-cli: 4.1.0
       typescript: 4.4.4
 
@@ -1424,8 +1424,8 @@ packages:
     resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
     dev: true
 
-  /dotenv/14.2.0:
-    resolution: {integrity: sha512-05POuPJyPpO6jqzTNweQFfAyMSD4qa4lvsMOWyTRTdpHKy6nnnN+IYWaXF+lHivhBH/ufDKlR4IWCAN3oPnHuw==}
+  /dotenv/15.0.1:
+    resolution: {integrity: sha512-4OnbwRfzR+xQThp7uq1xpUS9fmgZ//njexOtPjPSbK3yHGrSHSJnaJRsXderSSm2elfvVj+Y5awDC0I8Oy8rkA==}
     engines: {node: '>=12'}
     dev: true
 
