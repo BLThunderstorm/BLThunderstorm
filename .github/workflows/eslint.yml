@@ -15,7 +15,7 @@ jobs:
       - name: Checkout things
         uses: actions/checkout@v2.4.0
       - name: Node.JS 16.x
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v3.0.0
         with:
           node-version: "16"
 
