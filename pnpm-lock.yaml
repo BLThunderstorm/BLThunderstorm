@@ -27,7 +27,7 @@ importers:
     specifiers:
       '@types/node': 16.11.7
       dotenv: 14.2.0
-      dotenv-cli: 4.1.0
+      dotenv-cli: 5.1.0
       fastify: ^3.23.1
       fastify-passport: ^0.4.3
       fastify-secure-session: ^3.0.0
@@ -43,7 +43,7 @@ importers:
     devDependencies:
       '@types/node': 16.11.7
       dotenv: 14.2.0
-      dotenv-cli: 4.1.0
+      dotenv-cli: 5.1.0
       typescript: 4.4.4
 
   market-garden:
@@ -1410,18 +1410,19 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /dotenv-cli/4.1.0:
-    resolution: {integrity: sha512-HMXB6LRFJp5fhNurla9E1zrGIlx788/DtaHJfSOXxyAqFq77zrI2y0ow5i6AhviE4IBeW3uVgKAfwOgrGDyzSQ==}
+  /dotenv-cli/5.1.0:
+    resolution: {integrity: sha512-NoEZAlKo9WVrG0b3i9mBxdD6INdDuGqdgR74t68t8084QcI077/1MnPerRW1odl+9uULhcdnQp2U0pYVppKHOA==}
     hasBin: true
     dependencies:
       cross-spawn: 7.0.3
-      dotenv: 8.6.0
-      dotenv-expand: 5.1.0
+      dotenv: 16.0.0
+      dotenv-expand: 8.0.3
       minimist: 1.2.5
     dev: true
 
-  /dotenv-expand/5.1.0:
-    resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+  /dotenv-expand/8.0.3:
+    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
+    engines: {node: '>=12'}
     dev: true
 
   /dotenv/14.2.0:
@@ -1429,9 +1430,15 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /dotenv/16.0.0:
+    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
+    engines: {node: '>=12'}
+    dev: true
+
   /dotenv/8.6.0:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
+    dev: false
 
   /ecdsa-sig-formatter/1.0.11:
     resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
