@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "2.30.3",
+    "@prisma/client": "3.11.1",
     "battlelog.js": "0.2.7",
     "eslint-plugin-promise": "6.0.0",
     "next": "12.0.5",
