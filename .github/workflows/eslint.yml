@@ -15,7 +15,7 @@ jobs:
       - name: Checkout things
         uses: actions/checkout@v2.4.0
       - name: Node.JS 16.x
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2.5.1
         with:
           node-version: "16"
 
@@ -45,7 +45,7 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           report-json: "eslint_report.json"
       - name: Upload ESLint report
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v2.3.1
         with:
           name: eslint_report.json
           path: eslint_report.json
